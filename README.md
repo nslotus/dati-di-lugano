@@ -10,7 +10,7 @@ Open data tools and a public dashboard for the finances of the City of Lugano, S
 
 | Command | What it does | Output |
 |---|---|---|
-| `npm run map` | Builds the source catalog and reads the canton's per-municipality statistics (2023–2024): Lugano's accounts and the 8 official indicators, with rating, rank and median among 106 municipalities | `out/sources.json`, `out/lugano-indicators.json` / `.csv`, `out/bonds.json` |
+| `npm run map` | Builds the source catalog and reads the canton's per-municipality statistics (2023–2024): Lugano's accounts and the 8 official indicators, with rating, and rank and median among Ticino's 106 municipalities (not Switzerland-wide) | `out/sources.json`, `out/lugano-indicators.json` / `.csv`, `out/bonds.json` |
 | `npm run figures` | Extracts headline figures from the city's own PDFs (final accounts 2024 and 2025, budget 2026 with the financial plan), using [TypeSafe](https://docs.typesafe.ai). Needs `TYPESAFE_API_KEY` | `out/city-figures.json` |
 | `npm run debt` | Combines city debt figures with the bond register: share of debt in bonds, the plan's debt path, maturity ladder | `out/debt-profile.json` |
 | `npm run watch` | Checks lugano.ch for new financial documents and press releases; TypeSafe classifies new releases. Needs `TYPESAFE_API_KEY` | `out/news-alerts.json` |
