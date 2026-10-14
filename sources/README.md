@@ -1,0 +1,25 @@
+# Source archive
+
+The exact files this project's figures were taken from, as downloaded. `MANIFEST.json` has the same data in machine-readable form.
+To check that a file is unchanged, compare its SHA-256 (`sha256sum <file>` or `Get-FileHash <file>`) with the value below;
+to check whether the publisher has changed it since, download it again from the original URL and compare.
+
+These are public documents of Swiss authorities. Under Art. 5 of the Swiss Copyright Act, official reports and decisions
+of public authorities are generally not protected by copyright; they are archived here unchanged, for verification, with
+their publisher named. Press releases are the least clear-cut case; if a publisher objects, remove the file and keep its hash.
+
+| File | Publisher | Used for | Retrieved (UTC) | SHA-256 |
+|---|---|---|---|---|
+| [2023-allegato.xlsx](2023-allegato.xlsx) ([original](https://www4.ti.ch/fileadmin/DI/DI_DI/SEL/Comuni/DatiFinanziari/StatisticaFinanziaria/2023-allegato.xlsx)) | Canton of Ticino, Sezione degli enti locali | 2023 accounts and indicators for every municipality (indicators table, 2023 column; 2023 caveats) | 2026-10-14 21:18 | `d29815a12eea940d…` |
+| [2024-allegato.xlsx](2024-allegato.xlsx) ([original](https://www4.ti.ch/fileadmin/DI/DI_DI/SEL/Comuni/DatiFinanziari/StatisticaFinanziaria/2024-allegato.xlsx)) | Canton of Ticino, Sezione degli enti locali | 2024 accounts and indicators for every municipality (indicators table, ranks, medians; ground truth for the 2024 city figures) | 2026-10-14 21:18 | `51b46683fcc10e4a…` |
+| [2024-rapporto.pdf](2024-rapporto.pdf) ([original](https://www4.ti.ch/fileadmin/DI/DI_DI/SEL/Comuni/DatiFinanziari/StatisticaFinanziaria/2024-rapporto.pdf)) | Canton of Ticino, Sezione degli enti locali | Indicator definitions and the official rating scales | 2026-10-14 21:20 | `5763ca4faa63ebef…` |
+| [20251027-moodys-rating.pdf](20251027-moodys-rating.pdf) ([original](https://www.lugano.ch/dam/jcr:f659385e-ceef-4a3b-b14f-c776dcbf239d/20251027-cs-conferma-rating-moodys.pdf)) | City of Lugano | Moody's Aa3 stable rating, 27 October 2025 (key figures). Contains no debt ratios | 2026-10-14 22:49 | `2c41a02076c097b8…` |
+| [20260626-bond-decennale.pdf](20260626-bond-decennale.pdf) ([original](https://www.lugano.ch/dam/jcr:3f46ba81-6312-4886-b279-8741b5eecbb1/20260626-emissione-bond-digitale-investimenti.pdf)) | City of Lugano | CHF 100M 10-year bond of July 2026 (bond register; borrowing note) | 2026-10-14 22:48 | `a0f79ef65213a272…` |
+| [20261013-entita-partecipate.pdf](20261013-entita-partecipate.pdf) ([original](https://www.lugano.ch/dam/jcr:b7d47130-a778-455e-a5d8-d7ee9a9c66a9/20261013-cs-entita-partecipate-citta-lugano.pdf)) | City of Lugano | News check of 15 October 2026 (governance, no figures) | 2026-10-14 21:52 | `6d5980522fb83076…` |
+| [city-consuntivo-2024-slides.pdf](city-consuntivo-2024-slides.pdf) ([original](https://www.lugano.ch/dam/jcr:66e7b5df-519e-4fcb-83aa-a9db062b7081/20250404-cs-consuntivo-2024-presentazione.pdf)) | City of Lugano | 2024 figures (validation set for the extraction) | 2026-10-14 21:31 | `7de75eaa98bbd106…` |
+| [city-consuntivo-2025-slides.pdf](city-consuntivo-2025-slides.pdf) ([original](https://www.lugano.ch/dam/jcr:8e5c3ada-87b4-4397-a3c7-e55dd4a9199a/20260423-consuntivo-2025-presentazione.pdf)) | City of Lugano | 2025 results, end-2024 and end-2025 debt, Q1-2026 debt | 2026-10-14 21:31 | `371ee86b916c3d4e…` |
+| [city-preventivo-2026-comunicato.pdf](city-preventivo-2026-comunicato.pdf) ([original](https://www.lugano.ch/dam/jcr:0a793cce-fba0-4c83-b596-e65560732832/20251023-cs-preventivo-2026-piano-finanziario-2026-2033.pdf)) | City of Lugano | Budget 2026 and the financial plan's debt path to 2033 | 2026-10-14 21:55 | `23c09304e1902f33…` |
+| [evoluzione.html](evoluzione.html) ([original](https://www.lugano.ch/la-mia-citta/amministrazione/evoluzione-finanziaria/)) | City of Lugano | Snapshot of the finance-documents page (document list; watcher baseline) | 2026-10-14 21:31 | `62c7f5fab68d5ac1…` |
+| [news.html](news.html) ([original](https://www.lugano.ch/news/)) | City of Lugano | Snapshot of the news page (news check) | 2026-10-14 21:52 | `dd509c9cf0297803…` |
+| [press.html](press.html) ([original](https://www.lugano.ch/area-stampa/cartella-stampa/)) | City of Lugano | Snapshot of the press-release list (news check; watcher baseline) | 2026-10-14 21:52 | `7c37ee8d8f14f6ef…` |
+| [ustat-142lugano.pdf](ustat-142lugano.pdf) ([original](https://www3.ti.ch/DFE/DR/USTAT/allegati/comune/142lugano.pdf)) | Canton of Ticino, Ufficio di statistica (USTAT) | Checked only: confirmed the municipal profile is dated February 2017 | 2026-10-14 21:26 | `6ddca9388fe35f74…` |

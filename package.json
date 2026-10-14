@@ -7,7 +7,8 @@
     "typecheck": "tsc --noEmit",
     "figures": "tsx src/figures.ts",
     "debt": "tsx src/debt.ts",
-    "watch": "tsx src/watch.ts"
+    "watch": "tsx src/watch.ts",
+    "provenance": "tsx src/provenance.ts"
   },
   "keywords": [],
   "author": "",

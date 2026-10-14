@@ -150,7 +150,7 @@ export const sources: Source[] = [
   },
   {
     id: "moodys-rating",
-    publisher: "Moody's (via Città di Lugano press release)",
+    publisher: "Moody's (via Città di Lugano press release; ratios via Corriere del Ticino)",
     title: "Credit rating Aa3 stable (9th consecutive year, Oct 2025)",
     url: "https://www.lugano.ch/en/news/20251027-cs-conferma-rating-moodys.html",
     formats: ["html"],
@@ -158,7 +158,7 @@ export const sources: Source[] = [
     cadence: "event",
     machineReadable: false,
     luganoSpecific: true,
-    notes: "Moody's debt metric: net direct+indirect debt / operating revenue = 234% (2025), 224% (2026e), 216% (2027e).",
+    notes: "Aa3 stable confirmed Oct 2025 (city release) and Apr 2026 (city finance page). Debt ratio, net direct+indirect debt / operating revenue: 234% (2025e), 224% (2026e), 216% (2027e), per Moody's Apr 2026 review as quoted by Corriere del Ticino, 22.4.2026. Not in the city's own release.",
   },
   {
     id: "six-bond-explorer",

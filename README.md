@@ -15,6 +15,7 @@ Open data tools and a public dashboard for the finances of the City of Lugano, S
 | `npm run debt` | Combines city debt figures with the bond register: share of debt in bonds, the plan's debt path, maturity ladder | `out/debt-profile.json` |
 | `npm run watch` | Checks lugano.ch for new financial documents and press releases; TypeSafe classifies new releases. Needs `TYPESAFE_API_KEY` | `out/news-alerts.json` |
 | `npm run watch -- --eval` | Scores the press-release classifier on 8 labelled past releases | console |
+| `npm run provenance` | Archives the exact source files with SHA-256 fingerprints and traces every extracted figure to its page | `sources/`, `TRACE.md` |
 
 ```
 npm install
@@ -23,7 +24,9 @@ TYPESAFE_API_KEY=... npm run figures
 npm run debt
 ```
 
-Downloaded source files go to `data/raw/` and TypeSafe responses are cached in `data/cache/`; neither is committed. The scripts download what they need from the official URLs on first run.
+**Provenance.** [`METHODOLOGY.md`](METHODOLOGY.md) explains where every dashboard figure comes from, how it was checked, and the corrections made along the way. [`sources/`](sources/README.md) archives the exact documents used, and [`TRACE.md`](TRACE.md) gives the page and printed text of every extracted figure.
+
+Working downloads go to `data/raw/` and TypeSafe responses are cached in `data/cache/`; neither is committed.
 
 ## How the PDF figures are extracted
 
@@ -40,7 +43,7 @@ The 2024 figures are checked against the canton's statistics (5 of 5 match). Bud
 - **Three different debt measures**, not comparable with each other:
   - the city's *gross financial debt* (1’049.9M at end of 2025);
   - the canton's *net public debt I*, debt minus financial assets (655.5M in 2024, CHF 10’302 per resident);
-  - Moody's *net direct and indirect debt / operating revenue* (234% in 2025), as reported by the city.
+  - Moody's *net direct and indirect debt / operating revenue*: expected 234% for 2025, 224% for 2026, 216% for 2027 (Moody's April 2026 review, as quoted by Corriere del Ticino).
 - **Units.** Canton amounts are in CHF thousands; ratios are stored as fractions (0.26 = 26%).
 - **Estimates.** These are calculated here, not published by the city:
   - the end-2026 debt implied by the budget (end-2025 debt + 2026 borrowing need, before asset sales);
@@ -58,6 +61,7 @@ This project records bond terms only (ISIN, coupon, maturity, volume, listing da
 - City of Lugano, [financial documents](https://www.lugano.ch/la-mia-citta/amministrazione/evoluzione-finanziaria/) and press releases.
 - Canton of Ticino, Sezione degli enti locali, [municipal financial statistics](https://www4.ti.ch/di/sel/comuni/dati-finanziari/statistica-finanziaria).
 - City of Lugano, [Moody's rating announcement](https://www.lugano.ch/en/news/20251027-cs-conferma-rating-moodys.html), 27 October 2025.
+- Corriere del Ticino, [Moody's promuove governance e risparmi](https://www.cdt.ch/news/ticino/moodys-promuove-governance-e-risparmi-425707), 22 April 2026, for Moody's debt ratios.
 - RSI, [Finanze pubbliche, la corsa ai bond](https://www.rsi.ch/info/ticino-grigioni-e-insubria/Finanze-pubbliche-la-corsa-ai-bond--3000204.html), July 2025.
 - Bond terms from city press releases and public listings (SIX, finanzen.net, cbonds).
 

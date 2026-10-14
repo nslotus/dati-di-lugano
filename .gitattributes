@@ -1,0 +1,4 @@
+# Archived source documents must stay byte-identical so their SHA-256 values in MANIFEST.json match.
+sources/** -text
+sources/README.md text
+sources/MANIFEST.json text
