@@ -1,0 +1,489 @@
+{
+  "comune": "Lugano",
+  "note": "Canton SEL annex. Amounts in CHF thousands. 'debitoNetto' is the canton's net public debt I (gross debt minus financial assets), not the city's gross financial debt nor Moody's ratio.",
+  "years": [
+    {
+      "year": 2023,
+      "source": "https://www4.ti.ch/fileadmin/DI/DI_DI/SEL/Comuni/DatiFinanziari/StatisticaFinanziaria/2023-allegato.xlsx",
+      "units": {
+        "amounts": "CHF thousands",
+        "ratios": "fraction (0.26 = 26%)"
+      },
+      "caveats": [
+        "Investment receipts were 91% of outlays (one-off inflows): net investment is unusually small, so the self-financing ratio is inflated and not representative.",
+        "Extraordinary revenue of 15'019k CHF drives the total result (ordinary result: -2'664k)."
+      ],
+      "valoriIndicativi": {
+        "Popolazione residente (1) 2023": 63495,
+        "Moltiplicatore politico 2024": 77,
+        "Risorse fiscali procapite (fr.) 2021": 6501.219670452525,
+        "Indice di forza finanziaria 2025-26": 131.75
+      },
+      "contoEconomico": {
+        "Spese operative": 463204.75418,
+        "Ricavi operativi": 433232.26874,
+        "Risultato operativo": -29972.48544,
+        "Spese finanziarie": 14893.61754,
+        "Ricavi finanziari": 42202.5415,
+        "Risultato finanziario": 27308.92396,
+        "RISULTATO ORDINARIO": -2663.56148,
+        "Spese straordinarie": 0,
+        "Ricavi straordinari": 15019.39717,
+        "Risultato straordinario": 15019.39717,
+        "RISULTATO TOTALE D'ESERCIZIO": 12355.83569
+      },
+      "investimentiEFinanziamento": {
+        "Conto degli investimenti › Uscite per investimenti": 77284.90018,
+        "Conto degli investimenti › Entrate per investimenti": 70382.00876,
+        "Conto degli investimenti › ONERE NETTO PER INVESTIMENTI": 6902.89142,
+        "Conto di finanziamento › Onere netto per investimenti": 6902.89142,
+        "Conto di finanziamento › Autofinanziamento": 34627.79166,
+        "Conto di finanziamento › RISULTATO GLOBALE": 27724.900240000003
+      },
+      "bilancio": {
+        "Attivo › Beni patrimoniali": 539328.17061,
+        "Attivo › Beni amministrativi": 786785.42899,
+        "Attivo › Totale attivi": 1326113.5996,
+        "Passivo › Capitale di terzi": 1138024.03452,
+        "Passivo › Capitale proprio": 188089.56508,
+        "Passivo › di cui eccedenza di bilancio": 187517.51343,
+        "Passivo › Totale passivi": 1326113.5996
+      },
+      "ricaviFiscali": {
+        "400 imposte dirette delle persone fisiche": 276280.63237999997,
+        "401 imposte dirette delle persone giuridiche": 63680.00895,
+        "402 altre imposte dirette": 13295.5809,
+        "403 imposte sul possesso e sulla spesa": 383.55
+      },
+      "ripartizioneFunzionale": {
+        "Spese": {
+          "0 Amministrazione generale": 48327.15274,
+          "1 Ordine pubblico, sicurezza, difesa": 45299.59178,
+          "2 Formazione": 56846.16584,
+          "3 Cultura, sport, tempo libero, chiesa": 51551.3451,
+          "4 Sanità": 59275.64962,
+          "5 Sicurezza sociale": 53961.50045,
+          "6 Trasporti e comunicazioni": 57928.71675,
+          "7 Ambiente e territorio": 29985.81531,
+          "8 Economia pubblica": 3890.61824,
+          "9 Finanze e imposte": 74043.56804
+        },
+        "Ricavi": {
+          "0 Amministrazione generale": 8317.02694,
+          "1 Ordine pubblico, sicurezza, difesa": 18269.64349,
+          "2 Formazione": 6734.65769,
+          "3 Cultura, sport, tempo libero, chiesa": 6990.68545,
+          "4 Sanità": 240.1332,
+          "5 Sicurezza sociale": 2250.27047,
+          "6 Trasporti e comunicazioni": 26882.80048,
+          "7 Ambiente e territorio": 20818.17787,
+          "8 Economia pubblica": 2237.89016,
+          "9 Finanze e imposte": 400724.67381
+        },
+        "Spesa netta": {
+          "0 Amministrazione generale": 40010.125799999994,
+          "1 Ordine pubblico, sicurezza, difesa": 27029.948290000004,
+          "2 Formazione": 50111.50815,
+          "3 Cultura, sport, tempo libero, chiesa": 44560.65965,
+          "4 Sanità": 59035.51642,
+          "5 Sicurezza sociale": 51711.22998,
+          "6 Trasporti e comunicazioni": 31045.916269999998,
+          "7 Ambiente e territorio": 9167.637440000002,
+          "8 Economia pubblica": 1652.7280799999999,
+          "9 Finanze e imposte": -326681.10577
+        }
+      },
+      "indicatori": [
+        {
+          "key": "risultatoPuntiMA",
+          "label": "Risultato in punti di moltiplicatore aritmetico",
+          "en": "Result in tax-multiplier points",
+          "unit": "points",
+          "value": null,
+          "display": "not published this year",
+          "rating": null,
+          "cantonMean": null,
+          "cantonMedian": null,
+          "rank": null,
+          "of": 0,
+          "betterThanPct": null
+        },
+        {
+          "key": "tassoIndebitamentoNetto",
+          "label": "Tasso di indebitamento netto I",
+          "en": "Net debt / tax revenue",
+          "unit": "ratio",
+          "value": 1.6929539913870901,
+          "display": "169.3%",
+          "rating": {
+            "label": "eccessivo",
+            "level": "bad"
+          },
+          "cantonMean": 1.4596978545745503,
+          "cantonMedian": 1.5405869884490158,
+          "rank": 57,
+          "of": 106,
+          "betterThanPct": 47
+        },
+        {
+          "key": "gradoAutofinanziamento",
+          "label": "Grado di autofinanziamento",
+          "en": "Self-financing ratio",
+          "unit": "ratio",
+          "value": 5.016418418471951,
+          "display": "501.6%",
+          "rating": {
+            "label": "distorto (entrate d'investimento straordinarie)",
+            "level": "warning"
+          },
+          "cantonMean": 0.8248044403572411,
+          "cantonMedian": 0.6454668300355861,
+          "rank": null,
+          "of": 99,
+          "betterThanPct": null
+        },
+        {
+          "key": "quotaInteressi",
+          "label": "Quota delle spese per interessi",
+          "en": "Net interest / current revenue",
+          "unit": "ratio",
+          "value": 0.015021339298739568,
+          "display": "1.5%",
+          "rating": {
+            "label": "bassa",
+            "level": "good"
+          },
+          "cantonMean": 0.010472065253399873,
+          "cantonMedian": 0.009725909346614785,
+          "rank": 77,
+          "of": 106,
+          "betterThanPct": 28
+        },
+        {
+          "key": "debitoNettoProCapite",
+          "label": "Debito pubblico netto I pro capite",
+          "en": "Net public debt per resident",
+          "unit": "CHF",
+          "value": 9429.023764233403,
+          "display": "9'429",
+          "rating": {
+            "label": "molto elevato",
+            "level": "bad"
+          },
+          "cantonMean": 5641.0194253326645,
+          "cantonMedian": 5048.347610068684,
+          "rank": 91,
+          "of": 106,
+          "betterThanPct": 14
+        },
+        {
+          "key": "debitoNetto",
+          "label": "Debito pubblico netto I",
+          "en": "Net public debt (canton definition)",
+          "unit": "CHF thousands",
+          "value": 598695.86391,
+          "display": "598'696",
+          "rating": null,
+          "cantonMean": 2017905.4688300008,
+          "cantonMedian": null,
+          "rank": null,
+          "of": 106,
+          "betterThanPct": null
+        },
+        {
+          "key": "quotaInvestimenti",
+          "label": "Quota degli investimenti",
+          "en": "Investment share of spending",
+          "unit": "ratio",
+          "value": 0.14537312422393048,
+          "display": "14.5%",
+          "rating": {
+            "label": "media",
+            "level": "neutral"
+          },
+          "cantonMean": 0.16184351908092415,
+          "cantonMedian": 0.1757336342625903,
+          "rank": null,
+          "of": 106,
+          "betterThanPct": null
+        },
+        {
+          "key": "quotaCapitaleProprio",
+          "label": "Quota di capitale proprio",
+          "en": "Equity / total liabilities",
+          "unit": "ratio",
+          "value": 0.14183518300146689,
+          "display": "14.2%",
+          "rating": {
+            "label": "media",
+            "level": "warning"
+          },
+          "cantonMean": 0.21218464861189323,
+          "cantonMedian": 0.21488167475220496,
+          "rank": 82,
+          "of": 106,
+          "betterThanPct": 23
+        },
+        {
+          "key": "quotaEccedenze",
+          "label": "Quota delle eccedenze di bilancio",
+          "en": "Accumulated surplus / total liabilities",
+          "unit": "ratio",
+          "value": null,
+          "display": "not published this year",
+          "rating": null,
+          "cantonMean": null,
+          "cantonMedian": null,
+          "rank": null,
+          "of": 0,
+          "betterThanPct": null
+        }
+      ],
+      "water": "not in comune accounts (separate company)"
+    },
+    {
+      "year": 2024,
+      "source": "https://www4.ti.ch/fileadmin/DI/DI_DI/SEL/Comuni/DatiFinanziari/StatisticaFinanziaria/2024-allegato.xlsx",
+      "units": {
+        "amounts": "CHF thousands",
+        "ratios": "fraction (0.26 = 26%)"
+      },
+      "caveats": [],
+      "valoriIndicativi": {
+        "Popolazione residente al 31.12.2024": 63629,
+        "Moltiplicatori politici (MP) 2025 › MP persone fisiche": 77,
+        "Moltiplicatori politici (MP) 2025 › MP persone giuridiche": 82,
+        "Moltiplicatori politici (MP) 2025 › MP comunale coordinato (1)": 78,
+        "Risorse fiscali procapite (fr.) 2022": 6788.245227519653,
+        "Indice di forza finanziaria 2025-26": 131.75
+      },
+      "contoEconomico": {
+        "Spese operative": 466927.6806000001,
+        "Ricavi operativi": 432637.403,
+        "Risultato operativo": -34290.27760000009,
+        "Spese finanziarie": 14863.67787,
+        "Ricavi finanziari": 47134.29643,
+        "Risultato finanziario": 32270.618560000003,
+        "RISULTATO ORDINARIO": -2019.659040000086,
+        "Spese straordinarie": 0,
+        "Ricavi straordinari": 0,
+        "Risultato straordinario": 0,
+        "RISULTATO TOTALE D'ESERCIZIO": -2019.659040000086
+      },
+      "investimentiEFinanziamento": {
+        "Conto degli investimenti › Uscite per investimenti": 79536.47245999999,
+        "Conto degli investimenti › Entrate per investimenti": 4053.0911,
+        "Conto degli investimenti › ONERE NETTO PER INVESTIMENTI": 75483.38135999998,
+        "Conto di finanziamento › Onere netto per investimenti": 75483.38135999998,
+        "Conto di finanziamento › Autofinanziamento": 19595.568589999915,
+        "Conto di finanziamento › RISULTATO GLOBALE": -55887.81277000007
+      },
+      "bilancio": {
+        "Attivo › Beni patrimoniali": 568571.27875,
+        "Attivo › Beni amministrativi": 841613.54582,
+        "Attivo › Totale attivi": 1410184.8245700002,
+        "Passivo › Capitale di terzi": 1224107.96707,
+        "Passivo › Capitale proprio": 186076.8575,
+        "Passivo › di cui eccedenza di bilancio": 185497.85439,
+        "Passivo › Totale passivi": 1410184.82457
+      },
+      "ricaviFiscali": {
+        "400 imposte dirette delle persone fisiche": 264815.9182,
+        "401 imposte dirette delle persone giuridiche": 75550.66525,
+        "402 altre imposte dirette": 13796.6367,
+        "403 imposte sul possesso e sulla spesa": 375.45
+      },
+      "ripartizioneFunzionale": {
+        "Spese": {
+          "0 Amministrazione generale": 45712.05004,
+          "1 Ordine pubblico, sicurezza, difesa": 45822.40002,
+          "2 Formazione": 53958.4715,
+          "3 Cultura, sport, tempo libero, chiesa": 53615.41458,
+          "4 Sanità": 60778.68982,
+          "5 Sicurezza sociale": 54001.55944,
+          "6 Trasporti e comunicazioni": 58994.7496,
+          "7 Ambiente e territorio": 29651.95513,
+          "8 Economia pubblica": 4545.85397,
+          "9 Finanze e imposte": 78050.45372
+        },
+        "Ricavi": {
+          "0 Amministrazione generale": 9055.093630000001,
+          "1 Ordine pubblico, sicurezza, difesa": 17827.19371,
+          "2 Formazione": 6662.79581,
+          "3 Cultura, sport, tempo libero, chiesa": 7521.44736,
+          "4 Sanità": 252.61704999999998,
+          "5 Sicurezza sociale": 2568.26453,
+          "6 Trasporti e comunicazioni": 25542.77145,
+          "7 Ambiente e territorio": 22924.010100000003,
+          "8 Economia pubblica": 2326.29344,
+          "9 Finanze e imposte": 388431.45038
+        },
+        "Spesa netta": {
+          "0 Amministrazione generale": 36656.95641,
+          "1 Ordine pubblico, sicurezza, difesa": 27995.20631,
+          "2 Formazione": 47295.675690000004,
+          "3 Cultura, sport, tempo libero, chiesa": 46093.96722,
+          "4 Sanità": 60526.07277,
+          "5 Sicurezza sociale": 51433.29491,
+          "6 Trasporti e comunicazioni": 33451.97815,
+          "7 Ambiente e territorio": 6727.945029999995,
+          "8 Economia pubblica": 2219.56053,
+          "9 Finanze e imposte": -310380.99666
+        }
+      },
+      "indicatori": [
+        {
+          "key": "risultatoPuntiMA",
+          "label": "Risultato in punti di moltiplicatore aritmetico",
+          "en": "Result in tax-multiplier points",
+          "unit": "points",
+          "value": -0.6051118524513877,
+          "display": "-0.61",
+          "rating": {
+            "label": "disavanzo",
+            "level": "bad"
+          },
+          "cantonMean": 2.6313232502311252,
+          "cantonMedian": 2.0853268049050344,
+          "rank": 73,
+          "of": 106,
+          "betterThanPct": 31
+        },
+        {
+          "key": "tassoIndebitamentoNetto",
+          "label": "Tasso di indebitamento netto I",
+          "en": "Net debt / tax revenue",
+          "unit": "ratio",
+          "value": 1.8489850149284204,
+          "display": "184.9%",
+          "rating": {
+            "label": "eccessivo",
+            "level": "bad"
+          },
+          "cantonMean": 1.5219652138845898,
+          "cantonMedian": 1.6432103507756075,
+          "rank": 63,
+          "of": 106,
+          "betterThanPct": 41
+        },
+        {
+          "key": "gradoAutofinanziamento",
+          "label": "Grado di autofinanziamento",
+          "en": "Self-financing ratio",
+          "unit": "ratio",
+          "value": 0.2596010967837215,
+          "display": "26.0%",
+          "rating": {
+            "label": "debole",
+            "level": "bad"
+          },
+          "cantonMean": 0.5608402646895322,
+          "cantonMedian": 0.6114714949933412,
+          "rank": 82,
+          "of": 101,
+          "betterThanPct": 19
+        },
+        {
+          "key": "quotaInteressi",
+          "label": "Quota delle spese per interessi",
+          "en": "Net interest / current revenue",
+          "unit": "ratio",
+          "value": 0.013407611844638479,
+          "display": "1.3%",
+          "rating": {
+            "label": "bassa",
+            "level": "good"
+          },
+          "cantonMean": 0.011851208611102212,
+          "cantonMedian": 0.013477152388256392,
+          "rank": 53,
+          "of": 106,
+          "betterThanPct": 50
+        },
+        {
+          "key": "debitoNettoProCapite",
+          "label": "Debito pubblico netto I pro capite",
+          "en": "Net public debt per resident",
+          "unit": "CHF",
+          "value": 10302.482960914047,
+          "display": "10'302",
+          "rating": {
+            "label": "molto elevato",
+            "level": "bad"
+          },
+          "cantonMean": 6003.792560106766,
+          "cantonMedian": 5292.128040064052,
+          "rank": 96,
+          "of": 106,
+          "betterThanPct": 10
+        },
+        {
+          "key": "debitoNetto",
+          "label": "Debito pubblico netto I",
+          "en": "Net public debt (canton definition)",
+          "unit": "CHF thousands",
+          "value": 655536.68832,
+          "display": "655'537",
+          "rating": null,
+          "cantonMean": 2154779.161199999,
+          "cantonMedian": null,
+          "rank": null,
+          "of": 106,
+          "betterThanPct": null
+        },
+        {
+          "key": "quotaInvestimenti",
+          "label": "Quota degli investimenti",
+          "en": "Investment share of spending",
+          "unit": "ratio",
+          "value": 0.14782489542768415,
+          "display": "14.8%",
+          "rating": {
+            "label": "media",
+            "level": "neutral"
+          },
+          "cantonMean": 0.1589155257996666,
+          "cantonMedian": 0.16019216858170438,
+          "rank": null,
+          "of": 106,
+          "betterThanPct": null
+        },
+        {
+          "key": "quotaCapitaleProprio",
+          "label": "Quota di capitale proprio",
+          "en": "Equity / total liabilities",
+          "unit": "ratio",
+          "value": 0.1319521060345685,
+          "display": "13.2%",
+          "rating": {
+            "label": "media",
+            "level": "warning"
+          },
+          "cantonMean": 0.20585532085080194,
+          "cantonMedian": 0.20679168377504348,
+          "rank": 81,
+          "of": 106,
+          "betterThanPct": 24
+        },
+        {
+          "key": "quotaEccedenze",
+          "label": "Quota delle eccedenze di bilancio",
+          "en": "Accumulated surplus / total liabilities",
+          "unit": "ratio",
+          "value": 0.13154151935124025,
+          "display": "13.2%",
+          "rating": {
+            "label": "media",
+            "level": "warning"
+          },
+          "cantonMean": 0.20187827259381902,
+          "cantonMedian": 0.19324789083226088,
+          "rank": 80,
+          "of": 106,
+          "betterThanPct": 25
+        }
+      ],
+      "water": "not in comune accounts (separate company)"
+    }
+  ]
+}

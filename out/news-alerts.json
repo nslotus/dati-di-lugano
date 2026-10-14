@@ -1,0 +1,172 @@
+[
+  {
+    "checkedAt": "2026-10-14T22:03:18.434Z",
+    "firstRun": true,
+    "newFinanceDocuments": [],
+    "pressAlerts": [],
+    "pressOther": [
+      {
+        "url": "https://www.lugano.ch/dam/jcr:b7d47130-a778-455e-a5d8-d7ee9a9c66a9/20261013-cs-entita-partecipate-citta-lugano.pdf",
+        "title": "Entità partecipate della Città di Lugano: il tema al vaglio dell’Esecutivo cittadino",
+        "date": "2026-10-13",
+        "category": "city_company",
+        "confidence": 0.99,
+        "pFinancial": 0.01,
+        "alert": false
+      },
+      {
+        "url": "https://www.lugano.ch/dam/jcr:eeba8e4a-d932-4c3f-af72-cc2a3dd98666/20261008-analisi-alloggi-lugano-comunicato.pdf",
+        "title": "Mercato immobiliare e occupazione abitativa: la nuova fotografia di Lugano",
+        "date": "2026-10-08",
+        "category": "not_financial",
+        "confidence": 0.87,
+        "pFinancial": 0.04,
+        "alert": false
+      },
+      {
+        "url": "https://www.lugano.ch/dam/jcr:94127970-87ba-4724-bae8-0f4b3f51689c/20261008-cs-candidatura-dominio-primo-livello-lugano.pdf",
+        "title": "Lugano costruisce il suo spazio digitale: presentata la candidatura per .lugano",
+        "date": "2026-10-08",
+        "category": "not_financial",
+        "confidence": 0.78,
+        "pFinancial": 0.03,
+        "alert": false
+      },
+      {
+        "url": "https://www.lugano.ch/dam/jcr:89fa4254-3225-4227-88ed-33d4b46caf74/20260925-cs-esercitazione-lugano-airport.pdf",
+        "title": "Lugano Airport testa sul campo le procedure di emergenza",
+        "date": "2026-09-25",
+        "category": "not_financial",
+        "confidence": 0.57,
+        "pFinancial": 0,
+        "alert": false
+      },
+      {
+        "url": "https://www.lugano.ch/dam/jcr:7eeb4613-de94-4b24-83ea-88018d18070f/20260922-cs-momento-scegliere.pdf",
+        "title": "È il tuo momento di scegliere: Lugano accompagna i giovani alla scoperta delle professioni",
+        "date": "2026-09-22",
+        "category": "not_financial",
+        "confidence": 0.95,
+        "pFinancial": 0,
+        "alert": false
+      },
+      {
+        "url": "https://www.lugano.ch/dam/jcr:11fcd830-2819-4fe8-adca-a7ede48110b1/09%2019%202026_Inaugurato%20il%20nuovo%20Centro%20sportivo%20al%20Maglio.pdf",
+        "title": "Inaugurato il nuovo Centro sportivo al Maglio",
+        "date": "2026-09-19",
+        "category": "not_financial",
+        "confidence": 0.54,
+        "pFinancial": 0.1,
+        "alert": false
+      },
+      {
+        "url": "https://www.lugano.ch/dam/jcr:8aaab2b7-a2fd-42b8-bdc8-0bdc2714d040/20260917-cs-rinnovo-concessione-lugano-airport.pdf",
+        "title": "Lugano Airport: rinnovata per 30 anni la concessione d’esercizio",
+        "date": "2026-09-17",
+        "category": "city_company",
+        "confidence": 0.99,
+        "pFinancial": 0.01,
+        "alert": false
+      },
+      {
+        "url": "https://www.lugano.ch/dam/jcr:9266df48-d566-4059-9203-464323d99958/20260915-cs-apertura-iscrizioni-corsi-operatori-culturali-sociali.pdf",
+        "title": "Spazio all‘intelligenza artificiale per i nuovi percorsi formativi gratuiti dedicati ad operatori culturali e sociali attivi a Lugano",
+        "date": "2026-09-15",
+        "category": "city_company",
+        "confidence": 0.37,
+        "pFinancial": 0.01,
+        "alert": false
+      },
+      {
+        "url": "https://www.lugano.ch/dam/jcr:757eca56-4b22-44a9-8c3e-786ee9d7bba6/20260910-rapporto-semestrale-lugano-airport-comunicato.pdf",
+        "title": "Primo semestre 2026 positivo per l'Aeroporto di Lugano",
+        "date": "2026-09-10",
+        "category": "city_company",
+        "confidence": 0.99,
+        "pFinancial": 0.01,
+        "alert": false
+      },
+      {
+        "url": "https://www.lugano.ch/dam/jcr:b114df78-9505-424a-a830-58e37b4ab727/20260909-ripartono-caffe-quartiere-comunicato.pdf",
+        "title": "Ripartono i Caffè-quartiere: spazi di incontro e partecipazione nei quartieri",
+        "date": "2026-09-09",
+        "category": "other_finance",
+        "confidence": 0.74,
+        "pFinancial": 0,
+        "alert": false
+      },
+      {
+        "url": "https://www.lugano.ch/dam/jcr:ce179116-1879-4145-a27f-ff13a90a7269/20260908-nuove-misure-mobilita-partite-calcio-hockey-cs.pdf",
+        "title": "Nuove misure per la mobilità in occasione delle partite di calcio e hockey",
+        "date": "2026-09-08",
+        "category": "other_finance",
+        "confidence": 0.71,
+        "pFinancial": 0,
+        "alert": false
+      },
+      {
+        "url": "https://www.lugano.ch/dam/jcr:3db42621-3bf3-44d5-a249-61a634be0018/20260907-pregassona-cantiere-torre-opera-artistica-giovani-comunicato.pdf",
+        "title": "Pregassona, il quartiere si racconta attraverso i colori dei giovani",
+        "date": "2026-09-07",
+        "category": "not_financial",
+        "confidence": 0.86,
+        "pFinancial": 0,
+        "alert": false
+      },
+      {
+        "url": "https://www.lugano.ch/dam/jcr:94a2c992-7392-453c-8d0b-18af918571b4/20260903-mercato-darsena-comunicato.pdf",
+        "title": "Mercato in Darsena: un progetto che cresce insieme alle sue microimprese",
+        "date": "2026-09-03",
+        "category": "not_financial",
+        "confidence": 0.67,
+        "pFinancial": 0.01,
+        "alert": false
+      },
+      {
+        "url": "https://www.lugano.ch/dam/jcr:0173ac9a-2b31-435e-8dc5-02ab80f939f3/20260902-laboratori-creativi-molino-nuovo-cassarate-comunicato.pdf",
+        "title": "Ricominciano gli incontri creativi a Molino Nuovo e a Cassarate",
+        "date": "2026-09-02",
+        "category": "not_financial",
+        "confidence": 0.99,
+        "pFinancial": 0,
+        "alert": false
+      },
+      {
+        "url": "https://www.lugano.ch/dam/jcr:ac2a7094-abba-4979-905b-e81931087a43/20260911-mostra-lugano-belle-epoque-comunicato.pdf",
+        "title": "Lugano Belle Époque continua a splendere",
+        "date": "2026-09-01",
+        "category": "not_financial",
+        "confidence": 0.99,
+        "pFinancial": 0,
+        "alert": false
+      },
+      {
+        "url": "https://www.lugano.ch/dam/jcr:3a340d7f-0d96-4d7a-8af3-f512b72d1c9e/20260831-inizio-anno-scolastico-2026-27-comunicato.pdf",
+        "title": "Lugano torna sui banchi: tutto è pronto per il suono della prima campanella",
+        "date": "2026-08-31",
+        "category": "not_financial",
+        "confidence": 0.91,
+        "pFinancial": 0.01,
+        "alert": false
+      },
+      {
+        "url": "https://www.lugano.ch/dam/jcr:24b8b6e2-bf5a-4712-9d46-1d10dc1cbed2/28%2008%202026_Comunicato%20stampa%20congiunto_defibrillatore-pubblico-presso-FightGymClub-Maglio_.pdf",
+        "title": "Posato un defibrillatore pubblico all’esterno della palestra Fight Gym Club, nell’area del Maglio",
+        "date": "2026-08-28",
+        "category": "not_financial",
+        "confidence": 0.85,
+        "pFinancial": 0.01,
+        "alert": false
+      },
+      {
+        "url": "https://www.lugano.ch/dam/jcr:02639ab0-a087-4e67-8551-6618c2fde26f/27%2008%202026_Comunicato%20stampa%20congiunto_The%20Sustainability%20Series.pdf",
+        "title": "Torna The Lugano Sustainability Series: insieme per una transizione ecologica, inclusiva e giusta",
+        "date": "2026-08-27",
+        "category": "not_financial",
+        "confidence": 0.97,
+        "pFinancial": 0,
+        "alert": false
+      }
+    ]
+  }
+]

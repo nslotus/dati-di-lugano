@@ -1,0 +1,27 @@
+{
+  "name": "luganocity",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "map": "tsx src/map.ts",
+    "typecheck": "tsc --noEmit",
+    "figures": "tsx src/figures.ts",
+    "debt": "tsx src/debt.ts",
+    "watch": "tsx src/watch.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@typesafe-ai/sdk": "^0.7.0",
+    "pdf-parse": "^1.1.1",
+    "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  },
+  "private": true
+}

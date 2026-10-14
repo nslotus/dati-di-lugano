@@ -1,0 +1,706 @@
+{
+  "generatedAt": "2026-10-14T22:16:51.409Z",
+  "minConfidence": 0.8,
+  "results": [
+    {
+      "kind": "consuntivo",
+      "year": 2024,
+      "source": "https://www.lugano.ch/dam/jcr:66e7b5df-519e-4fcb-83aa-a9db062b7081/20250404-cs-consuntivo-2024-presentazione.pdf",
+      "model": "jev-1.14.0",
+      "candidates": 157,
+      "usage": {
+        "input_tokens": 40046,
+        "output_tokens": 19371
+      },
+      "figures": {
+        "risultatoTotaleEsercizio": {
+          "valueCHF": -2019659.04,
+          "raw": "-2’019’659.04",
+          "unit": "CHF",
+          "line": "-2’019’659.04",
+          "candidate": "c22",
+          "valueProbability": 0.97,
+          "occurrences": 4,
+          "runnerUp": {
+            "valueCHF": null,
+            "mass": 0.02
+          },
+          "rawChoice": {
+            "id": "c22",
+            "confidence": 0.8
+          },
+          "status": "accepted",
+          "check": {
+            "annexCHF": -2019659.040000086,
+            "match": true
+          }
+        },
+        "risultatoGlobale": {
+          "valueCHF": -55887812.77,
+          "raw": "-55’887’812.77",
+          "unit": "CHF",
+          "line": "-55’887’812.77",
+          "candidate": "c40",
+          "valueProbability": 0.99,
+          "occurrences": 2,
+          "runnerUp": {
+            "valueCHF": null,
+            "mass": 0.01
+          },
+          "rawChoice": {
+            "id": "c40",
+            "confidence": 0.95
+          },
+          "status": "accepted",
+          "check": {
+            "annexCHF": -55887812.77000007,
+            "match": true
+          }
+        },
+        "autofinanziamento": {
+          "valueCHF": 19595568.59,
+          "raw": "19’595’568.59",
+          "unit": "CHF",
+          "line": "19’595’568.59",
+          "candidate": "c37",
+          "valueProbability": 0.97,
+          "occurrences": 2,
+          "runnerUp": {
+            "valueCHF": null,
+            "mass": 0.02
+          },
+          "rawChoice": {
+            "id": "c37",
+            "confidence": 0.93
+          },
+          "status": "accepted",
+          "check": {
+            "annexCHF": 19595568.589999914,
+            "match": true
+          }
+        },
+        "usciteInvestimenti": {
+          "valueCHF": 79536472.46,
+          "raw": "79’536’472.46",
+          "unit": "CHF",
+          "line": "79’536’472.46",
+          "candidate": "c25",
+          "valueProbability": 0.98,
+          "occurrences": 3,
+          "runnerUp": {
+            "valueCHF": null,
+            "mass": 0.01
+          },
+          "rawChoice": {
+            "id": "c25",
+            "confidence": 0.94
+          },
+          "status": "accepted",
+          "check": {
+            "annexCHF": 79536472.46,
+            "match": true
+          }
+        },
+        "onereNettoInvestimenti": {
+          "valueCHF": 75483381.36,
+          "raw": "75’483’381.36",
+          "unit": "CHF",
+          "line": "75’483’381.36",
+          "candidate": "c31",
+          "valueProbability": 0.79,
+          "occurrences": 4,
+          "runnerUp": {
+            "valueCHF": null,
+            "mass": 0.09
+          },
+          "rawChoice": {
+            "id": "c31",
+            "confidence": 0.63
+          },
+          "status": "review",
+          "check": {
+            "annexCHF": 75483381.35999998,
+            "match": true
+          }
+        },
+        "debitoLordoFineAnno": {
+          "valueCHF": null,
+          "raw": null,
+          "unit": null,
+          "line": null,
+          "candidate": "none",
+          "valueProbability": 0.94,
+          "occurrences": 0,
+          "runnerUp": {
+            "valueCHF": 1050500000,
+            "mass": 0.02
+          },
+          "rawChoice": {
+            "id": "none",
+            "confidence": 0.94
+          },
+          "status": "none"
+        },
+        "liquiditaFineAnno": {
+          "valueCHF": 120000000,
+          "raw": "120’000’000.00",
+          "unit": "CHF",
+          "line": "120’000’000.00",
+          "candidate": "c151",
+          "valueProbability": 0.5,
+          "occurrences": 5,
+          "runnerUp": {
+            "valueCHF": null,
+            "mass": 0.38
+          },
+          "rawChoice": {
+            "id": "none",
+            "confidence": 0.38
+          },
+          "status": "review"
+        },
+        "debitoNettoFineAnno": {
+          "valueCHF": null,
+          "raw": null,
+          "unit": null,
+          "line": null,
+          "candidate": "none",
+          "valueProbability": 0.5,
+          "occurrences": 0,
+          "runnerUp": {
+            "valueCHF": 1050500000,
+            "mass": 0.1
+          },
+          "rawChoice": {
+            "id": "none",
+            "confidence": 0.5
+          },
+          "status": "review"
+        },
+        "debitoLordoAnnoPrecedente": {
+          "valueCHF": null,
+          "raw": null,
+          "unit": null,
+          "line": null,
+          "candidate": "none",
+          "valueProbability": 0.68,
+          "occurrences": 0,
+          "runnerUp": {
+            "valueCHF": 930800000,
+            "mass": 0.11
+          },
+          "rawChoice": {
+            "id": "none",
+            "confidence": 0.68
+          },
+          "status": "review"
+        },
+        "liquiditaAnnoPrecedente": {
+          "valueCHF": null,
+          "raw": null,
+          "unit": null,
+          "line": null,
+          "candidate": "none",
+          "valueProbability": 0.74,
+          "occurrences": 0,
+          "runnerUp": {
+            "valueCHF": 12600000,
+            "mass": 0.08
+          },
+          "rawChoice": {
+            "id": "none",
+            "confidence": 0.74
+          },
+          "status": "review"
+        },
+        "debitoNettoAnnoPrecedente": {
+          "valueCHF": null,
+          "raw": null,
+          "unit": null,
+          "line": null,
+          "candidate": "none",
+          "valueProbability": 0.64,
+          "occurrences": 0,
+          "runnerUp": {
+            "valueCHF": 930800000,
+            "mass": 0.06
+          },
+          "rawChoice": {
+            "id": "none",
+            "confidence": 0.64
+          },
+          "status": "review"
+        },
+        "debitoLordoTrimestreSuccessivo": {
+          "valueCHF": null,
+          "raw": null,
+          "unit": null,
+          "line": null,
+          "candidate": "none",
+          "valueProbability": 0.92,
+          "occurrences": 0,
+          "runnerUp": {
+            "valueCHF": 1050500000,
+            "mass": 0.02
+          },
+          "rawChoice": {
+            "id": "none",
+            "confidence": 0.92
+          },
+          "status": "none"
+        },
+        "debitoNettoTrimestreSuccessivo": {
+          "valueCHF": null,
+          "raw": null,
+          "unit": null,
+          "line": null,
+          "candidate": "none",
+          "valueProbability": 0.96,
+          "occurrences": 0,
+          "runnerUp": {
+            "valueCHF": 4300000,
+            "mass": 0.01
+          },
+          "rawChoice": {
+            "id": "none",
+            "confidence": 0.96
+          },
+          "status": "none"
+        }
+      },
+      "years": {},
+      "consistency": {
+        "expectedCHF": -55887812.769999996,
+        "reportedCHF": -55887812.77,
+        "ok": true
+      }
+    },
+    {
+      "kind": "consuntivo",
+      "year": 2025,
+      "source": "https://www.lugano.ch/dam/jcr:8e5c3ada-87b4-4397-a3c7-e55dd4a9199a/20260423-consuntivo-2025-presentazione.pdf",
+      "model": "jev-1.14.0",
+      "candidates": 123,
+      "usage": {
+        "input_tokens": 35190,
+        "output_tokens": 14966
+      },
+      "figures": {
+        "risultatoTotaleEsercizio": {
+          "valueCHF": 23734916.92,
+          "raw": "23’734’916.92",
+          "unit": "CHF",
+          "line": "Risultato totale d'esercizio23’734’916.92-23’992’933.0047’727’849.92-198.92%",
+          "candidate": "c47",
+          "valueProbability": 0.75,
+          "occurrences": 4,
+          "runnerUp": {
+            "valueCHF": null,
+            "mass": 0.2
+          },
+          "rawChoice": {
+            "id": "c47",
+            "confidence": 0.73
+          },
+          "status": "review"
+        },
+        "risultatoGlobale": {
+          "valueCHF": -28074598.59,
+          "raw": "-28’074’598.59",
+          "unit": "CHF",
+          "line": "Risultato globale-28’074’598.59-82’896’253.0054’821’654.41-66.13%",
+          "candidate": "c66",
+          "valueProbability": 0.91,
+          "occurrences": 2,
+          "runnerUp": {
+            "valueCHF": null,
+            "mass": 0.08
+          },
+          "rawChoice": {
+            "id": "c66",
+            "confidence": 0.71
+          },
+          "status": "accepted"
+        },
+        "autofinanziamento": {
+          "valueCHF": 46024508.33,
+          "raw": "46’024’508.33",
+          "unit": "CHF",
+          "line": "Autofinanziamento46’024’508.3335’747.0045’988’761.33128’650.69%",
+          "candidate": "c62",
+          "valueProbability": 0.88,
+          "occurrences": 2,
+          "runnerUp": {
+            "valueCHF": null,
+            "mass": 0.12
+          },
+          "rawChoice": {
+            "id": "c62",
+            "confidence": 0.86
+          },
+          "status": "accepted"
+        },
+        "usciteInvestimenti": {
+          "valueCHF": 82747789.47,
+          "raw": "82’747’789.47",
+          "unit": "CHF",
+          "line": "- Uscite per investimenti82’747’789.47112’699’000.00-29’951’210.53-26.58%",
+          "candidate": "c50",
+          "valueProbability": 0.95,
+          "occurrences": 3,
+          "runnerUp": {
+            "valueCHF": null,
+            "mass": 0.04
+          },
+          "rawChoice": {
+            "id": "c2",
+            "confidence": 0.54
+          },
+          "status": "accepted"
+        },
+        "onereNettoInvestimenti": {
+          "valueCHF": 74099106.92,
+          "raw": "74’099’106.92",
+          "unit": "CHF",
+          "line": "Onere netto per investimenti74’099’106.9282’932’000.00-8’832’893.08-10.65%",
+          "candidate": "c56",
+          "valueProbability": 0.71,
+          "occurrences": 4,
+          "runnerUp": {
+            "valueCHF": null,
+            "mass": 0.23
+          },
+          "rawChoice": {
+            "id": "c56",
+            "confidence": 0.3
+          },
+          "status": "review"
+        },
+        "debitoLordoFineAnno": {
+          "valueCHF": 1049900000,
+          "raw": "1’049.9",
+          "unit": "CHF million",
+          "line": "CHF1’049.9 Mio",
+          "candidate": "c14",
+          "valueProbability": 0.69,
+          "occurrences": 1,
+          "runnerUp": {
+            "valueCHF": null,
+            "mass": 0.23
+          },
+          "rawChoice": {
+            "id": "c14",
+            "confidence": 0.69
+          },
+          "status": "review"
+        },
+        "liquiditaFineAnno": {
+          "valueCHF": 141000000,
+          "raw": "141.0",
+          "unit": "CHF million",
+          "line": "CHF 141.0 Mio",
+          "candidate": "c15",
+          "valueProbability": 0.72,
+          "occurrences": 1,
+          "runnerUp": {
+            "valueCHF": null,
+            "mass": 0.15
+          },
+          "rawChoice": {
+            "id": "c15",
+            "confidence": 0.72
+          },
+          "status": "review"
+        },
+        "debitoNettoFineAnno": {
+          "valueCHF": 908900000,
+          "raw": "908.9",
+          "unit": "CHF million",
+          "line": "908.9 Mio",
+          "candidate": "c16",
+          "valueProbability": 0.85,
+          "occurrences": 1,
+          "runnerUp": {
+            "valueCHF": 888800000,
+            "mass": 0.06
+          },
+          "rawChoice": {
+            "id": "c16",
+            "confidence": 0.85
+          },
+          "status": "accepted"
+        },
+        "debitoLordoAnnoPrecedente": {
+          "valueCHF": 1090600000,
+          "raw": "1’090.6",
+          "unit": "CHF million",
+          "line": "Breve/lungo ter. CHF 1’090.6 Mio",
+          "candidate": "c20",
+          "valueProbability": 0.95,
+          "occurrences": 1,
+          "runnerUp": {
+            "valueCHF": null,
+            "mass": 0.05
+          },
+          "rawChoice": {
+            "id": "c20",
+            "confidence": 0.95
+          },
+          "status": "accepted"
+        },
+        "liquiditaAnnoPrecedente": {
+          "valueCHF": 201800000,
+          "raw": "201.8",
+          "unit": "CHF million",
+          "line": "Cassa/depositi CHF 201.8",
+          "candidate": "c21",
+          "valueProbability": 0.94,
+          "occurrences": 1,
+          "runnerUp": {
+            "valueCHF": null,
+            "mass": 0.05
+          },
+          "rawChoice": {
+            "id": "c21",
+            "confidence": 0.94
+          },
+          "status": "accepted"
+        },
+        "debitoNettoAnnoPrecedente": {
+          "valueCHF": 888800000,
+          "raw": "888.8",
+          "unit": "CHF million",
+          "line": "Netto CHF 888.8 Mio",
+          "candidate": "c22",
+          "valueProbability": 0.92,
+          "occurrences": 1,
+          "runnerUp": {
+            "valueCHF": null,
+            "mass": 0.07
+          },
+          "rawChoice": {
+            "id": "c22",
+            "confidence": 0.92
+          },
+          "status": "accepted"
+        },
+        "debitoLordoTrimestreSuccessivo": {
+          "valueCHF": 1123400000,
+          "raw": "1’123.4",
+          "unit": "CHF million",
+          "line": "Breve/lungo ter. CHF 1’123.4 Mio",
+          "candidate": "c23",
+          "valueProbability": 0.99,
+          "occurrences": 1,
+          "runnerUp": {
+            "valueCHF": null,
+            "mass": 0.01
+          },
+          "rawChoice": {
+            "id": "c23",
+            "confidence": 0.99
+          },
+          "status": "accepted"
+        },
+        "debitoNettoTrimestreSuccessivo": {
+          "valueCHF": 1033900000,
+          "raw": "1’033.9",
+          "unit": "CHF million",
+          "line": "Netto CHF 1’033.9 Mio",
+          "candidate": "c25",
+          "valueProbability": 0.98,
+          "occurrences": 1,
+          "runnerUp": {
+            "valueCHF": null,
+            "mass": 0.02
+          },
+          "rawChoice": {
+            "id": "c25",
+            "confidence": 0.98
+          },
+          "status": "accepted"
+        }
+      },
+      "years": {},
+      "consistency": {
+        "expectedCHF": -28074598.590000004,
+        "reportedCHF": -28074598.59,
+        "ok": true
+      }
+    },
+    {
+      "kind": "preventivo",
+      "year": 2026,
+      "source": "https://www.lugano.ch/dam/jcr:0a793cce-fba0-4c83-b596-e65560732832/20251023-cs-preventivo-2026-piano-finanziario-2026-2033.pdf",
+      "model": "jev-1.14.0",
+      "candidates": 31,
+      "usage": {
+        "input_tokens": 10471,
+        "output_tokens": 2580
+      },
+      "figures": {
+        "risultatoEsercizio": {
+          "valueCHF": -4200000,
+          "raw": "4.2",
+          "unit": "CHF million",
+          "line": "Il preventivo evidenzia un disavanzo d’esercizio di 4.2 milioni di franchi, in diminuzione rispetto",
+          "candidate": "c1",
+          "valueProbability": 0.99,
+          "occurrences": 2,
+          "runnerUp": {
+            "valueCHF": null,
+            "mass": 0.01
+          },
+          "rawChoice": {
+            "id": "c1",
+            "confidence": 0.64
+          },
+          "status": "accepted"
+        },
+        "investimentiNetti": {
+          "valueCHF": 263500000,
+          "raw": "263.5",
+          "unit": "CHF million",
+          "line": "• Investimenti netti: CHF 263.5 milioni (in larga parte legati all’acquisto di Arena e",
+          "candidate": "c18",
+          "valueProbability": 0.99,
+          "occurrences": 2,
+          "runnerUp": {
+            "valueCHF": null,
+            "mass": 0.01
+          },
+          "rawChoice": {
+            "id": "c18",
+            "confidence": 0.63
+          },
+          "status": "accepted"
+        },
+        "autofinanziamento": {
+          "valueCHF": 21600000,
+          "raw": "21.6",
+          "unit": "CHF million",
+          "line": "• Autofinanziamento: CHF 21.6 milioni (contro CHF 0.0 milioni nel preventivo 2025);",
+          "candidate": "c19",
+          "valueProbability": 0.99,
+          "occurrences": 1,
+          "runnerUp": {
+            "valueCHF": null,
+            "mass": 0.01
+          },
+          "rawChoice": {
+            "id": "c19",
+            "confidence": 0.99
+          },
+          "status": "accepted"
+        },
+        "risultatoGlobale": {
+          "valueCHF": -240800000,
+          "raw": "-240.8",
+          "unit": "CHF million",
+          "line": "• Risultato globale: CHF -240.8 milioni (CHF -157.9 milioni, impattato dallo",
+          "candidate": "c21",
+          "valueProbability": 0.96,
+          "occurrences": 2,
+          "runnerUp": {
+            "valueCHF": null,
+            "mass": 0.03
+          },
+          "rawChoice": {
+            "id": "c21",
+            "confidence": 0.94
+          },
+          "status": "accepted"
+        },
+        "disinvestimentiPiano": {
+          "valueCHF": 306100000,
+          "raw": "306.1",
+          "unit": "CHF million",
+          "line": "compensati da entrate per CHF 306.1 milioni derivanti da “rivalorizzazioni” aventi per oggetto",
+          "candidate": "c25",
+          "valueProbability": 0.95,
+          "occurrences": 2,
+          "runnerUp": {
+            "valueCHF": null,
+            "mass": 0.05
+          },
+          "rawChoice": {
+            "id": "c25",
+            "confidence": 0.75
+          },
+          "status": "accepted"
+        },
+        "debitoDopoInvestimenti": {
+          "valueCHF": 1233200000,
+          "raw": "1'233.2",
+          "unit": "CHF million",
+          "line": "Il debito finanziario della Città di Lugano, dopo aver raggiunto il valore di CHF 1'233.2 milioni,",
+          "candidate": "c29",
+          "valueProbability": 0.66,
+          "occurrences": 1,
+          "runnerUp": {
+            "valueCHF": null,
+            "mass": 0.26
+          },
+          "rawChoice": {
+            "id": "c29",
+            "confidence": 0.65
+          },
+          "status": "review"
+        },
+        "debitoPiccoPiano": {
+          "valueCHF": 1356300000,
+          "raw": "1'356.3",
+          "unit": "CHF million",
+          "line": "in conseguenza degli investimenti 2026, raggiungerà un valore massimo di CHF 1'356.3 milioni",
+          "candidate": "c30",
+          "valueProbability": 0.97,
+          "occurrences": 2,
+          "runnerUp": {
+            "valueCHF": null,
+            "mass": 0.03
+          },
+          "rawChoice": {
+            "id": "c30",
+            "confidence": 0.91
+          },
+          "status": "accepted"
+        },
+        "debitoFinePiano": {
+          "valueCHF": 1152700000,
+          "raw": "1'152.7",
+          "unit": "CHF million",
+          "line": "nel    2030     per    poi    calare  progressivamente  fino    a  CHF     1'152.7  milioni  nel    2033     grazie  alla",
+          "candidate": "c31",
+          "valueProbability": 0.98,
+          "occurrences": 2,
+          "runnerUp": {
+            "valueCHF": null,
+            "mass": 0.02
+          },
+          "rawChoice": {
+            "id": "c31",
+            "confidence": 0.9
+          },
+          "status": "accepted"
+        }
+      },
+      "years": {
+        "annoPiccoDebito": {
+          "year": 2030,
+          "confidence": 1,
+          "status": "accepted"
+        },
+        "annoFinePiano": {
+          "year": 2033,
+          "confidence": 1,
+          "status": "accepted"
+        }
+      },
+      "consistency": {
+        "expectedCHF": -241900000,
+        "reportedCHF": -240800000,
+        "ok": true
+      }
+    }
+  ]
+}

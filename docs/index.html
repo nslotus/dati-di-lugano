@@ -1,0 +1,591 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dati di Lugano</title>
+<meta name="description" content="Independent dashboard of the City of Lugano's public finances: debt, the city's financial plan, bonds and the canton's indicators.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=IBM+Plex+Mono:wght@400;500&family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap">
+<style>
+:root {
+  color-scheme: light;
+  --bg: #f6f8f8;
+  --panel: #ffffff;
+  --ink: #14232a;
+  --ink-2: #44565d;
+  --ink-3: #6b7c82;
+  --rule: #d5dfe1;
+  --rule-soft: #e6eded;
+  --accent: #006a80;
+  --accent-soft: #e0eff2;
+  --series-1: #00809a;
+  --series-2: #b56f12;
+  --grid: #e3eaeb;
+  --good: #0ca30c;
+  --warning: #fab219;
+  --critical: #d03b3b;
+  --neutral-chip: #e8eeef;
+  --chip-ink: #14232a;
+  --tooltip-bg: #14232a;
+  --tooltip-ink: #f6f8f8;
+  --focus: #006a80;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --bg: #0e171a;
+    --panel: #142126;
+    --ink: #e9f1f2;
+    --ink-2: #b4c4c8;
+    --ink-3: #8a9ca1;
+    --rule: #2a3c42;
+    --rule-soft: #1e2e33;
+    --accent: #5fc0cf;
+    --accent-soft: #173238;
+    --series-1: #0e97ab;
+    --series-2: #c8822a;
+    --grid: #22343a;
+    --neutral-chip: #23353b;
+    --chip-ink: #e9f1f2;
+    --tooltip-bg: #e9f1f2;
+    --tooltip-ink: #0e171a;
+    --focus: #5fc0cf;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #0e171a;
+  --panel: #142126;
+  --ink: #e9f1f2;
+  --ink-2: #b4c4c8;
+  --ink-3: #8a9ca1;
+  --rule: #2a3c42;
+  --rule-soft: #1e2e33;
+  --accent: #5fc0cf;
+  --accent-soft: #173238;
+  --series-1: #0e97ab;
+  --series-2: #c8822a;
+  --grid: #22343a;
+  --neutral-chip: #23353b;
+  --chip-ink: #e9f1f2;
+  --tooltip-bg: #e9f1f2;
+  --tooltip-ink: #0e171a;
+  --focus: #5fc0cf;
+}
+
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 400 16px/1.55 "Public Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
+  padding-inline: clamp(16px, 4vw, 48px);
+}
+.wrap { max-width: 1120px; margin-inline: auto; padding-block: 40px 64px; display: grid; gap: 56px; }
+h1, h2, h3, .figure-value { font-family: "Archivo", "Arial Narrow", "Helvetica Neue", Arial, sans-serif; text-wrap: balance; }
+h1 { font-size: clamp(2.6rem, 7vw, 4.4rem); font-stretch: 72%; font-weight: 800; line-height: 0.95; letter-spacing: -0.01em; margin: 0; }
+h2 { font-size: clamp(1.5rem, 3vw, 1.9rem); font-stretch: 80%; font-weight: 700; line-height: 1.1; margin: 0; }
+h3 { font-size: 1.05rem; font-stretch: 90%; font-weight: 700; margin: 0; }
+p { margin: 0; }
+a { color: var(--accent); text-underline-offset: 2px; }
+a:focus-visible, button:focus-visible, [tabindex]:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; border-radius: 2px; }
+.mono { font-family: "IBM Plex Mono", ui-monospace, Consolas, monospace; font-size: 0.86em; }
+.num { font-variant-numeric: tabular-nums; }
+.eyebrow { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3); }
+.lede { font-size: 1.1rem; color: var(--ink-2); max-width: 62ch; }
+.small { font-size: 0.85rem; color: var(--ink-3); }
+.prose { max-width: 66ch; color: var(--ink-2); display: grid; gap: 10px; }
+
+/* masthead */
+.masthead { display: grid; gap: 18px; padding-bottom: 28px; border-bottom: 2px solid var(--ink); }
+.masthead .top { display: flex; flex-wrap: wrap; gap: 8px 20px; justify-content: space-between; align-items: baseline; }
+.masthead .meta { display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 0.85rem; color: var(--ink-3); }
+.independent { display: inline-flex; max-width: 100%; align-items: center; gap: 8px; font-size: 0.82rem; color: var(--ink-2); border: 1px solid var(--rule); border-radius: 999px; padding: 3px 12px; background: var(--panel); }
+
+/* key figures */
+.figures { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(170px, 100%), 1fr)); gap: 1px; background: var(--panel); box-shadow: inset 0 0 0 1px var(--rule); border: 1px solid var(--rule); }
+.figure { background: var(--panel); outline: 1px solid var(--rule); padding: 18px 18px 16px; display: grid; gap: 6px; align-content: start; }
+.figure-label { font-size: 0.8rem; font-weight: 600; color: var(--ink-2); }
+.figure-value { font-size: 2.1rem; font-stretch: 75%; font-weight: 700; line-height: 1; font-variant-numeric: tabular-nums; }
+.figure-value .unit { font-family: "Public Sans", system-ui, sans-serif; font-size: 0.9rem; font-weight: 500; color: var(--ink-3); margin-right: 4px; }
+.figure-note { font-size: 0.82rem; color: var(--ink-3); }
+
+/* sections */
+section { display: grid; gap: 20px; }
+.section-head { display: grid; gap: 8px; }
+.split { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 300px); gap: 32px; align-items: start; }
+@media (max-width: 820px) { .split { grid-template-columns: 1fr; } }
+
+/* chart */
+.chart-card { background: var(--panel); border: 1px solid var(--rule); padding: 16px 16px 12px; display: grid; gap: 12px; position: relative; }
+.legend { display: flex; flex-wrap: wrap; gap: 8px 20px; font-size: 0.85rem; color: var(--ink-2); }
+.legend span { display: inline-flex; align-items: center; gap: 8px; }
+.key-line { width: 22px; height: 0; border-top: 2px solid var(--series-1); }
+.key-line.dashed { border-top-style: dashed; }
+.key-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--series-1); }
+.key-ring { width: 10px; height: 10px; border-radius: 50%; border: 2px solid var(--series-2); background: var(--panel); }
+.key-bar { width: 12px; height: 12px; border-radius: 2px; background: var(--series-1); }
+.key-bar.private { background: var(--series-2); }
+.chart { width: 100%; min-height: 200px; }
+.chart svg { display: block; width: 100%; height: auto; overflow: visible; }
+.chart text { font-family: "Public Sans", system-ui, sans-serif; fill: var(--ink-3); font-size: 12px; }
+.chart .value-label { fill: var(--ink); font-weight: 600; font-variant-numeric: tabular-nums; }
+.chart .tick-label { font-variant-numeric: tabular-nums; }
+.tooltip { position: absolute; pointer-events: none; background: var(--tooltip-bg); color: var(--tooltip-ink); font-size: 0.82rem; line-height: 1.4; padding: 8px 10px; border-radius: 4px; max-width: 240px; z-index: 2; }
+.tooltip strong { display: block; font-variant-numeric: tabular-nums; }
+.view-toggle { justify-self: start; font: inherit; font-size: 0.85rem; color: var(--accent); background: none; border: 1px solid var(--rule); border-radius: 4px; padding: 4px 10px; cursor: pointer; }
+.view-toggle:hover { background: var(--accent-soft); }
+
+/* side notes */
+.aside { display: grid; gap: 14px; border-left: 2px solid var(--rule); padding-left: 18px; }
+.aside dl { margin: 0; display: grid; gap: 12px; }
+.aside dt { font-size: 0.8rem; color: var(--ink-3); }
+.aside dd { margin: 0; font-weight: 600; font-variant-numeric: tabular-nums; }
+.aside dd .small { font-weight: 400; display: block; }
+
+/* tables */
+.table-scroll { overflow-x: auto; border: 1px solid var(--rule); background: var(--panel); }
+table { border-collapse: collapse; width: 100%; font-size: 0.9rem; }
+th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--rule-soft); vertical-align: top; }
+thead th { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-3); border-bottom: 1px solid var(--rule); white-space: nowrap; }
+tbody tr:last-child td { border-bottom: 0; }
+td.r, th.r { text-align: right; font-variant-numeric: tabular-nums; }
+td .sub { display: block; font-size: 0.8rem; color: var(--ink-3); }
+
+/* chips */
+.chip { display: inline-flex; align-items: center; gap: 6px; font-size: 0.8rem; font-weight: 600; padding: 2px 9px 2px 7px; border-radius: 999px; background: var(--neutral-chip); color: var(--chip-ink); white-space: nowrap; }
+.chip i { font-style: normal; width: 14px; height: 14px; border-radius: 50%; display: inline-grid; place-items: center; font-size: 10px; line-height: 1; color: #fff; background: var(--ink-3); }
+.chip.good i { background: var(--good); }
+.chip.warning i { background: var(--warning); color: #14232a; }
+.chip.bad i { background: var(--critical); }
+.tag { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ink-3); border: 1px solid var(--rule); border-radius: 3px; padding: 1px 6px; white-space: nowrap; }
+.tag.private { color: var(--series-2); border-color: currentColor; }
+.estimate { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: var(--series-2); }
+
+/* budget list */
+.ledger { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr)); gap: 0 32px; }
+.ledger-row { display: grid; grid-template-columns: 1fr auto; gap: 12px; padding-block: 12px; border-bottom: 1px solid var(--rule); align-items: baseline; }
+.ledger-row .what { font-size: 0.92rem; }
+.ledger-row .what .sub { display: block; font-size: 0.8rem; color: var(--ink-3); }
+.ledger-row .amt { font-family: "Archivo", "Arial Narrow", Arial, sans-serif; font-stretch: 80%; font-weight: 700; font-size: 1.2rem; font-variant-numeric: tabular-nums; white-space: nowrap; }
+
+/* notes */
+.notes { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr)); gap: 28px; }
+.notes ul, .notes ol { margin: 0; padding-left: 18px; display: grid; gap: 8px; color: var(--ink-2); font-size: 0.9rem; }
+.callout { background: var(--accent-soft); border-left: 3px solid var(--series-2); padding: 12px 14px; font-size: 0.9rem; color: var(--ink-2); max-width: 70ch; }
+footer { border-top: 2px solid var(--ink); padding-top: 18px; display: grid; gap: 8px; font-size: 0.85rem; color: var(--ink-3); }
+
+@media (prefers-reduced-motion: no-preference) {
+  .chart .draw { transition: opacity 0.2s ease; }
+}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <header class="masthead">
+    <div class="top">
+      <span class="eyebrow">Città di Lugano · public finances</span>
+      <span class="independent">Independent dashboard · not affiliated with the City of Lugano</span>
+    </div>
+    <h1>Dati di Lugano</h1>
+    <p class="lede">Where Lugano's debt stands, where the city's own plan takes it, and how it is financed. Every figure comes from a public document of the City of Lugano, the Canton of Ticino, or the public listing of the city's bonds.</p>
+    <div class="meta">
+      <span>Figures up to Q1 2026 · plan to 2033</span>
+      <span>Bond register as of 15 October 2026</span>
+      <span>Amounts in CHF millions unless stated</span>
+    </div>
+  </header>
+
+  <div class="figures" aria-label="Key figures">
+    <div class="figure">
+      <span class="figure-label">Gross financial debt, Q1 2026</span>
+      <span class="figure-value"><span class="unit">CHF</span>1’123.4<span class="unit">M</span></span>
+      <span class="figure-note">+73.5M since end of 2025 (1’049.9M)</span>
+    </div>
+    <div class="figure">
+      <span class="figure-label">Net debt, Q1 2026</span>
+      <span class="figure-value"><span class="unit">CHF</span>1’033.9<span class="unit">M</span></span>
+      <span class="figure-note">Gross debt minus cash and deposits</span>
+    </div>
+    <div class="figure">
+      <span class="figure-label">Operating result 2025</span>
+      <span class="figure-value">+23.7<span class="unit">M</span></span>
+      <span class="figure-note">Budgeted: −24.0M</span>
+    </div>
+    <div class="figure">
+      <span class="figure-label">Net debt per resident, 2024</span>
+      <span class="figure-value"><span class="unit">CHF</span>10’302</span>
+      <span class="figure-note"><span class="chip bad"><i aria-hidden="true">✕</i>Very high</span> 96th of 106 comuni</span>
+    </div>
+    <div class="figure">
+      <span class="figure-label">Credit rating (Moody's)</span>
+      <span class="figure-value">Aa3</span>
+      <span class="figure-note">Stable outlook, confirmed October 2025, as announced by the City</span>
+    </div>
+  </div>
+
+  <section aria-labelledby="debt-path">
+    <div class="section-head">
+      <span class="eyebrow">Debt path</span>
+      <h2 id="debt-path">Debt rises through 2030 before the plan brings it down</h2>
+      <p class="prose">Buying the Arena Sportiva and the Palazzetto dello Sport makes 2026 the main borrowing year. The city's financial plan expects debt to peak at 1’356.3M in 2030, then fall to 1’152.7M by 2033 through asset sales and a budget correction. Even at the end of the plan, debt stays above its 2025 level.</p>
+    </div>
+    <div class="split">
+      <div class="chart-card">
+        <div class="legend" aria-hidden="true">
+          <span><span class="key-dot"></span>Actual</span>
+          <span><span class="key-line dashed"></span>City plan</span>
+          <span><span class="key-ring"></span>Estimate from 2026 budget</span>
+        </div>
+        <div class="chart" id="debt-chart" role="group" aria-label="Gross financial debt of the City of Lugano: 1090.6 million at end of 2024, 1049.9 million at end of 2025, 1123.4 million in Q1 2026; city plan 1233.2 million at end of 2026, peak 1356.3 million in 2030, 1152.7 million in 2033."></div>
+        <div class="tooltip" id="debt-tip" hidden></div>
+        <button class="view-toggle" id="debt-toggle" type="button" aria-expanded="false" aria-controls="debt-table">Show as table</button>
+        <div class="table-scroll" id="debt-table" hidden>
+          <table>
+            <thead><tr><th>Point</th><th>Type</th><th class="r">Gross debt</th><th>Source</th></tr></thead>
+            <tbody id="debt-rows"></tbody>
+          </table>
+        </div>
+        <p class="small">The City gives plan figures only for the years shown. Lines between them are straight connections, not yearly values.</p>
+      </div>
+      <aside class="aside" aria-label="How much of the debt is bonds">
+        <h3>How much of the debt is bonds</h3>
+        <dl>
+          <div><dt>End of 2024</dt><dd>89% <span class="small">970M bonds of 1’090.6M gross</span></dd></div>
+          <div><dt>End of 2025</dt><dd>97% <span class="small">1’020M bonds of 1’049.9M gross</span></dd></div>
+          <div><dt>Q1 2026</dt><dd>91% <span class="small">1’020M bonds of 1’123.4M gross. The other 103.4M is likely short-term bank borrowing <span class="estimate">estimate</span></span></dd></div>
+          <div><dt>2026 borrowing need (budget)</dt><dd>240.8M <span class="small">A CHF 100M bond issued in July 2026 covers part of it</span></dd></div>
+        </dl>
+      </aside>
+    </div>
+  </section>
+
+  <section aria-labelledby="bonds">
+    <div class="section-head">
+      <span class="eyebrow">Bond book</span>
+      <h2 id="bonds">CHF 1’120M in 11 bonds, mostly long-dated</h2>
+      <p class="prose" id="bond-summary"></p>
+    </div>
+    <div class="chart-card">
+      <div class="legend" aria-hidden="true">
+        <span><span class="key-bar"></span>Public bond (SIX-listed)</span>
+        <span><span class="key-bar private"></span>Private placement</span>
+      </div>
+      <div class="chart" id="ladder-chart" role="group" aria-label="Bond maturities by year in CHF millions: 2027 120, 2028 100, 2029 100, 2030 20 private placement, 2032 100, 2033 120, 2034 100, 2035 100, 2036 100, 2043 120, 2070 140."></div>
+      <div class="tooltip" id="ladder-tip" hidden></div>
+    </div>
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th>ISIN</th><th class="r">Coupon</th><th>Maturity</th><th class="r">Volume</th><th>Type</th><th>Market price</th></tr></thead>
+        <tbody id="bond-rows"></tbody>
+      </table>
+    </div>
+    <p class="small">This page does not show bond prices or yields. For live quotes, follow the SIX link next to each listed bond.</p>
+  </section>
+
+  <section aria-labelledby="indicators">
+    <div class="section-head">
+      <span class="eyebrow">Canton of Ticino indicators</span>
+      <h2 id="indicators">How Lugano compares with Ticino's 106 municipalities</h2>
+      <p class="prose">The canton publishes the same eight indicators for every municipality, each with an official rating scale. These are the latest available, for 2024. Rank 1 is the best value among all municipalities.</p>
+    </div>
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th>Indicator</th><th class="r">2024</th><th>Canton rating</th><th class="r">Rank</th><th class="r">Median</th><th class="r">2023</th></tr></thead>
+        <tbody id="indicator-rows"></tbody>
+      </table>
+    </div>
+    <p class="callout"><strong>About 2023 self-financing (501.6%).</strong> In 2023 the city booked one-off investment receipts equal to 91% of its investment spending, so net investment was only 6.9M and the ratio is not meaningful. The 2023 total result of +12.4M also rests on 15.0M of one-off revenue; the ordinary result was −2.7M.</p>
+  </section>
+
+  <section aria-labelledby="budget">
+    <div class="section-head">
+      <span class="eyebrow">Budget 2026 and financial plan 2026–2033</span>
+      <h2 id="budget">A small operating deficit and a large investment year</h2>
+    </div>
+    <div class="ledger">
+      <div class="ledger-row"><span class="what">Operating result<span class="sub">Budget 2025: −24.0M</span></span><span class="amt">−4.2M</span></div>
+      <div class="ledger-row"><span class="what">Net investment<span class="sub">Mainly Arena Sportiva and Palazzetto dello Sport</span></span><span class="amt">263.5M</span></div>
+      <div class="ledger-row"><span class="what">Self-financing<span class="sub">Covers 8% of net investment</span></span><span class="amt">21.6M</span></div>
+      <div class="ledger-row"><span class="what">Borrowing need (risultato globale)<span class="sub">New debt needed in 2026</span></span><span class="amt">−240.8M</span></div>
+      <div class="ledger-row"><span class="what">Planned asset sales and revaluations<span class="sub">Across the whole plan, 2026–2033</span></span><span class="amt">306.1M</span></div>
+      <div class="ledger-row"><span class="what">Municipal tax multiplier<span class="sub">Individuals / companies, up 3 points each from 77% / 82%</span></span><span class="amt">80% / 85%</span></div>
+    </div>
+    <p class="small">From 2028 the results of the cantonal votes of 28 September 2025 reduce city revenue by about 22.9M a year. The City intends to make this up with measures over 2028–2030.</p>
+  </section>
+
+  <section aria-labelledby="notes">
+    <div class="section-head">
+      <span class="eyebrow">Notes and sources</span>
+      <h2 id="notes">How to read these numbers</h2>
+    </div>
+    <div class="notes">
+      <div class="prose">
+        <h3>Three different debt measures</h3>
+        <ul>
+          <li><strong>Gross financial debt</strong> (City of Lugano): bonds and loans owed, 1’049.9M at end of 2025. Used in the debt path and key figures.</li>
+          <li><strong>Net public debt I</strong> (Canton of Ticino): debt minus financial assets, 655.5M in 2024, or CHF 10’302 per resident. Used in the indicator table.</li>
+          <li><strong>Net direct and indirect debt / operating revenue</strong> (Moody's): 234% in 2025. Reported by the City with the rating.</li>
+        </ul>
+        <p>These measure different things and should not be compared with one another.</p>
+      </div>
+      <div class="prose">
+        <h3>Estimates on this page</h3>
+        <ul>
+          <li>The 2026 estimate of 1’290.7M adds the budget's 240.8M borrowing need to end-2025 debt, before any asset sales. The City does not publish this figure.</li>
+          <li>Three bonds not listed on SIX are treated as private placements. The City's public-bond total of CHF 1.0bn after September 2025 only adds up without them.</li>
+          <li>Debt not in bonds is described as likely bank and short-term borrowing.</li>
+          <li>One matured private placement (CH0536893263) has no published size and is left out of the 2024 bond share.</li>
+        </ul>
+      </div>
+      <div class="prose">
+        <h3>Sources</h3>
+        <ol>
+          <li><a href="https://www.lugano.ch/la-mia-citta/amministrazione/evoluzione-finanziaria/">City of Lugano, financial documents</a>: final accounts 2024 and 2025, budget 2026, financial plan 2026–2033.</li>
+          <li><a href="https://www4.ti.ch/di/sel/comuni/dati-finanziari/statistica-finanziaria">Canton of Ticino, Sezione degli enti locali</a>: municipal financial statistics 2023 and 2024.</li>
+          <li><a href="https://www.lugano.ch/en/news/20251027-cs-conferma-rating-moodys.html">City of Lugano, Moody's rating announcement</a>, 27 October 2025.</li>
+          <li><a href="https://www.rsi.ch/info/ticino-grigioni-e-insubria/Finanze-pubbliche-la-corsa-ai-bond--3000204.html">RSI, "Finanze pubbliche, la corsa ai bond"</a>, July 2025, for the public-bond total.</li>
+          <li>Bond terms from City press releases and public listings (SIX, finanzen.net, cbonds). Listing dates from SIX.</li>
+        </ol>
+      </div>
+    </div>
+    <p class="small">Figures were extracted from the published documents by software and checked by hand against the original PDFs. The 2024 figures match the canton's statistics exactly.</p>
+  </section>
+
+  <footer>
+    <span>Dati di Lugano is an independent project. Code and data: <a href="https://github.com/nslotus/dati-di-lugano">github.com/nslotus/dati-di-lugano</a>. It is not produced, reviewed or endorsed by the City of Lugano or the Canton of Ticino.</span>
+    <span>Bond prices are not reproduced here. Market data belongs to SIX Swiss Exchange; follow the links in the bond table.</span>
+  </footer>
+</div>
+
+<script>
+const BONDS = [
+  { isin: "CH0387879080", coupon: 0.25, maturity: "2027-12-20", volumeM: 120, private: false },
+  { isin: "CH1199660007", coupon: 1.125, maturity: "2028-09-01", volumeM: 100, private: false },
+  { isin: "CH1232107172", coupon: 1.625, maturity: "2029-02-01", volumeM: 100, private: false, note: "First digital bond (SDX)" },
+  { isin: "CH0116880672", coupon: 2.0, maturity: "2030-08-30", volumeM: 20, private: true },
+  { isin: "CH1433241267", coupon: 0.6125, maturity: "2032-06-16", volumeM: 100, private: false, note: "Digital, settled in central bank digital money" },
+  { isin: "CH1392903543", coupon: 1.0, maturity: "2033-11-25", volumeM: 120, private: false },
+  { isin: "CH1319968462", coupon: 1.415, maturity: "2034-03-07", volumeM: 100, private: false },
+  { isin: "CH1462229902", coupon: 0.9525, maturity: "2035-08-08", volumeM: 100, private: false, note: "Digital bond, July 2025" },
+  { isin: "CH1562934682", coupon: 0.95, maturity: "2036-07-16", volumeM: 100, private: false, note: "Issued July 2026" },
+  { isin: "CH0205500017", coupon: 1.75, maturity: "2043-02-20", volumeM: 120, private: false },
+  { isin: "CH0579132918", coupon: 0.15, maturity: "2070-11-28", volumeM: 140, private: false },
+];
+
+const DEBT = [
+  { date: "2024-12-31", label: "End of 2024", value: 1090.6, type: "actual", source: "Final accounts 2025 (prior-year comparison)" },
+  { date: "2025-12-31", label: "End of 2025", value: 1049.9, type: "actual", source: "Final accounts 2025" },
+  { date: "2026-03-31", label: "Q1 2026", value: 1123.4, type: "actual", source: "Final accounts 2025 presentation" },
+  { date: "2026-12-31", label: "End of 2026", value: 1233.2, type: "plan", source: "Budget 2026 and financial plan" },
+  { date: "2026-12-31", label: "End of 2026", value: 1290.7, type: "estimate", source: "End-2025 debt + 2026 borrowing need, before asset sales" },
+  { date: "2030-12-31", label: "2030 (plan peak)", value: 1356.3, type: "plan", source: "Financial plan 2026–2033" },
+  { date: "2033-12-31", label: "2033 (end of plan)", value: 1152.7, type: "plan", source: "Financial plan 2026–2033" },
+];
+
+const INDICATORS = [
+  { en: "Net debt per resident", unit: "chf", v24: 10302.48, r24: "molto elevato", l24: "bad", rank: 96, of: 106, med: 5292.13, v23: 9429.02 },
+  { en: "Net debt / tax revenue", unit: "pct", v24: 1.8490, r24: "eccessivo", l24: "bad", rank: 63, of: 106, med: 1.6432, v23: 1.6930 },
+  { en: "Self-financing ratio", unit: "pct", v24: 0.2596, r24: "debole", l24: "bad", rank: 82, of: 101, med: 0.6115, v23: 5.0164, note23: "one-off, see note" },
+  { en: "Result in tax-multiplier points", unit: "pts", v24: -0.605, r24: "disavanzo", l24: "bad", rank: 73, of: 106, med: 2.085, v23: null },
+  { en: "Net interest / current revenue", unit: "pct", v24: 0.01341, r24: "bassa", l24: "good", rank: 53, of: 106, med: 0.01348, v23: 0.01502 },
+  { en: "Equity / total liabilities", unit: "pct", v24: 0.1320, r24: "media", l24: "warning", rank: 81, of: 106, med: 0.2068, v23: 0.1418 },
+  { en: "Accumulated surplus / total liabilities", unit: "pct", v24: 0.1315, r24: "media", l24: "warning", rank: 80, of: 106, med: 0.1932, v23: null },
+  { en: "Investment share of spending", unit: "pct", v24: 0.1478, r24: "media", l24: "neutral", rank: null, of: 106, med: 0.1602, v23: 0.1454 },
+];
+const RATING_EN = { "molto elevato": "Very high", "eccessivo": "Excessive", "debole": "Weak", "disavanzo": "Deficit", "bassa": "Low", "media": "Average" };
+const ICON = { good: "✓", warning: "!", bad: "✕", neutral: "–" };
+
+const fmt = (v, d = 1) => v.toLocaleString("de-CH", { minimumFractionDigits: d, maximumFractionDigits: d });
+const fmtVal = (v, unit) => v === null ? "–" : unit === "chf" ? "CHF " + fmt(v, 0) : unit === "pts" ? fmt(v, 2) : fmt(v * 100, 1) + "%";
+const cpn = (c) => fmt(c, Math.max(2, (String(c).split(".")[1] || "").length));
+const sixUrl = (isin) => `https://www.six-group.com/en/market-data/bonds/bond-explorer/bond-details.${isin}CHF4.html`;
+const NS = "http://www.w3.org/2000/svg";
+const el = (tag, attrs = {}, parent) => { const n = document.createElementNS(NS, tag); for (const k in attrs) n.setAttribute(k, attrs[k]); if (parent) parent.appendChild(n); return n; };
+const css = (name) => getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+
+
+/* ---------- tooltip helper ---------- */
+function makeTip(card, tip) {
+  return {
+    show(html, x, y) {
+      tip.innerHTML = html; tip.hidden = false;
+      const cw = card.clientWidth, tw = tip.offsetWidth, th = tip.offsetHeight;
+      let left = x + 14; if (left + tw > cw - 8) left = x - tw - 14;
+      tip.style.left = Math.max(8, left) + "px";
+      tip.style.top = Math.max(8, y - th - 10) + "px";
+    },
+    hide() { tip.hidden = true; },
+  };
+}
+
+/* ---------- debt path ---------- */
+function drawDebt() {
+  const host = document.getElementById("debt-chart");
+  const card = host.parentElement;
+  const tip = makeTip(card, document.getElementById("debt-tip"));
+  host.innerHTML = "";
+  const W = Math.max(300, host.clientWidth), narrow = W < 560;
+  const H = narrow ? 260 : 320;
+  const m = { t: 24, r: narrow ? 56 : 88, b: 34, l: 52 };
+  const svg = el("svg", { viewBox: `0 0 ${W} ${H}`, width: W, height: H }, host);
+  const t = (d) => new Date(d + "T00:00:00Z").getTime();
+  const x0 = t("2024-10-01"), x1 = t("2034-02-28");
+  const y0 = 1000, y1 = 1400;
+  const X = (d) => m.l + (t(d) - x0) / (x1 - x0) * (W - m.l - m.r);
+  const Y = (v) => H - m.b - (v - y0) / (y1 - y0) * (H - m.t - m.b);
+
+  for (let v = y0; v <= y1; v += 100) {
+    el("line", { x1: m.l, x2: W - m.r, y1: Y(v), y2: Y(v), stroke: css("--grid"), "stroke-width": 1 }, svg);
+    const lab = el("text", { x: m.l - 8, y: Y(v) + 4, "text-anchor": "end", class: "tick-label" }, svg);
+    lab.textContent = fmt(v, 0);
+  }
+  const years = narrow ? [2024, 2026, 2028, 2030, 2032] : [2024, 2025, 2026, 2027, 2028, 2029, 2030, 2031, 2032, 2033];
+  for (const yr of years) {
+    const lab = el("text", { x: X(`${yr}-12-31`), y: H - m.b + 20, "text-anchor": "middle", class: "tick-label" }, svg);
+    lab.textContent = yr;
+  }
+  const yt = el("text", { x: m.l - 8, y: m.t - 10, "text-anchor": "end" }, svg); yt.textContent = "CHF M";
+  const xt = el("text", { x: W - m.r, y: H - 2, "text-anchor": "end" }, svg); xt.textContent = "year end";
+
+  const actual = DEBT.filter((d) => d.type === "actual");
+  const plan = [DEBT[1], ...DEBT.filter((d) => d.type === "plan")];
+  const path = (pts) => pts.map((p, i) => `${i ? "L" : "M"}${X(p.date).toFixed(1)},${Y(p.value).toFixed(1)}`).join(" ");
+  el("path", { d: path(plan), fill: "none", stroke: css("--series-1"), "stroke-width": 2, "stroke-dasharray": "6 5", "stroke-linecap": "round" }, svg);
+  el("path", { d: path(actual), fill: "none", stroke: css("--series-1"), "stroke-width": 2.5, "stroke-linejoin": "round", "stroke-linecap": "round" }, svg);
+
+  const labelled = new Set(["Q1 2026", "End of 2025", "2030 (plan peak)", "2033 (end of plan)", "End of 2024"]);
+  for (const d of DEBT) {
+    const cx = X(d.date), cy = Y(d.value);
+    const g = el("g", { tabindex: 0, role: "button", "aria-label": `${d.label}, ${d.type}: ${fmt(d.value)} million CHF` }, svg);
+    if (d.type === "estimate") {
+      el("circle", { cx, cy, r: 5.5, fill: css("--panel"), stroke: css("--series-2"), "stroke-width": 2.5 }, g);
+    } else {
+      el("circle", { cx, cy, r: d.type === "actual" ? 5 : 4.5, fill: d.type === "actual" ? css("--series-1") : css("--panel"),
+        stroke: d.type === "actual" ? css("--panel") : css("--series-1"), "stroke-width": 2 }, g);
+    }
+    el("circle", { cx, cy, r: 16, fill: "transparent" }, g);
+    const html = `<strong>${fmt(d.value)}M · ${d.label}</strong>${d.type === "actual" ? "Actual" : d.type === "plan" ? "City plan" : "Estimate"} · ${d.source}`;
+    g.addEventListener("pointerenter", () => tip.show(html, cx + host.offsetLeft, cy + host.offsetTop));
+    g.addEventListener("focus", () => tip.show(html, cx + host.offsetLeft, cy + host.offsetTop));
+    g.addEventListener("pointerleave", () => tip.hide());
+    g.addEventListener("blur", () => tip.hide());
+    if (labelled.has(d.label) || (d.type === "estimate" && !narrow)) {
+      const pos = d.type === "estimate" ? { x: cx + 10, y: cy + 4, a: "start" }
+        : d.label === "Q1 2026" ? { x: cx - 8, y: cy - 10, a: "end" }
+        : d.label === "End of 2025" ? { x: cx, y: cy + 22, a: "middle" }
+        : d.label === "End of 2024" ? { x: cx - 4, y: cy - 12, a: "start" }
+        : { x: cx, y: cy - 12, a: "middle" };
+      const lab = el("text", { x: pos.x, y: pos.y, "text-anchor": pos.a, class: "value-label" }, svg);
+      lab.textContent = fmt(d.value);
+    }
+  }
+  // the plan's end-2026 point sits under the estimate label on wide screens; label it on the left
+  const p26 = DEBT[3];
+  const l26 = el("text", { x: X(p26.date) - 10, y: Y(p26.value) + 4, "text-anchor": "end", class: "value-label" }, svg);
+  l26.textContent = fmt(p26.value);
+}
+
+function fillDebtTable() {
+  const rows = document.getElementById("debt-rows");
+  rows.innerHTML = DEBT.map((d) => `<tr><td>${d.label}</td><td>${d.type === "actual" ? "Actual" : d.type === "plan" ? "City plan" : '<span class="estimate">Estimate</span>'}</td><td class="r">${fmt(d.value)}M</td><td>${d.source}</td></tr>`).join("");
+  const btn = document.getElementById("debt-toggle"), tbl = document.getElementById("debt-table");
+  btn.addEventListener("click", () => {
+    const open = tbl.hidden; tbl.hidden = !open;
+    btn.setAttribute("aria-expanded", String(open)); btn.textContent = open ? "Hide table" : "Show as table";
+  });
+}
+
+/* ---------- maturity ladder ---------- */
+function drawLadder() {
+  const host = document.getElementById("ladder-chart");
+  const card = host.parentElement;
+  const tip = makeTip(card, document.getElementById("ladder-tip"));
+  host.innerHTML = "";
+  const byYear = {};
+  for (const b of BONDS) { const y = b.maturity.slice(0, 4); (byYear[y] ??= []).push(b); }
+  const years = Object.keys(byYear).sort();
+  const W = Math.max(300, host.clientWidth), narrow = W < 560;
+  const H = narrow ? 220 : 250;
+  const m = { t: 20, r: 8, b: 34, l: 40 };
+  const svg = el("svg", { viewBox: `0 0 ${W} ${H}`, width: W, height: H }, host);
+  const vmax = 150;
+  const Y = (v) => H - m.b - v / vmax * (H - m.t - m.b);
+  const band = (W - m.l - m.r) / years.length, bw = Math.min(36, band * 0.62);
+  for (let v = 0; v <= vmax; v += 50) {
+    el("line", { x1: m.l, x2: W - m.r, y1: Y(v), y2: Y(v), stroke: css(v === 0 ? "--rule" : "--grid"), "stroke-width": 1 }, svg);
+    const lab = el("text", { x: m.l - 8, y: Y(v) + 4, "text-anchor": "end", class: "tick-label" }, svg); lab.textContent = v;
+  }
+  const yt = el("text", { x: m.l - 8, y: m.t - 8, "text-anchor": "end" }, svg); yt.textContent = "CHF M";
+  years.forEach((yr, i) => {
+    const cx = m.l + band * i + band / 2;
+    let base = 0;
+    for (const b of byYear[yr]) {
+      const top = Y(base + b.volumeM), bottom = Y(base);
+      const h = Math.max(1, bottom - top - (base ? 2 : 0));
+      const r = Math.min(4, h / 2);
+      const x = cx - bw / 2;
+      // square at the baseline, rounded at the data end
+      el("path", { d: `M${x},${bottom} V${top + r} Q${x},${top} ${x + r},${top} H${x + bw - r} Q${x + bw},${top} ${x + bw},${top + r} V${bottom} Z`,
+        fill: css(b.private ? "--series-2" : "--series-1") }, svg);
+      const hit = el("rect", { x: cx - band / 2, y: m.t, width: band, height: H - m.t - m.b, fill: "transparent", tabindex: 0, role: "button",
+        "aria-label": `${b.isin}, ${cpn(b.coupon)}% coupon, matures ${b.maturity}, ${b.volumeM} million CHF${b.private ? ", private placement" : ""}` }, svg);
+      const html = `<strong>${b.volumeM}M · matures ${b.maturity}</strong>${b.isin} · ${cpn(b.coupon)}% coupon${b.private ? " · private placement" : ""}`;
+      const show = () => tip.show(html, cx + host.offsetLeft, top + host.offsetTop);
+      hit.addEventListener("pointerenter", show); hit.addEventListener("focus", show);
+      hit.addEventListener("pointerleave", () => tip.hide()); hit.addEventListener("blur", () => tip.hide());
+      base += b.volumeM;
+    }
+    const lab = el("text", { x: cx, y: H - m.b + 18, "text-anchor": "middle", class: "tick-label" }, svg);
+    lab.textContent = narrow ? "’" + yr.slice(2) : yr;
+  });
+  // annotate the next three years of maturities
+  const iEnd = years.indexOf("2029");
+  if (iEnd >= 0) {
+    const xa = m.l + band * 0, xb = m.l + band * (iEnd + 1), ya = Y(120) - 12;
+    el("path", { d: `M${xa + 6},${ya + 5} V${ya} H${xb - 6} V${ya + 5}`, fill: "none", stroke: css("--ink-3"), "stroke-width": 1 }, svg);
+    const lab = el("text", { x: (xa + xb) / 2, y: ya - 6, "text-anchor": "middle", class: "value-label" }, svg);
+    lab.textContent = "320M due by 2029";
+  }
+}
+
+function fillBonds() {
+  const rows = document.getElementById("bond-rows");
+  rows.innerHTML = BONDS.map((b) => `<tr>
+    <td><span class="mono">${b.isin}</span>${b.note ? `<span class="sub">${b.note}</span>` : ""}</td>
+    <td class="r">${cpn(b.coupon)}%</td>
+    <td class="num">${new Date(b.maturity + "T00:00:00Z").toLocaleDateString("de-CH", { timeZone: "UTC" })}</td>
+    <td class="r">${b.volumeM}M</td>
+    <td>${b.private ? '<span class="tag private">Private placement</span>' : '<span class="tag">Public</span>'}</td>
+    <td>${b.private ? '<span class="small">Not listed on SIX</span>' : `<a href="${sixUrl(b.isin)}" target="_blank" rel="noopener">SIX ↗<span class="sr" style="position:absolute;left:-9999px"> price for ${b.isin}</span></a>`}</td>
+  </tr>`).join("");
+  const total = BONDS.reduce((s, b) => s + b.volumeM, 0);
+  const coupon = BONDS.reduce((s, b) => s + b.coupon * b.volumeM, 0) / total;
+  document.getElementById("bond-summary").textContent =
+    `Lugano has moved its borrowing almost entirely into bonds. The volume-weighted coupon is ${fmt(coupon, 2)}% and the average bond has 11.4 years left to run. Nothing matures in the next 12 months; 320M falls due between December 2027 and February 2029.`;
+}
+
+function fillIndicators() {
+  const rows = document.getElementById("indicator-rows");
+  rows.innerHTML = INDICATORS.map((i) => {
+    const chip = `<span class="chip ${i.l24}" title="Canton scale: ${i.r24}"><i aria-hidden="true">${ICON[i.l24]}</i>${RATING_EN[i.r24] ?? i.r24}</span>`;
+    const v23 = i.v23 === null ? '<span class="small">not published</span>' : fmtVal(i.v23, i.unit) + (i.note23 ? `<span class="sub">${i.note23}</span>` : "");
+    return `<tr><td>${i.en}</td><td class="r"><strong>${fmtVal(i.v24, i.unit)}</strong></td><td>${chip}</td>
+      <td class="r">${i.rank ? `${i.rank}<span class="sub">of ${i.of}</span>` : '<span class="small">no direction</span>'}</td>
+      <td class="r">${fmtVal(i.med, i.unit)}</td><td class="r">${v23}</td></tr>`;
+  }).join("");
+}
+
+function render() { drawDebt(); drawLadder(); }
+fillDebtTable(); fillBonds(); fillIndicators(); render();
+let rt; new ResizeObserver(() => { clearTimeout(rt); rt = setTimeout(render, 80); }).observe(document.querySelector(".wrap"));
+new MutationObserver(render).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+matchMedia("(prefers-color-scheme: dark)").addEventListener("change", render);
+</script>
+</body>
+</html>

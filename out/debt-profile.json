@@ -1,0 +1,265 @@
+{
+  "generatedAt": "2026-10-14T22:38:01.056Z",
+  "snapshots": [
+    {
+      "label": "end 2024",
+      "date": "2024-12-31",
+      "grossDebt": {
+        "M": 1090.6,
+        "status": "accepted"
+      },
+      "cash": {
+        "M": 201.8,
+        "status": "accepted"
+      },
+      "netDebt": {
+        "M": 888.8,
+        "status": "accepted"
+      },
+      "publicBondsM": 920,
+      "privatePlacementsM": 50,
+      "bondCount": 11,
+      "bondShareOfGross": 0.889,
+      "otherDebtM": 120.6,
+      "unknownVolume": [
+        "CH0536893263"
+      ],
+      "assumedOutstanding": [
+        "CH0290876512"
+      ],
+      "source": "https://www.lugano.ch/dam/jcr:8e5c3ada-87b4-4397-a3c7-e55dd4a9199a/20260423-consuntivo-2025-presentazione.pdf"
+    },
+    {
+      "label": "end 2025",
+      "date": "2025-12-31",
+      "grossDebt": {
+        "M": 1049.9,
+        "status": "review"
+      },
+      "cash": {
+        "M": 141,
+        "status": "review"
+      },
+      "netDebt": {
+        "M": 908.9,
+        "status": "accepted"
+      },
+      "publicBondsM": 1000,
+      "privatePlacementsM": 20,
+      "bondCount": 10,
+      "bondShareOfGross": 0.972,
+      "otherDebtM": 29.9,
+      "unknownVolume": [],
+      "assumedOutstanding": [],
+      "source": "https://www.lugano.ch/dam/jcr:8e5c3ada-87b4-4397-a3c7-e55dd4a9199a/20260423-consuntivo-2025-presentazione.pdf"
+    },
+    {
+      "label": "Q1 2026",
+      "date": "2026-03-31",
+      "grossDebt": {
+        "M": 1123.4,
+        "status": "accepted"
+      },
+      "cash": null,
+      "netDebt": {
+        "M": 1033.9,
+        "status": "accepted"
+      },
+      "publicBondsM": 1000,
+      "privatePlacementsM": 20,
+      "bondCount": 10,
+      "bondShareOfGross": 0.908,
+      "otherDebtM": 103.4,
+      "unknownVolume": [],
+      "assumedOutstanding": [],
+      "source": "https://www.lugano.ch/dam/jcr:8e5c3ada-87b4-4397-a3c7-e55dd4a9199a/20260423-consuntivo-2025-presentazione.pdf"
+    }
+  ],
+  "plan": {
+    "budgetYear": 2026,
+    "source": "https://www.lugano.ch/dam/jcr:0a793cce-fba0-4c83-b596-e65560732832/20251023-cs-preventivo-2026-piano-finanziario-2026-2033.pdf",
+    "budget": {
+      "risultatoEsercizio": {
+        "M": -4.2,
+        "status": "accepted"
+      },
+      "investimentiNetti": {
+        "M": 263.5,
+        "status": "accepted"
+      },
+      "autofinanziamento": {
+        "M": 21.6,
+        "status": "accepted"
+      },
+      "risultatoGlobale": {
+        "M": -240.8,
+        "status": "accepted"
+      },
+      "disinvestimentiPiano": {
+        "M": 306.1,
+        "status": "accepted"
+      }
+    },
+    "debtPath": [
+      {
+        "label": "end 2025 (actual)",
+        "year": 2025,
+        "M": 1049.9
+      },
+      {
+        "label": "end 2026 implied by budget",
+        "year": 2026,
+        "M": 1290.7
+      },
+      {
+        "label": "end 2026 per plan",
+        "year": 2026,
+        "M": 1233.2,
+        "status": "review"
+      },
+      {
+        "label": "plan peak",
+        "year": 2030,
+        "M": 1356.3,
+        "status": "accepted"
+      },
+      {
+        "label": "end of plan",
+        "year": 2033,
+        "M": 1152.7,
+        "status": "accepted"
+      }
+    ]
+  },
+  "today": {
+    "asOf": "2026-10-14",
+    "outstandingM": 1120,
+    "bondCount": 11,
+    "weightedCouponPct": 0.972,
+    "weightedRemainingYears": 11.4,
+    "maturingWithin": {
+      "1y": 0,
+      "3y": 320,
+      "5y": 340
+    },
+    "ladderM": {
+      "2027": 120,
+      "2028": 100,
+      "2029": 100,
+      "2030": 20,
+      "2032": 100,
+      "2033": 120,
+      "2034": 100,
+      "2035": 100,
+      "2036": 100,
+      "2043": 120,
+      "2070": 140
+    },
+    "bonds": [
+      {
+        "isin": "CH0387879080",
+        "coupon": 0.25,
+        "maturity": "2027-12-20",
+        "volumeMCHF": 120,
+        "listed": "2017-12-18",
+        "kind": "public",
+        "sixUrl": "https://www.six-group.com/en/market-data/bonds/bond-explorer/bond-details.CH0387879080CHF4.html"
+      },
+      {
+        "isin": "CH1199660007",
+        "coupon": 1.125,
+        "maturity": "2028-09-01",
+        "volumeMCHF": 100,
+        "listed": "2022-08-31",
+        "kind": "public",
+        "sixUrl": "https://www.six-group.com/en/market-data/bonds/bond-explorer/bond-details.CH1199660007CHF4.html"
+      },
+      {
+        "isin": "CH1232107172",
+        "coupon": 1.625,
+        "maturity": "2029-02-01",
+        "volumeMCHF": 100,
+        "listed": "2023-02-01",
+        "kind": "public",
+        "sixUrl": "https://www.six-group.com/en/market-data/bonds/bond-explorer/bond-details.CH1232107172CHF4.html",
+        "note": "first digital bond (SDX), Jan 2023"
+      },
+      {
+        "isin": "CH0116880672",
+        "coupon": 2,
+        "maturity": "2030-08-30",
+        "volumeMCHF": 20,
+        "listed": null,
+        "kind": "private",
+        "sixUrl": null,
+        "note": "not on SIX; listed by finanzen.net"
+      },
+      {
+        "isin": "CH1433241267",
+        "coupon": 0.6125,
+        "maturity": "2032-06-16",
+        "volumeMCHF": 100,
+        "listed": "2025-06-12",
+        "kind": "public",
+        "sixUrl": "https://www.six-group.com/en/market-data/bonds/bond-explorer/bond-details.CH1433241267CHF4.html",
+        "note": "digital, wCBDC settlement (Helvetia III)"
+      },
+      {
+        "isin": "CH1392903543",
+        "coupon": 1,
+        "maturity": "2033-11-25",
+        "volumeMCHF": 120,
+        "listed": "2024-11-25",
+        "kind": "public",
+        "sixUrl": "https://www.six-group.com/en/market-data/bonds/bond-explorer/bond-details.CH1392903543CHF4.html"
+      },
+      {
+        "isin": "CH1319968462",
+        "coupon": 1.415,
+        "maturity": "2034-03-07",
+        "volumeMCHF": 100,
+        "listed": "2024-03-07",
+        "kind": "public",
+        "sixUrl": "https://www.six-group.com/en/market-data/bonds/bond-explorer/bond-details.CH1319968462CHF4.html"
+      },
+      {
+        "isin": "CH1462229902",
+        "coupon": 0.9525,
+        "maturity": "2035-08-08",
+        "volumeMCHF": 100,
+        "listed": "2025-08-06",
+        "kind": "public",
+        "sixUrl": "https://www.six-group.com/en/market-data/bonds/bond-explorer/bond-details.CH1462229902CHF4.html",
+        "note": "5th digital bond, Jul 2025"
+      },
+      {
+        "isin": "CH1562934682",
+        "coupon": 0.95,
+        "maturity": "2036-07-16",
+        "volumeMCHF": 100,
+        "listed": "2026-07-15",
+        "kind": "public",
+        "sixUrl": "https://www.six-group.com/en/market-data/bonds/bond-explorer/bond-details.CH1562934682CHF4.html",
+        "note": "issued Jul 2026"
+      },
+      {
+        "isin": "CH0205500017",
+        "coupon": 1.75,
+        "maturity": "2043-02-20",
+        "volumeMCHF": 120,
+        "listed": "2013-02-18",
+        "kind": "public",
+        "sixUrl": "https://www.six-group.com/en/market-data/bonds/bond-explorer/bond-details.CH0205500017CHF4.html"
+      },
+      {
+        "isin": "CH0579132918",
+        "coupon": 0.15,
+        "maturity": "2070-11-28",
+        "volumeMCHF": 140,
+        "listed": "2020-11-26",
+        "kind": "public",
+        "sixUrl": "https://www.six-group.com/en/market-data/bonds/bond-explorer/bond-details.CH0579132918CHF4.html"
+      }
+    ]
+  }
+}
