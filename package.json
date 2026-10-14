@@ -1,7 +1,7 @@
 {
-  "name": "luganocity",
+  "name": "dati-di-lugano",
   "version": "1.0.0",
-  "description": "",
+  "description": "Open data tools and dashboard for the City of Lugano's public finances",
   "scripts": {
     "map": "tsx src/map.ts",
     "typecheck": "tsc --noEmit",
@@ -11,7 +11,7 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "type": "commonjs",
   "dependencies": {
     "@typesafe-ai/sdk": "^0.7.0",
@@ -23,5 +23,9 @@
     "tsx": "^4.23.15",
     "typescript": "^7.0.2"
   },
-  "private": true
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nslotus/dati-di-lugano.git"
+  }
 }
