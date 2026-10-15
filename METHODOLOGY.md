@@ -88,6 +88,10 @@ Deficits printed as positive amounts ("disavanzo … CHF 4.2 milioni") are store
 | Net investment 2024 | 75.48M | equals the canton figure |
 | Cash and deposits, end of 2024 | 120.0M | **not used**: the 2024 deck reports only term deposits of 120.0M, not cash plus deposits |
 
+### Budget vs actual (`npm run budget`)
+
+The city's final-accounts decks print each recap row as *actual · budget · difference · percent*. `src/budget.ts` reads the budget column directly from that table (row label and column position, no model involved) for 9 rows in 2024 and 2025: operating spending and revenue, operating balance, total operating result, gross investment, investment receipts, net investment, self-financing and the overall financing result. Checks that stop the run: actual − budget equals the printed difference to the cent (18 of 18 rows), and every actual already extracted in `out/city-figures.json` matches (10 of 10). The 2025 self-financing budget of CHF 35'747 is as printed; it agrees with the deck's summary ("P2025 0.0 Mio") and the 2026 budget release ("contro CHF 0.0 milioni nel preventivo 2025").
+
 ## 4. Research log
 
 Searches were run with Claude Code's web search and Exa (`web_search_exa`, `web_fetch_exa`); files were downloaded with curl.

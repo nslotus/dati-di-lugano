@@ -1,0 +1,380 @@
+{
+  "generatedAt": "2026-10-15T10:30:50.842Z",
+  "method": "Read from the recap tables of the City's final-accounts decks (columns: actual, budget, difference). Every row passes actual − budget = printed difference; where the actual was already extracted (out/city-figures.json) it must match.",
+  "decks": [
+    {
+      "year": 2024,
+      "source": "https://www.lugano.ch/dam/jcr:66e7b5df-519e-4fcb-83aa-a9db062b7081/20250404-cs-consuntivo-2024-presentazione.pdf",
+      "archived": "sources/city-consuntivo-2024-slides.pdf",
+      "rows": [
+        {
+          "key": "speseOperative",
+          "label": {
+            "it": "Spese operative",
+            "en": "Operating spending"
+          },
+          "actualCHF": 466927680.6,
+          "budgetCHF": 471346860,
+          "differenceCHF": -4419179.4,
+          "printed": {
+            "actual": "466’927’680.60",
+            "budget": "471’346’860.00",
+            "difference": "-4’419’179.40"
+          },
+          "page": 2,
+          "checks": {
+            "differenceAddsUp": true,
+            "matchesExtractedFigure": null
+          }
+        },
+        {
+          "key": "ricaviOperativi",
+          "label": {
+            "it": "Ricavi operativi",
+            "en": "Operating revenue"
+          },
+          "actualCHF": 432637403,
+          "budgetCHF": 427518780,
+          "differenceCHF": 5118623,
+          "printed": {
+            "actual": "432’637’403.00",
+            "budget": "427’518’780.00",
+            "difference": "5’118’623.00"
+          },
+          "page": 2,
+          "checks": {
+            "differenceAddsUp": true,
+            "matchesExtractedFigure": null
+          }
+        },
+        {
+          "key": "risultatoOperativo",
+          "label": {
+            "it": "Risultato operativo",
+            "en": "Operating balance"
+          },
+          "actualCHF": -34290277.6,
+          "budgetCHF": -43828080,
+          "differenceCHF": 9537802.4,
+          "printed": {
+            "actual": "-34’290’277.60",
+            "budget": "-43’828’080.00",
+            "difference": "9’537’802.40"
+          },
+          "page": 2,
+          "checks": {
+            "differenceAddsUp": true,
+            "matchesExtractedFigure": null
+          }
+        },
+        {
+          "key": "risultatoTotaleEsercizio",
+          "label": {
+            "it": "Risultato totale d'esercizio",
+            "en": "Total operating result"
+          },
+          "actualCHF": -2019659.04,
+          "budgetCHF": -9023360,
+          "differenceCHF": 7003700.96,
+          "printed": {
+            "actual": "-2’019’659.04",
+            "budget": "-9’023’360.00",
+            "difference": "7’003’700.96"
+          },
+          "page": 2,
+          "checks": {
+            "differenceAddsUp": true,
+            "matchesExtractedFigure": true
+          }
+        },
+        {
+          "key": "usciteInvestimenti",
+          "label": {
+            "it": "Uscite per investimenti",
+            "en": "Gross investment"
+          },
+          "actualCHF": 79536472.46,
+          "budgetCHF": 90283000,
+          "differenceCHF": -10746527.54,
+          "printed": {
+            "actual": "79’536’472.46",
+            "budget": "90’283’000.00",
+            "difference": "-10’746’527.54"
+          },
+          "page": 2,
+          "checks": {
+            "differenceAddsUp": true,
+            "matchesExtractedFigure": true
+          }
+        },
+        {
+          "key": "entrateInvestimenti",
+          "label": {
+            "it": "Entrate per investimenti",
+            "en": "Investment receipts"
+          },
+          "actualCHF": 4053091.1,
+          "budgetCHF": 29780000,
+          "differenceCHF": -25726908.9,
+          "printed": {
+            "actual": "4’053’091.10",
+            "budget": "29’780’000.00",
+            "difference": "-25’726’908.90"
+          },
+          "page": 2,
+          "checks": {
+            "differenceAddsUp": true,
+            "matchesExtractedFigure": null
+          }
+        },
+        {
+          "key": "onereNettoInvestimenti",
+          "label": {
+            "it": "Onere netto per investimenti",
+            "en": "Net investment"
+          },
+          "actualCHF": 75483381.36,
+          "budgetCHF": 60503000,
+          "differenceCHF": 14980381.36,
+          "printed": {
+            "actual": "75’483’381.36",
+            "budget": "60’503’000.00",
+            "difference": "14’980’381.36"
+          },
+          "page": 2,
+          "checks": {
+            "differenceAddsUp": true,
+            "matchesExtractedFigure": true
+          }
+        },
+        {
+          "key": "autofinanziamento",
+          "label": {
+            "it": "Autofinanziamento",
+            "en": "Self-financing"
+          },
+          "actualCHF": 19595568.59,
+          "budgetCHF": 12552150,
+          "differenceCHF": 7043418.59,
+          "printed": {
+            "actual": "19’595’568.59",
+            "budget": "12’552’150.00",
+            "difference": "7’043’418.59"
+          },
+          "page": 2,
+          "checks": {
+            "differenceAddsUp": true,
+            "matchesExtractedFigure": true
+          }
+        },
+        {
+          "key": "risultatoGlobale",
+          "label": {
+            "it": "Risultato globale",
+            "en": "Overall financing result"
+          },
+          "actualCHF": -55887812.77,
+          "budgetCHF": -47950850,
+          "differenceCHF": -7936962.77,
+          "printed": {
+            "actual": "-55’887’812.77",
+            "budget": "-47’950’850.00",
+            "difference": "-7’936’962.77"
+          },
+          "page": 2,
+          "checks": {
+            "differenceAddsUp": true,
+            "matchesExtractedFigure": true
+          }
+        }
+      ]
+    },
+    {
+      "year": 2025,
+      "source": "https://www.lugano.ch/dam/jcr:8e5c3ada-87b4-4397-a3c7-e55dd4a9199a/20260423-consuntivo-2025-presentazione.pdf",
+      "archived": "sources/city-consuntivo-2025-slides.pdf",
+      "rows": [
+        {
+          "key": "speseOperative",
+          "label": {
+            "it": "Spese operative",
+            "en": "Operating spending"
+          },
+          "actualCHF": 473565042.5,
+          "budgetCHF": 480223993,
+          "differenceCHF": -6658950.5,
+          "printed": {
+            "actual": "473’565’042.50",
+            "budget": "480’223’993.00",
+            "difference": "-6’658’950.50"
+          },
+          "page": 3,
+          "checks": {
+            "differenceAddsUp": true,
+            "matchesExtractedFigure": null
+          }
+        },
+        {
+          "key": "ricaviOperativi",
+          "label": {
+            "it": "Ricavi operativi",
+            "en": "Operating revenue"
+          },
+          "actualCHF": 455138482.82,
+          "budgetCHF": 427528130,
+          "differenceCHF": 27610352.82,
+          "printed": {
+            "actual": "455’138’482.82",
+            "budget": "427’528’130.00",
+            "difference": "27’610’352.82"
+          },
+          "page": 3,
+          "checks": {
+            "differenceAddsUp": true,
+            "matchesExtractedFigure": null
+          }
+        },
+        {
+          "key": "risultatoOperativo",
+          "label": {
+            "it": "Risultato operativo",
+            "en": "Operating balance"
+          },
+          "actualCHF": -18426559.68,
+          "budgetCHF": -52695863,
+          "differenceCHF": 34269303.32,
+          "printed": {
+            "actual": "-18’426’559.68",
+            "budget": "-52’695’863.00",
+            "difference": "34’269’303.32"
+          },
+          "page": 3,
+          "checks": {
+            "differenceAddsUp": true,
+            "matchesExtractedFigure": null
+          }
+        },
+        {
+          "key": "risultatoTotaleEsercizio",
+          "label": {
+            "it": "Risultato totale d'esercizio",
+            "en": "Total operating result"
+          },
+          "actualCHF": 23734916.92,
+          "budgetCHF": -23992933,
+          "differenceCHF": 47727849.92,
+          "printed": {
+            "actual": "23’734’916.92",
+            "budget": "-23’992’933.00",
+            "difference": "47’727’849.92"
+          },
+          "page": 3,
+          "checks": {
+            "differenceAddsUp": true,
+            "matchesExtractedFigure": true
+          }
+        },
+        {
+          "key": "usciteInvestimenti",
+          "label": {
+            "it": "Uscite per investimenti",
+            "en": "Gross investment"
+          },
+          "actualCHF": 82747789.47,
+          "budgetCHF": 112699000,
+          "differenceCHF": -29951210.53,
+          "printed": {
+            "actual": "82’747’789.47",
+            "budget": "112’699’000.00",
+            "difference": "-29’951’210.53"
+          },
+          "page": 3,
+          "checks": {
+            "differenceAddsUp": true,
+            "matchesExtractedFigure": true
+          }
+        },
+        {
+          "key": "entrateInvestimenti",
+          "label": {
+            "it": "Entrate per investimenti",
+            "en": "Investment receipts"
+          },
+          "actualCHF": 8648682.55,
+          "budgetCHF": 29767000,
+          "differenceCHF": -21118317.45,
+          "printed": {
+            "actual": "8’648’682.55",
+            "budget": "29’767’000.00",
+            "difference": "-21’118’317.45"
+          },
+          "page": 3,
+          "checks": {
+            "differenceAddsUp": true,
+            "matchesExtractedFigure": null
+          }
+        },
+        {
+          "key": "onereNettoInvestimenti",
+          "label": {
+            "it": "Onere netto per investimenti",
+            "en": "Net investment"
+          },
+          "actualCHF": 74099106.92,
+          "budgetCHF": 82932000,
+          "differenceCHF": -8832893.08,
+          "printed": {
+            "actual": "74’099’106.92",
+            "budget": "82’932’000.00",
+            "difference": "-8’832’893.08"
+          },
+          "page": 3,
+          "checks": {
+            "differenceAddsUp": true,
+            "matchesExtractedFigure": true
+          }
+        },
+        {
+          "key": "autofinanziamento",
+          "label": {
+            "it": "Autofinanziamento",
+            "en": "Self-financing"
+          },
+          "actualCHF": 46024508.33,
+          "budgetCHF": 35747,
+          "differenceCHF": 45988761.33,
+          "printed": {
+            "actual": "46’024’508.33",
+            "budget": "35’747.00",
+            "difference": "45’988’761.33"
+          },
+          "page": 3,
+          "checks": {
+            "differenceAddsUp": true,
+            "matchesExtractedFigure": true
+          }
+        },
+        {
+          "key": "risultatoGlobale",
+          "label": {
+            "it": "Risultato globale",
+            "en": "Overall financing result"
+          },
+          "actualCHF": -28074598.59,
+          "budgetCHF": -82896253,
+          "differenceCHF": 54821654.41,
+          "printed": {
+            "actual": "-28’074’598.59",
+            "budget": "-82’896’253.00",
+            "difference": "54’821’654.41"
+          },
+          "page": 3,
+          "checks": {
+            "differenceAddsUp": true,
+            "matchesExtractedFigure": true
+          }
+        }
+      ]
+    }
+  ]
+}
