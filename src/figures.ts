@@ -14,7 +14,7 @@ import { createHash } from "node:crypto";
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { parseAnnex } from "./annex";
 
-const MODEL = process.env.TYPESAFE_MODEL ?? "jev-1.14.0";
+export const MODEL = process.env.TYPESAFE_MODEL ?? "jev-1.14.0";
 const MIN_CONFIDENCE = 0.8; // on pooled value probability; tuned against the 2024 validation below
 const NONE = "none";
 const CACHE = "data/cache/typesafe.json";
@@ -133,7 +133,7 @@ export function findCandidates(text: string): Candidate[] {
 }
 
 // --- cached TypeSafe call: re-runs cost nothing unless the state or questions change ---
-function cached<T>(payload: unknown, run: () => Promise<T>): Promise<T> {
+export function cached<T>(payload: unknown, run: () => Promise<T>): Promise<T> {
   const key = createHash("sha256").update(JSON.stringify(payload)).digest("hex");
   const store: Record<string, T> = existsSync(CACHE) ? JSON.parse(readFileSync(CACHE, "utf8")) : {};
   if (key in store) return Promise.resolve(store[key]);

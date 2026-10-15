@@ -27,6 +27,24 @@
     "sha256": "5763ca4faa63ebefc99ea17d2d2948eb9f6ffc168ea0d12f8cf3b2c2be0642e8"
   },
   {
+    "file": "sources/20240902-inizio-anno-scolastico.pdf",
+    "url": "https://www.lugano.ch/dam/jcr:774e4f20-eb34-4ce6-8c55-4951d7b3884e/20240902-cs-inizio-scuole.pdf",
+    "publisher": "City of Lugano",
+    "usedFor": "Istituto scolastico pupils, sections/classes and averages, school year 2024/25 (npm run schools)",
+    "retrieved": "2026-10-15T10:50:08.013Z",
+    "bytes": 122263,
+    "sha256": "1c1b4645af41f8deb26f14f2a054122cb607cec736047d197b09b3e421ccb614"
+  },
+  {
+    "file": "sources/20250903-inizio-anno-scolastico.pdf",
+    "url": "https://www.lugano.ch/dam/jcr:6ea44591-f14e-4fe7-a278-d883546c7e1b/20250903-cs-inizio-anno-scolastico-2025-2026.pdf",
+    "publisher": "City of Lugano",
+    "usedFor": "Istituto scolastico pupils, sections/classes and averages, school year 2025/26 (npm run schools)",
+    "retrieved": "2026-10-15T10:50:08.058Z",
+    "bytes": 109429,
+    "sha256": "8af5d90a5f6e2a9f100ad27dd55966764a435fcd9f0613e69339fc76303c8a58"
+  },
+  {
     "file": "sources/20251027-moodys-rating.pdf",
     "url": "https://www.lugano.ch/dam/jcr:f659385e-ceef-4a3b-b14f-c776dcbf239d/20251027-cs-conferma-rating-moodys.pdf",
     "publisher": "City of Lugano",
@@ -43,6 +61,15 @@
     "retrieved": "2026-10-14T22:48:55.161Z",
     "bytes": 89304,
     "sha256": "a0f79ef65213a2721c6330e20c94f1431a2f8fdfe2c8cbc423e5c37cf637df44"
+  },
+  {
+    "file": "sources/20260831-inizio-anno-scolastico.pdf",
+    "url": "https://www.lugano.ch/dam/jcr:3a340d7f-0d96-4d7a-8af3-f512b72d1c9e/20260831-inizio-anno-scolastico-2026-27-comunicato.pdf",
+    "publisher": "City of Lugano",
+    "usedFor": "Istituto scolastico pupils, sections/classes and averages, school year 2026/27 (npm run schools)",
+    "retrieved": "2026-10-15T10:50:08.098Z",
+    "bytes": 114306,
+    "sha256": "d849a91c537141079f3893c5a6c9cbb1097359e1c8b8ea898409b1873d4f574d"
   },
   {
     "file": "sources/20261013-entita-partecipate.pdf",
