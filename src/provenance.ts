@@ -27,6 +27,12 @@ const ORIGIN: Record<string, { url: string; publisher: string; usedFor: string }
     publisher: "City of Lugano", usedFor: "2025 results, end-2024 and end-2025 debt, Q1-2026 debt" },
   "city-preventivo-2026-comunicato.pdf": { url: `${CITY}/dam/jcr:0a793cce-fba0-4c83-b596-e65560732832/20251023-cs-preventivo-2026-piano-finanziario-2026-2033.pdf`,
     publisher: "City of Lugano", usedFor: "Budget 2026 and the financial plan's debt path to 2033" },
+  "city-preventivo-2027-comunicato.pdf": { url: `${CITY}/dam/jcr:3252b132-7bd9-4f5b-84af-f03a9a61c763/15%2010%202026_Comunicato_Preventivo%202027.pdf`,
+    publisher: "City of Lugano", usedFor: "Budget 2027 (15 October 2026): result, investment, self-financing, spending, revenue, taxes, comparison with the plan" },
+  "city-preventivo-2027-slides.pdf": { url: `${CITY}/dam/jcr:3f7967db-a4c6-4d4b-8570-c0ddf97179db/Presentazione_Preventivo%202027.pdf`,
+    publisher: "City of Lugano", usedFor: "Slide 18: the 2026 accounts are expected to close with a positive total result" },
+  "city-preventivo-2027-messaggio.pdf": { url: `${CITY}/dam/jcr:5b2703d5-bf4c-446d-85d9-20bfdc2b2fc6/Messaggio%20generale_Preventivo%202027.pdf`,
+    publisher: "City of Lugano", usedFor: "p. 14: 2026 budget restated (net investment 262.4M); p. 31: 2027 interest on short- and long-term debt 12.29M" },
   "ustat-142lugano.pdf": { url: "https://www3.ti.ch/DFE/DR/USTAT/allegati/comune/142lugano.pdf", publisher: "Canton of Ticino, Ufficio di statistica (USTAT)",
     usedFor: "Checked only: confirmed the municipal profile is dated February 2017" },
   "20261013-entita-partecipate.pdf": { url: `${CITY}/dam/jcr:b7d47130-a778-455e-a5d8-d7ee9a9c66a9/20261013-cs-entita-partecipate-citta-lugano.pdf`,
@@ -84,7 +90,7 @@ function findPage(pages: string[], raw: string, line: string): number | null {
 }
 
 const LABEL: Record<string, string> = {
-  risultatoTotaleEsercizio: "Total operating result", risultatoEsercizio: "Operating result (budget)",
+  risultatoTotaleEsercizio: "Total operating result", risultatoEsercizio: "Operating result (budget)", speseOrdinarie: "Ordinary spending (budget)", entrateOrdinarie: "Ordinary revenue before taxes (budget)", fabbisognoImposte: "Amount to be covered by taxes", gettitoPF: "Tax revenue, individuals (budget)", gettitoPG: "Tax revenue, companies (budget)", disavanzoPrevistoPiano: "Deficit the 2026–2033 plan foresaw", miglioramentoVsPiano: "Improvement on the plan",
   risultatoGlobale: "Overall financing result", autofinanziamento: "Self-financing",
   usciteInvestimenti: "Gross investment spending", onereNettoInvestimenti: "Net investment", investimentiNetti: "Net investment (budget)",
   debitoLordoFineAnno: "Gross debt, year end", liquiditaFineAnno: "Cash and deposits, year end", debitoNettoFineAnno: "Net debt, year end",

@@ -117,6 +117,33 @@
     "sha256": "23c09304e1902f33c7fb100b11cf73234a19a426385f5e0a338d36a042aaa415"
   },
   {
+    "file": "sources/city-preventivo-2027-comunicato.pdf",
+    "url": "https://www.lugano.ch/dam/jcr:3252b132-7bd9-4f5b-84af-f03a9a61c763/15%2010%202026_Comunicato_Preventivo%202027.pdf",
+    "publisher": "City of Lugano",
+    "usedFor": "Budget 2027 (15 October 2026): result, investment, self-financing, spending, revenue, taxes, comparison with the plan",
+    "retrieved": "2026-10-15T21:39:07.997Z",
+    "bytes": 87913,
+    "sha256": "4d1b5a2ccaabf47dbc631ee0b496a87a2b0d5102eca0255038f65fb82b728670"
+  },
+  {
+    "file": "sources/city-preventivo-2027-messaggio.pdf",
+    "url": "https://www.lugano.ch/dam/jcr:5b2703d5-bf4c-446d-85d9-20bfdc2b2fc6/Messaggio%20generale_Preventivo%202027.pdf",
+    "publisher": "City of Lugano",
+    "usedFor": "p. 14: 2026 budget restated (net investment 262.4M); p. 31: 2027 interest on short- and long-term debt 12.29M",
+    "retrieved": "2026-10-15T21:39:43.602Z",
+    "bytes": 6671967,
+    "sha256": "121f955a5bd9a56e483a3273a8d691913bbcbc25f01a75a1c770032c74a10149"
+  },
+  {
+    "file": "sources/city-preventivo-2027-slides.pdf",
+    "url": "https://www.lugano.ch/dam/jcr:3f7967db-a4c6-4d4b-8570-c0ddf97179db/Presentazione_Preventivo%202027.pdf",
+    "publisher": "City of Lugano",
+    "usedFor": "Slide 18: the 2026 accounts are expected to close with a positive total result",
+    "retrieved": "2026-10-15T21:39:42.286Z",
+    "bytes": 339572,
+    "sha256": "0d22428265c249d956e6961bc3c16854b8332012e9f5723106d3dca176b6f87b"
+  },
+  {
     "file": "sources/evoluzione.html",
     "url": "https://www.lugano.ch/la-mia-citta/amministrazione/evoluzione-finanziaria/",
     "publisher": "City of Lugano",

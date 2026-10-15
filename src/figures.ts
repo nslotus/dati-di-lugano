@@ -21,13 +21,19 @@ const CACHE = "data/cache/typesafe.json";
 
 type Kind = "consuntivo" | "preventivo";
 
-const DOCS: { kind: Kind; year: number; file: string; url: string }[] = [
+const DOCS: { kind: Kind; year: number; file: string; url: string; plan?: false; fields?: () => Field[] }[] = [
   { kind: "consuntivo", year: 2024, file: "data/raw/city-consuntivo-2024-slides.pdf",
     url: "https://www.lugano.ch/dam/jcr:66e7b5df-519e-4fcb-83aa-a9db062b7081/20250404-cs-consuntivo-2024-presentazione.pdf" },
   { kind: "consuntivo", year: 2025, file: "data/raw/city-consuntivo-2025-slides.pdf",
     url: "https://www.lugano.ch/dam/jcr:8e5c3ada-87b4-4397-a3c7-e55dd4a9199a/20260423-consuntivo-2025-presentazione.pdf" },
   { kind: "preventivo", year: 2026, file: "data/raw/city-preventivo-2026-comunicato.pdf",
     url: "https://www.lugano.ch/dam/jcr:0a793cce-fba0-4c83-b596-e65560732832/20251023-cs-preventivo-2026-piano-finanziario-2026-2033.pdf" },
+  // 15.10.2026: budget only (no new financial plan); its own field list, so the 2026 request (and its cached answers) stay unchanged
+  { kind: "preventivo", year: 2027, file: "data/raw/city-preventivo-2027-comunicato.pdf", plan: false,
+    url: "https://www.lugano.ch/dam/jcr:3252b132-7bd9-4f5b-84af-f03a9a61c763/15%2010%202026_Comunicato_Preventivo%202027.pdf",
+    // the release prints "Risultato globale: – CHF 80.4 milioni" with an en dash the amount pattern does not read as a sign:
+    // stored negative; the autofinanziamento − investimenti = globale check confirms the sign
+    fields: () => [...PREVENTIVO_FIELDS.slice(0, 3), { ...PREVENTIVO_FIELDS[3], deficit: true }, ...PREVENTIVO_2027_FIELDS] },
 ];
 
 interface Field {
@@ -65,6 +71,19 @@ const PREVENTIVO_FIELDS: Field[] = [
     ask: () => `Which candidate is the peak (maximum) financial debt foreseen by the financial plan?` },
   { key: "debitoFinePiano",
     ask: () => `Which candidate is the financial debt foreseen at the end of the financial plan, after the peak?` },
+];
+
+// extra figures the 2027 release lists; checked by arithmetic below
+const PREVENTIVO_2027_FIELDS: Field[] = [
+  { key: "speseOrdinarie", ask: (y) => `Which candidate is the budgeted ordinary spending (spese ordinarie) for ${y}?` },
+  { key: "entrateOrdinarie", ask: (y) => `Which candidate is the budgeted ordinary revenue (entrate ordinarie) for ${y}, before taxes?` },
+  { key: "fabbisognoImposte", ask: (y) => `Which candidate is the amount to be covered by taxes (fabbisogno coperto da imposte) in the ${y} budget?` },
+  { key: "gettitoPF", ask: (y) => `Which candidate is the budgeted tax revenue from individuals (gettito fiscale delle persone fisiche) for ${y}?` },
+  { key: "gettitoPG", ask: (y) => `Which candidate is the budgeted tax revenue from companies (gettito fiscale delle persone giuridiche) for ${y}?` },
+  { key: "disavanzoPrevistoPiano", deficit: true,
+    ask: (y) => `Which candidate is the deficit that the previous financial plan (Piano finanziario 2026–2033) foresaw for ${y}, given for comparison — not the ${y} budget deficit, not the improvement, and not the older multi-year projection?` },
+  { key: "miglioramentoVsPiano",
+    ask: (y) => `Which candidate is the improvement of the ${y} budget deficit compared with what the Piano finanziario 2026–2033 foresaw for ${y} — not the improvement compared with the older multi-year projection?` },
 ];
 
 const CONSUNTIVO_FIELDS: Field[] = [
@@ -144,7 +163,7 @@ export function cached<T>(payload: unknown, run: () => Promise<T>): Promise<T> {
   });
 }
 
-async function pickFigures(client: TypeSafeClient, kind: Kind, year: number, cands: Candidate[], text: string) {
+async function pickFigures(client: TypeSafeClient, kind: Kind, year: number, cands: Candidate[], text: string, fields: Field[], plan: boolean) {
   const state = {
     document: kind === "consuntivo"
       ? `Città di Lugano – Consuntivo ${year}, press-conference slides (text extracted from PDF; table columns may run together).`
@@ -155,14 +174,14 @@ async function pickFigures(client: TypeSafeClient, kind: Kind, year: number, can
   };
   const labels = Object.fromEntries([...cands.map((c) => [c.id, null]), [NONE, "None of the candidates is this figure."]]);
   const questions: Record<string, ReturnType<typeof choice>> =
-    Object.fromEntries(FIELDS_BY_KIND[kind].map((f) => [f.key, choice(f.ask(year), labels)]));
+    Object.fromEntries(fields.map((f) => [f.key, choice(f.ask(year), labels)]));
   if (kind === "preventivo") {
     // select-don't-generate for the year too: options are the years printed in the release
     const years = [...new Set(text.match(/\b20[2-4]\d\b/g) ?? [])].sort();
     const yearLabels = Object.fromEntries([...years.map((y) => [y, null]), [NONE, "The text does not say."]]);
     Object.assign(state, { text: text.replace(/\s+/g, " ").trim() });
-    questions.annoPiccoDebito = choice("According to the text, in which year does the financial plan expect the city's financial debt to peak?", yearLabels);
-    questions.annoFinePiano = choice("According to the text, which year is the last year of the financial plan?", yearLabels);
+    if (plan) questions.annoPiccoDebito = choice("According to the text, in which year does the financial plan expect the city's financial debt to peak?", yearLabels);
+    if (plan) questions.annoFinePiano = choice("According to the text, which year is the last year of the financial plan?", yearLabels);
   }
   const req = { model: MODEL, state, questions };
   return cached(req, async () => {
@@ -210,10 +229,11 @@ async function main() {
     }
     const text = (await pdf(readFileSync(doc.file))).text;
     const cands = findCandidates(text);
-    const picked = await pickFigures(client, doc.kind, doc.year, cands, text);
+    const fields = doc.fields ? doc.fields() : FIELDS_BY_KIND[doc.kind];
+    const picked = await pickFigures(client, doc.kind, doc.year, cands, text, fields, doc.plan !== false);
     const annex = doc.kind === "consuntivo" ? await parseAnnex(doc.year).catch(() => null) : null; // 2025 not yet published by the canton
 
-    const figures = Object.fromEntries(FIELDS_BY_KIND[doc.kind].map((f) => {
+    const figures = Object.fromEntries(fields.map((f) => {
       const a = picked.answers[f.key];
       const { rep, mass, occurrences, runnerUp } = resolveByValue(a, cands);
       const c = rep && f.deficit ? { ...rep, chf: -Math.abs(rep.chf) } : rep;
@@ -241,8 +261,21 @@ async function main() {
       : [v("autofinanziamento"), v("onereNettoInvestimenti"), v("risultatoGlobale")];
     const consistency = af !== null && inv !== null && rg !== null
       ? { expectedCHF: af - inv, reportedCHF: rg, ok: Math.abs(af - inv - rg) <= 2e6 } : null;
+    // 2027 release: its totals must add up (amounts printed to 0.1M, so allow 0.15M)
+    const near = (a: number | null, b: number | null) => a !== null && b !== null ? Math.abs(a - b) <= 0.15e6 : null;
+    const sum = (...ks: string[]) => ks.every((k) => v(k) !== null) ? ks.reduce((t, k) => t + v(k)!, 0) : null;
+    const checks = doc.fields ? {
+      spendingMinusRevenueIsTaxNeed: near(sum("speseOrdinarie") !== null && v("entrateOrdinarie") !== null ? v("speseOrdinarie")! - v("entrateOrdinarie")! : null, v("fabbisognoImposte")),
+      taxNeedMinusTaxesIsDeficit: near(v("fabbisognoImposte") !== null && sum("gettitoPF", "gettitoPG") !== null ? sum("gettitoPF", "gettitoPG")! - v("fabbisognoImposte")! : null, v("risultatoEsercizio")),
+      planMinusBudgetIsImprovement: near(v("risultatoEsercizio") !== null && v("disavanzoPrevistoPiano") !== null ? v("risultatoEsercizio")! - v("disavanzoPrevistoPiano")! : null, v("miglioramentoVsPiano")),
+    } : undefined;
+    if (checks) {
+      const failed = Object.entries(checks).filter(([, ok]) => ok !== true).map(([k, ok]) => `${k} ${ok === null ? "(figure missing)" : "✗"}`);
+      if (consistency && !consistency.ok) failed.push("autofinanziamento − investimenti = globale ✗");
+      if (failed.length) throw new Error(`CHECK FAILED preventivo ${doc.year}: ${failed.join(", ")}`);
+    }
     results.push({ kind: doc.kind, year: doc.year, source: doc.url, model: picked.model, candidates: cands.length,
-      usage: picked.usage, figures, years, consistency });
+      usage: picked.usage, figures, years, consistency, ...(checks ? { checks } : {}) });
   }
 
   mkdirSync("out", { recursive: true });
@@ -251,6 +284,7 @@ async function main() {
   for (const r of results) {
     console.log(`\n${r.kind === "consuntivo" ? "Consuntivo" : "Preventivo"} ${r.year}  (${r.candidates} candidates, ${r.usage?.input_tokens ?? "?"} input tokens, ${r.model})`);
     for (const [k, y] of Object.entries(r.years)) console.log(`  ${k.padEnd(32)} ${String(y.year ?? "—").padStart(12)}  ${y.status.padEnd(8)} conf ${y.confidence.toFixed(2)}`);
+    if ("checks" in r && r.checks) console.log(`  checks: ${Object.entries(r.checks).map(([k, ok]) => `${k} ${ok ? "✓" : "✗"}`).join(" · ")}`);
     if (r.consistency) console.log(`  consistency autofin − invest = globale: ${r.consistency.ok ? "✓" : "✗"} ` +
       `(${(r.consistency.expectedCHF / 1e6).toFixed(1)} vs ${(r.consistency.reportedCHF / 1e6).toFixed(1)} M)`);
     for (const [k, f] of Object.entries(r.figures)) {

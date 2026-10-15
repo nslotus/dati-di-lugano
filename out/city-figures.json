@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-14T22:16:51.409Z",
+  "generatedAt": "2026-10-15T21:46:44.987Z",
   "minConfidence": 0.8,
   "results": [
     {
@@ -700,6 +700,228 @@
         "expectedCHF": -241900000,
         "reportedCHF": -240800000,
         "ok": true
+      }
+    },
+    {
+      "kind": "preventivo",
+      "year": 2027,
+      "source": "https://www.lugano.ch/dam/jcr:3252b132-7bd9-4f5b-84af-f03a9a61c763/15%2010%202026_Comunicato_Preventivo%202027.pdf",
+      "model": "jev-1.14.0",
+      "candidates": 15,
+      "usage": {
+        "input_tokens": 6021,
+        "output_tokens": 1685
+      },
+      "figures": {
+        "risultatoEsercizio": {
+          "valueCHF": -14700000,
+          "raw": "14.7",
+          "unit": "CHF million",
+          "line": "Il Preventivo 2027 presenta un disavanzo di gestione corrente di CHF 14.7 milioni, con un",
+          "candidate": "c1",
+          "valueProbability": 1,
+          "occurrences": 2,
+          "runnerUp": {
+            "valueCHF": 4800000,
+            "mass": 0
+          },
+          "rawChoice": {
+            "id": "c1",
+            "confidence": 0.72
+          },
+          "status": "accepted"
+        },
+        "investimentiNetti": {
+          "valueCHF": 97000000,
+          "raw": "97.0",
+          "unit": "CHF million",
+          "line": "Gli investimenti netti ammontano a CHF 97.0 milioni e comprendono anche il pagamento",
+          "candidate": "c6",
+          "valueProbability": 0.94,
+          "occurrences": 2,
+          "runnerUp": {
+            "valueCHF": null,
+            "mass": 0.05
+          },
+          "rawChoice": {
+            "id": "c6",
+            "confidence": 0.52
+          },
+          "status": "accepted"
+        },
+        "autofinanziamento": {
+          "valueCHF": 16600000,
+          "raw": "16.6",
+          "unit": "CHF million",
+          "line": "• Autofinanziamento: CHF 16.6 milioni;",
+          "candidate": "c14",
+          "valueProbability": 1,
+          "occurrences": 1,
+          "runnerUp": {
+            "valueCHF": 14700000,
+            "mass": 0
+          },
+          "rawChoice": {
+            "id": "c14",
+            "confidence": 1
+          },
+          "status": "accepted"
+        },
+        "risultatoGlobale": {
+          "valueCHF": -80400000,
+          "raw": "80.4",
+          "unit": "CHF million",
+          "line": "• Risultato globale: – CHF 80.4 milioni.",
+          "candidate": "c15",
+          "valueProbability": 0.97,
+          "occurrences": 1,
+          "runnerUp": {
+            "valueCHF": null,
+            "mass": 0.03
+          },
+          "rawChoice": {
+            "id": "c15",
+            "confidence": 0.97
+          },
+          "status": "accepted"
+        },
+        "speseOrdinarie": {
+          "valueCHF": 510800000,
+          "raw": "510.8",
+          "unit": "CHF million",
+          "line": "• Spese ordinarie: CHF 510.8 milioni;",
+          "candidate": "c8",
+          "valueProbability": 0.99,
+          "occurrences": 1,
+          "runnerUp": {
+            "valueCHF": null,
+            "mass": 0.01
+          },
+          "rawChoice": {
+            "id": "c8",
+            "confidence": 0.99
+          },
+          "status": "accepted"
+        },
+        "entrateOrdinarie": {
+          "valueCHF": 224100000,
+          "raw": "224.1",
+          "unit": "CHF million",
+          "line": "• Entrate ordinarie: CHF 224.1 milioni;",
+          "candidate": "c9",
+          "valueProbability": 0.97,
+          "occurrences": 1,
+          "runnerUp": {
+            "valueCHF": null,
+            "mass": 0.03
+          },
+          "rawChoice": {
+            "id": "c9",
+            "confidence": 0.97
+          },
+          "status": "accepted"
+        },
+        "fabbisognoImposte": {
+          "valueCHF": 286700000,
+          "raw": "286.7",
+          "unit": "CHF million",
+          "line": "• Fabbisogno coperto da imposte: CHF 286.7 milioni;",
+          "candidate": "c10",
+          "valueProbability": 0.99,
+          "occurrences": 1,
+          "runnerUp": {
+            "valueCHF": null,
+            "mass": 0.01
+          },
+          "rawChoice": {
+            "id": "c10",
+            "confidence": 0.99
+          },
+          "status": "accepted"
+        },
+        "gettitoPF": {
+          "valueCHF": 221000000,
+          "raw": "221.0",
+          "unit": "CHF million",
+          "line": "• Gettito fiscale delle persone fisiche: CHF 221.0 milioni;",
+          "candidate": "c11",
+          "valueProbability": 1,
+          "occurrences": 1,
+          "runnerUp": {
+            "valueCHF": 14700000,
+            "mass": 0
+          },
+          "rawChoice": {
+            "id": "c11",
+            "confidence": 1
+          },
+          "status": "accepted"
+        },
+        "gettitoPG": {
+          "valueCHF": 51000000,
+          "raw": "51.0",
+          "unit": "CHF million",
+          "line": "• Gettito fiscale delle persone giuridiche: CHF 51.0 milioni;",
+          "candidate": "c12",
+          "valueProbability": 1,
+          "occurrences": 1,
+          "runnerUp": {
+            "valueCHF": 14700000,
+            "mass": 0
+          },
+          "rawChoice": {
+            "id": "c12",
+            "confidence": 1
+          },
+          "status": "accepted"
+        },
+        "disavanzoPrevistoPiano": {
+          "valueCHF": -19500000,
+          "raw": "19.5",
+          "unit": "CHF million",
+          "line": "miglioramento di  CHF 4.8 milioni rispetto ai CHF 19.5 milioni previsti per il 2027 nel Piano",
+          "candidate": "c3",
+          "valueProbability": 0.99,
+          "occurrences": 1,
+          "runnerUp": {
+            "valueCHF": null,
+            "mass": 0.01
+          },
+          "rawChoice": {
+            "id": "c3",
+            "confidence": 0.99
+          },
+          "status": "accepted"
+        },
+        "miglioramentoVsPiano": {
+          "valueCHF": 4800000,
+          "raw": "4.8",
+          "unit": "CHF million",
+          "line": "miglioramento di  CHF 4.8 milioni rispetto ai CHF 19.5 milioni previsti per il 2027 nel Piano",
+          "candidate": "c2",
+          "valueProbability": 0.99,
+          "occurrences": 1,
+          "runnerUp": {
+            "valueCHF": null,
+            "mass": 0.01
+          },
+          "rawChoice": {
+            "id": "c2",
+            "confidence": 0.99
+          },
+          "status": "accepted"
+        }
+      },
+      "years": {},
+      "consistency": {
+        "expectedCHF": -80400000,
+        "reportedCHF": -80400000,
+        "ok": true
+      },
+      "checks": {
+        "spendingMinusRevenueIsTaxNeed": true,
+        "taxNeedMinusTaxesIsDeficit": true,
+        "planMinusBudgetIsImprovement": true
       }
     }
   ]

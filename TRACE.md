@@ -67,3 +67,23 @@ Consistency check (self-financing − net investment = overall result): passed (
 | Debt at end of plan | 1152.70 | `1'152.7` M | 3 | nel    2030     per    poi    calare  progressivamente  fino    a  CHF     1'152.7  milion | 0.98 | accepted |  |
 | Year of plan peak | 2030 | — | — | — | conf 1.00 | accepted | |
 | Last year of plan | 2033 | — | — | — | conf 1.00 | accepted | |
+
+## Budget 2027
+
+Source: [sources/city-preventivo-2027-comunicato.pdf](sources/city-preventivo-2027-comunicato.pdf) · [original](https://www.lugano.ch/dam/jcr:3252b132-7bd9-4f5b-84af-f03a9a61c763/15%2010%202026_Comunicato_Preventivo%202027.pdf) · SHA-256 `4d1b5a2ccaabf47d…` · 15 candidate amounts · model jev-1.14.0
+
+Consistency check (self-financing − net investment = overall result): passed (-80.4M vs -80.4M).
+
+| Figure | Value (CHF M) | Printed as | Page | Printed line | p(value) | Status | Check |
+|---|---|---|---|---|---|---|---|
+| Operating result (budget) | -14.70 | `14.7` M | 1 | Il Preventivo 2027 presenta un disavanzo di gestione corrente di CHF 14.7 milioni, con un | 1.00 | accepted |  |
+| Net investment (budget) | 97.00 | `97.0` M | 1 | Gli investimenti netti ammontano a CHF 97.0 milioni e comprendono anche il pagamento | 0.94 | accepted |  |
+| Self-financing | 16.60 | `16.6` M | 2 | • Autofinanziamento: CHF 16.6 milioni; | 1.00 | accepted |  |
+| Overall financing result | -80.40 | `80.4` M | 2 | • Risultato globale: – CHF 80.4 milioni. | 0.97 | accepted |  |
+| Ordinary spending (budget) | 510.80 | `510.8` M | 1 | • Spese ordinarie: CHF 510.8 milioni; | 0.99 | accepted |  |
+| Ordinary revenue before taxes (budget) | 224.10 | `224.1` M | 1 | • Entrate ordinarie: CHF 224.1 milioni; | 0.97 | accepted |  |
+| Amount to be covered by taxes | 286.70 | `286.7` M | 1 | • Fabbisogno coperto da imposte: CHF 286.7 milioni; | 0.99 | accepted |  |
+| Tax revenue, individuals (budget) | 221.00 | `221.0` M | 1 | • Gettito fiscale delle persone fisiche: CHF 221.0 milioni; | 1.00 | accepted |  |
+| Tax revenue, companies (budget) | 51.00 | `51.0` M | 1 | • Gettito fiscale delle persone giuridiche: CHF 51.0 milioni; | 1.00 | accepted |  |
+| Deficit the 2026–2033 plan foresaw | -19.50 | `19.5` M | 1 | miglioramento di  CHF 4.8 milioni rispetto ai CHF 19.5 milioni previsti per il 2027 nel Pi | 0.99 | accepted |  |
+| Improvement on the plan | 4.80 | `4.8` M | 1 | miglioramento di  CHF 4.8 milioni rispetto ai CHF 19.5 milioni previsti per il 2027 nel Pi | 0.99 | accepted |  |
