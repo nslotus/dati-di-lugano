@@ -10,7 +10,8 @@
     "watch": "tsx src/watch.ts",
     "provenance": "tsx src/provenance.ts",
     "budget": "tsx src/budget.ts",
-    "schools": "tsx src/schools.ts"
+    "schools": "tsx src/schools.ts",
+    "mobility": "tsx src/mobility.ts"
   },
   "keywords": [],
   "author": "",

@@ -36,6 +36,15 @@
     "sha256": "1c1b4645af41f8deb26f14f2a054122cb607cec736047d197b09b3e421ccb614"
   },
   {
+    "file": "sources/20250805-rete-bikesharing.pdf",
+    "url": "https://www.lugano.ch/dam/jcr:fde47d24-6fc7-4ce2-9e73-cef2b0aa0ab7/20250805-cs-rete-bikesharing.pdf",
+    "publisher": "City of Lugano",
+    "usedFor": "PubliBike bike sharing: rentals 2024, fleet, stations, City net cost (npm run mobility)",
+    "retrieved": "2026-10-15T13:58:37.084Z",
+    "bytes": 89454,
+    "sha256": "a3047466087e7d98ba7c208d23dbb9d0d30cc1b54e52f4f19b74f55bea14a39c"
+  },
+  {
     "file": "sources/20250903-inizio-anno-scolastico.pdf",
     "url": "https://www.lugano.ch/dam/jcr:6ea44591-f14e-4fe7-a278-d883546c7e1b/20250903-cs-inizio-anno-scolastico-2025-2026.pdf",
     "publisher": "City of Lugano",
@@ -139,6 +148,15 @@
     "sha256": "ce1d988ef396ffbc66fe3ba092de855878cf9d8202370367dad0b793e3eeab72",
     "redacted": "1 third-party API key value(s) replaced with REDACTED",
     "originalSha256": "7c37ee8d8f14f6ef8240a5587eaefba02b59b6bd110b5b067f5fd5045efd4d40"
+  },
+  {
+    "file": "sources/tpl-cs-assemblea-2026.pdf",
+    "url": "https://www.tplsa.ch/repository/pdf/125163517-CS_Assembleaazionisti2026_TPL.pdf",
+    "publisher": "TPL – Trasporti Pubblici Luganesi SA",
+    "usedFor": "TPL passengers 2025: total, buses, funicular (npm run mobility)",
+    "retrieved": "2026-10-15T13:58:37.044Z",
+    "bytes": 150674,
+    "sha256": "2b538889fbf79ba2a65e73c5cbda9c621b49cf3d0a4f22c8d40409e6615d1be3"
   },
   {
     "file": "sources/ustat-142lugano.pdf",
