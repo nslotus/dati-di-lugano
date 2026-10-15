@@ -102,6 +102,22 @@ The city's final-accounts decks print each recap row as *actual · budget · dif
 | 2025/26 | 3,267 | 1,177 in 69 sections (17.06) | 2,090 in 119 classes (17.56) |
 | 2026/27 | 3,289 | 1,254 in 69 sections (18.17) | 2,035 in 115 classes (17.70) |
 
+### Mobility figures (`npm run mobility`)
+
+`src/mobility.ts` uses the same TypeSafe extraction on two releases: TPL's press release of its 2026 general meeting (2025 financial year) and the City's press release of 5 August 2025 on the PubliBike bike-sharing network. Checks that stop the run: total passengers − bus passengers lies between the printed funicular figure ("oltre 3.1 milioni") and 3.2 million; e-bikes + standard bikes = the renewed fleet. Run of 15 October 2026: 12 of 12 figures accepted (confidence 0.90–1.00), both checks passed.
+
+| Figure | Value | Source |
+|---|---|---|
+| TPL passengers 2025 | 17,110,804 (+4.42% on 2024) | TPL release |
+| of which bus lines | 14,008,855 | TPL release |
+| Funicolare Lugano–Stazione | over 3.1 million (3,101,949 by difference) | TPL release |
+| PubliBike rentals 2024 | over 320,000 | City release |
+| Fleet before / after renewal | 225 / 140 (92 e-bikes, 48 standard) | City release |
+| New "light" stations | 35 | City release |
+| City net cost | 107,000 → 96,000 francs a year from 2027 | City release |
+
+TPL serves Lugano and neighbouring municipalities, so its figures are for the TPL network, not the city alone. PubliBike counts rentals (trips), not users.
+
 ## 4. Research log
 
 Searches were run with Claude Code's web search and Exa (`web_search_exa`, `web_fetch_exa`); files were downloaded with curl.

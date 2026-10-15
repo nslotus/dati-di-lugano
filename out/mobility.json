@@ -1,0 +1,131 @@
+{
+  "generatedAt": "2026-10-15T14:59:09.644Z",
+  "minConfidence": 0.8,
+  "method": "TypeSafe pre-parsed value extraction from TPL's and the City's releases; checks: total − bus = funicular (printed as a lower bound in millions), e-bikes + standard bikes = fleet.",
+  "results": [
+    {
+      "id": "tpl",
+      "year": 2025,
+      "publisher": "TPL – Trasporti Pubblici Luganesi SA",
+      "source": "https://www.tplsa.ch/repository/pdf/125163517-CS_Assembleaazionisti2026_TPL.pdf",
+      "archived": "sources/tpl-cs-assemblea-2026.pdf",
+      "model": "jev-1.14.0",
+      "candidates": 26,
+      "usage": {
+        "input_tokens": 3442,
+        "output_tokens": 1007
+      },
+      "figures": {
+        "totalPassengers": {
+          "value": 17110804,
+          "raw": "17’110’804",
+          "confidence": 0.98,
+          "context": "nche la crescita della domanda di trasporto pubblico. Complessivamente TPL ha trasportato 17’110’804 passeggeri, pari a un aumento del 4.42% rispetto al 2024. L"
+        },
+        "busPassengers": {
+          "value": 14008855,
+          "raw": "14’008’855",
+          "confidence": 1,
+          "context": "sseggeri, pari a un aumento del 4.42% rispetto al 2024. Le linee su gomma hanno raggiunto 14’008’855 utenti, con una crescita del 3.6%, mentre la Funicolare Lug"
+        },
+        "funicularMillions": {
+          "value": 3100000,
+          "raw": "3.1",
+          "confidence": 0.91,
+          "context": "utenti, con una crescita del 3.6%, mentre la Funicolare Lugano–Stazione ha superato quota 3.1 milioni di passeggeri, registrando un incremento dell’8.28%"
+        },
+        "growthPct": {
+          "value": 4.42,
+          "raw": "4.42",
+          "confidence": 0.98,
+          "context": "ubblico. Complessivamente TPL ha trasportato 17’110’804 passeggeri, pari a un aumento del 4.42% rispetto al 2024. Le linee su gomma hanno raggiunto 14’008"
+        }
+      },
+      "checks": {
+        "funicularFits": true
+      },
+      "status": {
+        "totalPassengers": "accepted",
+        "busPassengers": "accepted",
+        "funicularMillions": "accepted",
+        "growthPct": "accepted"
+      }
+    },
+    {
+      "id": "publibike",
+      "year": 2024,
+      "publisher": "Città di Lugano",
+      "source": "https://www.lugano.ch/dam/jcr:fde47d24-6fc7-4ce2-9e73-cef2b0aa0ab7/20250805-cs-rete-bikesharing.pdf",
+      "archived": "sources/20250805-rete-bikesharing.pdf",
+      "model": "jev-1.14.0",
+      "candidates": 27,
+      "usage": {
+        "input_tokens": 4625,
+        "output_tokens": 2080
+      },
+      "figures": {
+        "rentals2024": {
+          "value": 320000,
+          "raw": "320’000",
+          "confidence": 0.98,
+          "context": "10, il servizio ha visto una crescita costante: solo nel 2024 sono state registrate oltre 320’000 movimentazioni, a conferma dell’utilizzo diffuso da parte d"
+        },
+        "bikesBefore": {
+          "value": 225,
+          "raw": "225",
+          "confidence": 0.9,
+          "context": ", contrassegnati da un apposito adesivo. • Flotta aggiornata: le biciclette passeranno da 225 a 140 mezzi totali, suddivisi in 92 e-bike e 48 bici muscol"
+        },
+        "bikesAfter": {
+          "value": 140,
+          "raw": "140",
+          "confidence": 0.98,
+          "context": "rassegnati da un apposito adesivo. • Flotta aggiornata: le biciclette passeranno da 225 a 140 mezzi totali, suddivisi in 92 e-bike e 48 bici muscolari. A"
+        },
+        "eBikes": {
+          "value": 92,
+          "raw": "92",
+          "confidence": 0.98,
+          "context": "vo. • Flotta aggiornata: le biciclette passeranno da 225 a 140 mezzi totali, suddivisi in 92 e-bike e 48 bici muscolari. Attivo a Lugano dal 2010, il se"
+        },
+        "standardBikes": {
+          "value": 48,
+          "raw": "48",
+          "confidence": 0.99,
+          "context": " aggiornata: le biciclette passeranno da 225 a 140 mezzi totali, suddivisi in 92 e-bike e 48 bici muscolari. Attivo a Lugano dal 2010, il servizio ha vi"
+        },
+        "lightStations": {
+          "value": 35,
+          "raw": "35",
+          "confidence": 0.95,
+          "context": "hi, grazie a costi di gestione inferiori. • Nuove postazioni “light”: verranno introdotte 35 nuove postazioni leggere. Oltre alle stazioni classiche, sa"
+        },
+        "netCostNow": {
+          "value": 107000,
+          "raw": "107’000",
+          "confidence": 0.93,
+          "context": "costo netto per la Città sarà di 96’000 franchi all’anno, inferiore rispetto agli attuali 107’000. La Città ha inoltre deciso di non introdurre il servizio d"
+        },
+        "netCost2027": {
+          "value": 96000,
+          "raw": "96’000",
+          "confidence": 0.98,
+          "context": "enibile anche dal punto di vista economico: dal 2027, il costo netto per la Città sarà di 96’000 franchi all’anno, inferiore rispetto agli attuali 107’000. "
+        }
+      },
+      "checks": {
+        "fleetAddsUp": true
+      },
+      "status": {
+        "rentals2024": "accepted",
+        "bikesBefore": "accepted",
+        "bikesAfter": "accepted",
+        "eBikes": "accepted",
+        "standardBikes": "accepted",
+        "lightStations": "accepted",
+        "netCostNow": "accepted",
+        "netCost2027": "accepted"
+      }
+    }
+  ]
+}
