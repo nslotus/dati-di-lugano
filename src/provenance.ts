@@ -43,6 +43,15 @@ const ORIGIN: Record<string, { url: string; publisher: string; usedFor: string }
 };
 
 const sha256 = (buf: Buffer) => createHash("sha256").update(buf).digest("hex");
+
+/** Google API keys (AIza…) and generic key=/token= query values in archived web pages. */
+function redact(text: string) {
+  let count = 0;
+  const out = text
+    .replace(/AIza[0-9A-Za-z_-]{30,}/g, () => (count++, "REDACTED"))
+    .replace(/([?&](?:api_?key|access_token|token)=)([A-Za-z0-9._-]{16,})/gi, (_m, k) => (count++, `${k}REDACTED`));
+  return { text: out, count };
+}
 const squash = (s: string) => s.replace(/\s+/g, "");
 
 async function pageTexts(file: string): Promise<string[]> {
@@ -82,10 +91,17 @@ async function main() {
   const unknown = readdirSync(RAW).filter((f) => !ORIGIN[f]);
   if (unknown.length) console.warn(`not archived (no recorded origin): ${unknown.join(", ")}`);
   const manifest = files.map((f) => {
-    const buf = readFileSync(`${RAW}/${f}`);
-    copyFileSync(`${RAW}/${f}`, `${OUT}/${f}`);
-    return { file: `sources/${f}`, ...ORIGIN[f], retrieved: statSync(`${RAW}/${f}`).mtime.toISOString(), bytes: buf.length, sha256: sha256(buf) };
+    const original = readFileSync(`${RAW}/${f}`);
+    // Page snapshots embed the site's own third-party keys (lugano.ch loads Google Maps with a browser key).
+    // Never republish them: blank any credential-looking value before archiving, and record both hashes.
+    const redacted = f.endsWith(".html") ? redact(original.toString("utf8")) : null;
+    const buf = redacted && redacted.count ? Buffer.from(redacted.text, "utf8") : original;
+    if (buf === original) copyFileSync(`${RAW}/${f}`, `${OUT}/${f}`); else writeFileSync(`${OUT}/${f}`, buf);
+    return { file: `sources/${f}`, ...ORIGIN[f], retrieved: statSync(`${RAW}/${f}`).mtime.toISOString(), bytes: buf.length, sha256: sha256(buf),
+      ...(buf !== original ? { redacted: `${redacted!.count} third-party API key value(s) replaced with REDACTED`, originalSha256: sha256(original) } : {}) };
   });
+  const leftovers = manifest.filter((m) => /AIza[0-9A-Za-z_-]{30}/.test(readFileSync(m.file).toString("latin1")));
+  if (leftovers.length) throw new Error(`credential pattern still present in: ${leftovers.map((m) => m.file).join(", ")}`);
   writeFileSync(`${OUT}/MANIFEST.json`, JSON.stringify(manifest, null, 2) + "\n");
   writeFileSync(`${OUT}/README.md`, [
     "# Source archive",

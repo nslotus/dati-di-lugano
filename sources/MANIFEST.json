@@ -86,8 +86,10 @@
     "publisher": "City of Lugano",
     "usedFor": "Snapshot of the finance-documents page (document list; watcher baseline)",
     "retrieved": "2026-10-14T21:31:30.156Z",
-    "bytes": 68898,
-    "sha256": "62c7f5fab68d5ac110d6cbfe653663739d7a3e150f458e101475e950f852b9d2"
+    "bytes": 68867,
+    "sha256": "997bf4ea8600b95a5a5da14343f6dbadfcc837a306c2f137a8694da4b91d2178",
+    "redacted": "1 third-party API key value(s) replaced with REDACTED",
+    "originalSha256": "62c7f5fab68d5ac110d6cbfe653663739d7a3e150f458e101475e950f852b9d2"
   },
   {
     "file": "sources/news.html",
@@ -95,8 +97,10 @@
     "publisher": "City of Lugano",
     "usedFor": "Snapshot of the news page (news check)",
     "retrieved": "2026-10-14T21:52:14.531Z",
-    "bytes": 65676,
-    "sha256": "dd509c9cf02978033c0dbb9f24aaec9f0282f5cb478e9b2898e428a46fb01737"
+    "bytes": 65645,
+    "sha256": "258d29097c6b219ec31444f1c65856f18fa0d16e5aed28aa082e226be7ce637b",
+    "redacted": "1 third-party API key value(s) replaced with REDACTED",
+    "originalSha256": "dd509c9cf02978033c0dbb9f24aaec9f0282f5cb478e9b2898e428a46fb01737"
   },
   {
     "file": "sources/press.html",
@@ -104,8 +108,10 @@
     "publisher": "City of Lugano",
     "usedFor": "Snapshot of the press-release list (news check; watcher baseline)",
     "retrieved": "2026-10-14T21:52:14.333Z",
-    "bytes": 86739,
-    "sha256": "7c37ee8d8f14f6ef8240a5587eaefba02b59b6bd110b5b067f5fd5045efd4d40"
+    "bytes": 86708,
+    "sha256": "ce1d988ef396ffbc66fe3ba092de855878cf9d8202370367dad0b793e3eeab72",
+    "redacted": "1 third-party API key value(s) replaced with REDACTED",
+    "originalSha256": "7c37ee8d8f14f6ef8240a5587eaefba02b59b6bd110b5b067f5fd5045efd4d40"
   },
   {
     "file": "sources/ustat-142lugano.pdf",
