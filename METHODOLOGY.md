@@ -118,6 +118,12 @@ The city's final-accounts decks print each recap row as *actual · budget · dif
 
 TPL serves Lugano and neighbouring municipalities, so its figures are for the TPL network, not the city alone. PubliBike counts rentals (trips), not users.
 
+### Bond debt service (`npm run debtservice`)
+
+Computed from the bond register in `src/bonds.ts` (terms only, no market data): one coupon a year on the anniversary of the maturity day, the first about a year after issue (an anniversary within 30 days of the first trading day is not a coupon date), the last with the repayment at maturity. Interest accrued in a calendar year = volume × coupon × days outstanding / 365, which is what the accounts book. The schedule is as contracted: no refinancing is assumed, and volumes are issue volumes. The 0.03% private placement that matured in 2025 has no known volume and is left out.
+
+Tests that stop the run: first coupon of the July 2026 bond on 16.7.2027 (none in 2026), of the March 2024 bond on 7.3.2025, of the June 2025 bond on 16.6.2026; the bond matured on 9.12.2024 pays its last coupon with the repayment; the 2070 bond pays every year. Check against the accounts: 2024 accrued bond interest (CHF 8.64M) must not exceed Lugano's interest expense in the canton's 2024 annex (`2024-allegato.xlsx`, `tab9c`, account 340 "spese per interessi": CHF 11.50M); the rest is interest on bank loans and other debt. Result on 15.10.2026: 11 bonds, CHF 1’120M, CHF 10.89M interest a year (average coupon 0.972%).
+
 ## 4. Research log
 
 Searches were run with Claude Code's web search and Exa (`web_search_exa`, `web_fetch_exa`); files were downloaded with curl.

@@ -1,0 +1,1205 @@
+{
+  "generatedAt": "2026-10-15T20:14:49.337Z",
+  "asOf": "2026-10-15",
+  "method": "Computed from the bond register (terms only). One coupon a year on the maturity anniversary, the first about a year after issue; accrued interest by days outstanding / 365. Contracted schedule, no refinancing assumed. Volumes are issue volumes.",
+  "today": {
+    "bondCount": 11,
+    "outstandingM": 1120,
+    "annualInterestM": 10.89,
+    "averageCouponPct": 0.9723
+  },
+  "accounts2024": {
+    "interestExpenseM": 11.502,
+    "bondInterestAccruedM": 8.644,
+    "bondSharePct": 75.2,
+    "source": "2024-allegato.xlsx, sheet tab9c, column 340 'spese per interessi', row 'Lugano' (CHF thousands)"
+  },
+  "checks": {
+    "bondInterestWithinAccounts2024": true
+  },
+  "unknownVolume": [
+    "CH0536893263"
+  ],
+  "byYear": [
+    {
+      "year": 2024,
+      "interestPaidM": 7.394,
+      "interestAccruedM": 8.644,
+      "redemptionM": 100,
+      "outstandingEndM": 970
+    },
+    {
+      "year": 2025,
+      "interestPaidM": 9.134,
+      "interestAccruedM": 9.609,
+      "redemptionM": 150,
+      "outstandingEndM": 1020
+    },
+    {
+      "year": 2026,
+      "interestPaidM": 9.94,
+      "interestAccruedM": 10.382,
+      "redemptionM": 0,
+      "outstandingEndM": 1120
+    },
+    {
+      "year": 2027,
+      "interestPaidM": 10.89,
+      "interestAccruedM": 10.88,
+      "redemptionM": 120,
+      "outstandingEndM": 1000
+    },
+    {
+      "year": 2028,
+      "interestPaidM": 10.59,
+      "interestAccruedM": 10.243,
+      "redemptionM": 100,
+      "outstandingEndM": 900
+    },
+    {
+      "year": 2029,
+      "interestPaidM": 9.465,
+      "interestAccruedM": 7.978,
+      "redemptionM": 100,
+      "outstandingEndM": 800
+    },
+    {
+      "year": 2030,
+      "interestPaidM": 7.84,
+      "interestAccruedM": 7.704,
+      "redemptionM": 20,
+      "outstandingEndM": 780
+    },
+    {
+      "year": 2031,
+      "interestPaidM": 7.44,
+      "interestAccruedM": 7.44,
+      "redemptionM": 0,
+      "outstandingEndM": 780
+    },
+    {
+      "year": 2032,
+      "interestPaidM": 7.44,
+      "interestAccruedM": 7.126,
+      "redemptionM": 100,
+      "outstandingEndM": 680
+    },
+    {
+      "year": 2033,
+      "interestPaidM": 6.827,
+      "interestAccruedM": 6.706,
+      "redemptionM": 120,
+      "outstandingEndM": 560
+    },
+    {
+      "year": 2034,
+      "interestPaidM": 5.628,
+      "interestAccruedM": 4.464,
+      "redemptionM": 100,
+      "outstandingEndM": 460
+    },
+    {
+      "year": 2035,
+      "interestPaidM": 4.212,
+      "interestAccruedM": 3.832,
+      "redemptionM": 100,
+      "outstandingEndM": 360
+    },
+    {
+      "year": 2036,
+      "interestPaidM": 3.26,
+      "interestAccruedM": 2.829,
+      "redemptionM": 100,
+      "outstandingEndM": 260
+    },
+    {
+      "year": 2037,
+      "interestPaidM": 2.31,
+      "interestAccruedM": 2.31,
+      "redemptionM": 0,
+      "outstandingEndM": 260
+    },
+    {
+      "year": 2038,
+      "interestPaidM": 2.31,
+      "interestAccruedM": 2.31,
+      "redemptionM": 0,
+      "outstandingEndM": 260
+    },
+    {
+      "year": 2039,
+      "interestPaidM": 2.31,
+      "interestAccruedM": 2.31,
+      "redemptionM": 0,
+      "outstandingEndM": 260
+    },
+    {
+      "year": 2040,
+      "interestPaidM": 2.31,
+      "interestAccruedM": 2.316,
+      "redemptionM": 0,
+      "outstandingEndM": 260
+    },
+    {
+      "year": 2041,
+      "interestPaidM": 2.31,
+      "interestAccruedM": 2.31,
+      "redemptionM": 0,
+      "outstandingEndM": 260
+    },
+    {
+      "year": 2042,
+      "interestPaidM": 2.31,
+      "interestAccruedM": 2.31,
+      "redemptionM": 0,
+      "outstandingEndM": 260
+    },
+    {
+      "year": 2043,
+      "interestPaidM": 2.31,
+      "interestAccruedM": 0.498,
+      "redemptionM": 120,
+      "outstandingEndM": 140
+    },
+    {
+      "year": 2044,
+      "interestPaidM": 0.21,
+      "interestAccruedM": 0.211,
+      "redemptionM": 0,
+      "outstandingEndM": 140
+    },
+    {
+      "year": 2045,
+      "interestPaidM": 0.21,
+      "interestAccruedM": 0.21,
+      "redemptionM": 0,
+      "outstandingEndM": 140
+    },
+    {
+      "year": 2046,
+      "interestPaidM": 0.21,
+      "interestAccruedM": 0.21,
+      "redemptionM": 0,
+      "outstandingEndM": 140
+    },
+    {
+      "year": 2047,
+      "interestPaidM": 0.21,
+      "interestAccruedM": 0.21,
+      "redemptionM": 0,
+      "outstandingEndM": 140
+    },
+    {
+      "year": 2048,
+      "interestPaidM": 0.21,
+      "interestAccruedM": 0.211,
+      "redemptionM": 0,
+      "outstandingEndM": 140
+    },
+    {
+      "year": 2049,
+      "interestPaidM": 0.21,
+      "interestAccruedM": 0.21,
+      "redemptionM": 0,
+      "outstandingEndM": 140
+    },
+    {
+      "year": 2050,
+      "interestPaidM": 0.21,
+      "interestAccruedM": 0.21,
+      "redemptionM": 0,
+      "outstandingEndM": 140
+    },
+    {
+      "year": 2051,
+      "interestPaidM": 0.21,
+      "interestAccruedM": 0.21,
+      "redemptionM": 0,
+      "outstandingEndM": 140
+    },
+    {
+      "year": 2052,
+      "interestPaidM": 0.21,
+      "interestAccruedM": 0.211,
+      "redemptionM": 0,
+      "outstandingEndM": 140
+    },
+    {
+      "year": 2053,
+      "interestPaidM": 0.21,
+      "interestAccruedM": 0.21,
+      "redemptionM": 0,
+      "outstandingEndM": 140
+    },
+    {
+      "year": 2054,
+      "interestPaidM": 0.21,
+      "interestAccruedM": 0.21,
+      "redemptionM": 0,
+      "outstandingEndM": 140
+    },
+    {
+      "year": 2055,
+      "interestPaidM": 0.21,
+      "interestAccruedM": 0.21,
+      "redemptionM": 0,
+      "outstandingEndM": 140
+    },
+    {
+      "year": 2056,
+      "interestPaidM": 0.21,
+      "interestAccruedM": 0.211,
+      "redemptionM": 0,
+      "outstandingEndM": 140
+    },
+    {
+      "year": 2057,
+      "interestPaidM": 0.21,
+      "interestAccruedM": 0.21,
+      "redemptionM": 0,
+      "outstandingEndM": 140
+    },
+    {
+      "year": 2058,
+      "interestPaidM": 0.21,
+      "interestAccruedM": 0.21,
+      "redemptionM": 0,
+      "outstandingEndM": 140
+    },
+    {
+      "year": 2059,
+      "interestPaidM": 0.21,
+      "interestAccruedM": 0.21,
+      "redemptionM": 0,
+      "outstandingEndM": 140
+    },
+    {
+      "year": 2060,
+      "interestPaidM": 0.21,
+      "interestAccruedM": 0.211,
+      "redemptionM": 0,
+      "outstandingEndM": 140
+    },
+    {
+      "year": 2061,
+      "interestPaidM": 0.21,
+      "interestAccruedM": 0.21,
+      "redemptionM": 0,
+      "outstandingEndM": 140
+    },
+    {
+      "year": 2062,
+      "interestPaidM": 0.21,
+      "interestAccruedM": 0.21,
+      "redemptionM": 0,
+      "outstandingEndM": 140
+    },
+    {
+      "year": 2063,
+      "interestPaidM": 0.21,
+      "interestAccruedM": 0.21,
+      "redemptionM": 0,
+      "outstandingEndM": 140
+    },
+    {
+      "year": 2064,
+      "interestPaidM": 0.21,
+      "interestAccruedM": 0.211,
+      "redemptionM": 0,
+      "outstandingEndM": 140
+    },
+    {
+      "year": 2065,
+      "interestPaidM": 0.21,
+      "interestAccruedM": 0.21,
+      "redemptionM": 0,
+      "outstandingEndM": 140
+    },
+    {
+      "year": 2066,
+      "interestPaidM": 0.21,
+      "interestAccruedM": 0.21,
+      "redemptionM": 0,
+      "outstandingEndM": 140
+    },
+    {
+      "year": 2067,
+      "interestPaidM": 0.21,
+      "interestAccruedM": 0.21,
+      "redemptionM": 0,
+      "outstandingEndM": 140
+    },
+    {
+      "year": 2068,
+      "interestPaidM": 0.21,
+      "interestAccruedM": 0.211,
+      "redemptionM": 0,
+      "outstandingEndM": 140
+    },
+    {
+      "year": 2069,
+      "interestPaidM": 0.21,
+      "interestAccruedM": 0.21,
+      "redemptionM": 0,
+      "outstandingEndM": 140
+    },
+    {
+      "year": 2070,
+      "interestPaidM": 0.21,
+      "interestAccruedM": 0.19,
+      "redemptionM": 140,
+      "outstandingEndM": 0
+    }
+  ],
+  "bonds": [
+    {
+      "isin": "CH0261541863",
+      "coupon": 0.875,
+      "volumeM": 100,
+      "maturity": "2024-12-09",
+      "listed": null,
+      "kind": "public",
+      "payments": [
+        {
+          "date": "2024-12-09",
+          "interestM": 0.875,
+          "redemptionM": 100
+        }
+      ]
+    },
+    {
+      "isin": "CH0290876512",
+      "coupon": 0.625,
+      "volumeM": 120,
+      "maturity": "2025-09-01",
+      "listed": null,
+      "kind": "public",
+      "payments": [
+        {
+          "date": "2024-09-01",
+          "interestM": 0.75,
+          "redemptionM": 0
+        },
+        {
+          "date": "2025-09-01",
+          "interestM": 0.75,
+          "redemptionM": 120
+        }
+      ]
+    },
+    {
+      "isin": "CH0536893263",
+      "coupon": 0.03,
+      "volumeM": null,
+      "maturity": "2025-09-01",
+      "listed": null,
+      "kind": "private",
+      "payments": []
+    },
+    {
+      "isin": "CH0485261116",
+      "coupon": 0.03,
+      "volumeM": 30,
+      "maturity": "2025-11-21",
+      "listed": null,
+      "kind": "private",
+      "payments": [
+        {
+          "date": "2024-11-21",
+          "interestM": 0.009,
+          "redemptionM": 0
+        },
+        {
+          "date": "2025-11-21",
+          "interestM": 0.009,
+          "redemptionM": 30
+        }
+      ]
+    },
+    {
+      "isin": "CH0387879080",
+      "coupon": 0.25,
+      "volumeM": 120,
+      "maturity": "2027-12-20",
+      "listed": "2017-12-18",
+      "kind": "public",
+      "payments": [
+        {
+          "date": "2024-12-20",
+          "interestM": 0.3,
+          "redemptionM": 0
+        },
+        {
+          "date": "2025-12-20",
+          "interestM": 0.3,
+          "redemptionM": 0
+        },
+        {
+          "date": "2026-12-20",
+          "interestM": 0.3,
+          "redemptionM": 0
+        },
+        {
+          "date": "2027-12-20",
+          "interestM": 0.3,
+          "redemptionM": 120
+        }
+      ]
+    },
+    {
+      "isin": "CH1199660007",
+      "coupon": 1.125,
+      "volumeM": 100,
+      "maturity": "2028-09-01",
+      "listed": "2022-08-31",
+      "kind": "public",
+      "payments": [
+        {
+          "date": "2024-09-01",
+          "interestM": 1.125,
+          "redemptionM": 0
+        },
+        {
+          "date": "2025-09-01",
+          "interestM": 1.125,
+          "redemptionM": 0
+        },
+        {
+          "date": "2026-09-01",
+          "interestM": 1.125,
+          "redemptionM": 0
+        },
+        {
+          "date": "2027-09-01",
+          "interestM": 1.125,
+          "redemptionM": 0
+        },
+        {
+          "date": "2028-09-01",
+          "interestM": 1.125,
+          "redemptionM": 100
+        }
+      ]
+    },
+    {
+      "isin": "CH1232107172",
+      "coupon": 1.625,
+      "volumeM": 100,
+      "maturity": "2029-02-01",
+      "listed": "2023-02-01",
+      "kind": "public",
+      "payments": [
+        {
+          "date": "2024-02-01",
+          "interestM": 1.625,
+          "redemptionM": 0
+        },
+        {
+          "date": "2025-02-01",
+          "interestM": 1.625,
+          "redemptionM": 0
+        },
+        {
+          "date": "2026-02-01",
+          "interestM": 1.625,
+          "redemptionM": 0
+        },
+        {
+          "date": "2027-02-01",
+          "interestM": 1.625,
+          "redemptionM": 0
+        },
+        {
+          "date": "2028-02-01",
+          "interestM": 1.625,
+          "redemptionM": 0
+        },
+        {
+          "date": "2029-02-01",
+          "interestM": 1.625,
+          "redemptionM": 100
+        }
+      ]
+    },
+    {
+      "isin": "CH0116880672",
+      "coupon": 2,
+      "volumeM": 20,
+      "maturity": "2030-08-30",
+      "listed": null,
+      "kind": "private",
+      "payments": [
+        {
+          "date": "2024-08-30",
+          "interestM": 0.4,
+          "redemptionM": 0
+        },
+        {
+          "date": "2025-08-30",
+          "interestM": 0.4,
+          "redemptionM": 0
+        },
+        {
+          "date": "2026-08-30",
+          "interestM": 0.4,
+          "redemptionM": 0
+        },
+        {
+          "date": "2027-08-30",
+          "interestM": 0.4,
+          "redemptionM": 0
+        },
+        {
+          "date": "2028-08-30",
+          "interestM": 0.4,
+          "redemptionM": 0
+        },
+        {
+          "date": "2029-08-30",
+          "interestM": 0.4,
+          "redemptionM": 0
+        },
+        {
+          "date": "2030-08-30",
+          "interestM": 0.4,
+          "redemptionM": 20
+        }
+      ]
+    },
+    {
+      "isin": "CH1433241267",
+      "coupon": 0.6125,
+      "volumeM": 100,
+      "maturity": "2032-06-16",
+      "listed": "2025-06-12",
+      "kind": "public",
+      "payments": [
+        {
+          "date": "2026-06-16",
+          "interestM": 0.6125,
+          "redemptionM": 0
+        },
+        {
+          "date": "2027-06-16",
+          "interestM": 0.6125,
+          "redemptionM": 0
+        },
+        {
+          "date": "2028-06-16",
+          "interestM": 0.6125,
+          "redemptionM": 0
+        },
+        {
+          "date": "2029-06-16",
+          "interestM": 0.6125,
+          "redemptionM": 0
+        },
+        {
+          "date": "2030-06-16",
+          "interestM": 0.6125,
+          "redemptionM": 0
+        },
+        {
+          "date": "2031-06-16",
+          "interestM": 0.6125,
+          "redemptionM": 0
+        },
+        {
+          "date": "2032-06-16",
+          "interestM": 0.6125,
+          "redemptionM": 100
+        }
+      ]
+    },
+    {
+      "isin": "CH1392903543",
+      "coupon": 1,
+      "volumeM": 120,
+      "maturity": "2033-11-25",
+      "listed": "2024-11-25",
+      "kind": "public",
+      "payments": [
+        {
+          "date": "2025-11-25",
+          "interestM": 1.2,
+          "redemptionM": 0
+        },
+        {
+          "date": "2026-11-25",
+          "interestM": 1.2,
+          "redemptionM": 0
+        },
+        {
+          "date": "2027-11-25",
+          "interestM": 1.2,
+          "redemptionM": 0
+        },
+        {
+          "date": "2028-11-25",
+          "interestM": 1.2,
+          "redemptionM": 0
+        },
+        {
+          "date": "2029-11-25",
+          "interestM": 1.2,
+          "redemptionM": 0
+        },
+        {
+          "date": "2030-11-25",
+          "interestM": 1.2,
+          "redemptionM": 0
+        },
+        {
+          "date": "2031-11-25",
+          "interestM": 1.2,
+          "redemptionM": 0
+        },
+        {
+          "date": "2032-11-25",
+          "interestM": 1.2,
+          "redemptionM": 0
+        },
+        {
+          "date": "2033-11-25",
+          "interestM": 1.2,
+          "redemptionM": 120
+        }
+      ]
+    },
+    {
+      "isin": "CH1319968462",
+      "coupon": 1.415,
+      "volumeM": 100,
+      "maturity": "2034-03-07",
+      "listed": "2024-03-07",
+      "kind": "public",
+      "payments": [
+        {
+          "date": "2025-03-07",
+          "interestM": 1.415,
+          "redemptionM": 0
+        },
+        {
+          "date": "2026-03-07",
+          "interestM": 1.415,
+          "redemptionM": 0
+        },
+        {
+          "date": "2027-03-07",
+          "interestM": 1.415,
+          "redemptionM": 0
+        },
+        {
+          "date": "2028-03-07",
+          "interestM": 1.415,
+          "redemptionM": 0
+        },
+        {
+          "date": "2029-03-07",
+          "interestM": 1.415,
+          "redemptionM": 0
+        },
+        {
+          "date": "2030-03-07",
+          "interestM": 1.415,
+          "redemptionM": 0
+        },
+        {
+          "date": "2031-03-07",
+          "interestM": 1.415,
+          "redemptionM": 0
+        },
+        {
+          "date": "2032-03-07",
+          "interestM": 1.415,
+          "redemptionM": 0
+        },
+        {
+          "date": "2033-03-07",
+          "interestM": 1.415,
+          "redemptionM": 0
+        },
+        {
+          "date": "2034-03-07",
+          "interestM": 1.415,
+          "redemptionM": 100
+        }
+      ]
+    },
+    {
+      "isin": "CH1462229902",
+      "coupon": 0.9525,
+      "volumeM": 100,
+      "maturity": "2035-08-08",
+      "listed": "2025-08-06",
+      "kind": "public",
+      "payments": [
+        {
+          "date": "2026-08-08",
+          "interestM": 0.9525,
+          "redemptionM": 0
+        },
+        {
+          "date": "2027-08-08",
+          "interestM": 0.9525,
+          "redemptionM": 0
+        },
+        {
+          "date": "2028-08-08",
+          "interestM": 0.9525,
+          "redemptionM": 0
+        },
+        {
+          "date": "2029-08-08",
+          "interestM": 0.9525,
+          "redemptionM": 0
+        },
+        {
+          "date": "2030-08-08",
+          "interestM": 0.9525,
+          "redemptionM": 0
+        },
+        {
+          "date": "2031-08-08",
+          "interestM": 0.9525,
+          "redemptionM": 0
+        },
+        {
+          "date": "2032-08-08",
+          "interestM": 0.9525,
+          "redemptionM": 0
+        },
+        {
+          "date": "2033-08-08",
+          "interestM": 0.9525,
+          "redemptionM": 0
+        },
+        {
+          "date": "2034-08-08",
+          "interestM": 0.9525,
+          "redemptionM": 0
+        },
+        {
+          "date": "2035-08-08",
+          "interestM": 0.9525,
+          "redemptionM": 100
+        }
+      ]
+    },
+    {
+      "isin": "CH1562934682",
+      "coupon": 0.95,
+      "volumeM": 100,
+      "maturity": "2036-07-16",
+      "listed": "2026-07-15",
+      "kind": "public",
+      "payments": [
+        {
+          "date": "2027-07-16",
+          "interestM": 0.95,
+          "redemptionM": 0
+        },
+        {
+          "date": "2028-07-16",
+          "interestM": 0.95,
+          "redemptionM": 0
+        },
+        {
+          "date": "2029-07-16",
+          "interestM": 0.95,
+          "redemptionM": 0
+        },
+        {
+          "date": "2030-07-16",
+          "interestM": 0.95,
+          "redemptionM": 0
+        },
+        {
+          "date": "2031-07-16",
+          "interestM": 0.95,
+          "redemptionM": 0
+        },
+        {
+          "date": "2032-07-16",
+          "interestM": 0.95,
+          "redemptionM": 0
+        },
+        {
+          "date": "2033-07-16",
+          "interestM": 0.95,
+          "redemptionM": 0
+        },
+        {
+          "date": "2034-07-16",
+          "interestM": 0.95,
+          "redemptionM": 0
+        },
+        {
+          "date": "2035-07-16",
+          "interestM": 0.95,
+          "redemptionM": 0
+        },
+        {
+          "date": "2036-07-16",
+          "interestM": 0.95,
+          "redemptionM": 100
+        }
+      ]
+    },
+    {
+      "isin": "CH0205500017",
+      "coupon": 1.75,
+      "volumeM": 120,
+      "maturity": "2043-02-20",
+      "listed": "2013-02-18",
+      "kind": "public",
+      "payments": [
+        {
+          "date": "2024-02-20",
+          "interestM": 2.1,
+          "redemptionM": 0
+        },
+        {
+          "date": "2025-02-20",
+          "interestM": 2.1,
+          "redemptionM": 0
+        },
+        {
+          "date": "2026-02-20",
+          "interestM": 2.1,
+          "redemptionM": 0
+        },
+        {
+          "date": "2027-02-20",
+          "interestM": 2.1,
+          "redemptionM": 0
+        },
+        {
+          "date": "2028-02-20",
+          "interestM": 2.1,
+          "redemptionM": 0
+        },
+        {
+          "date": "2029-02-20",
+          "interestM": 2.1,
+          "redemptionM": 0
+        },
+        {
+          "date": "2030-02-20",
+          "interestM": 2.1,
+          "redemptionM": 0
+        },
+        {
+          "date": "2031-02-20",
+          "interestM": 2.1,
+          "redemptionM": 0
+        },
+        {
+          "date": "2032-02-20",
+          "interestM": 2.1,
+          "redemptionM": 0
+        },
+        {
+          "date": "2033-02-20",
+          "interestM": 2.1,
+          "redemptionM": 0
+        },
+        {
+          "date": "2034-02-20",
+          "interestM": 2.1,
+          "redemptionM": 0
+        },
+        {
+          "date": "2035-02-20",
+          "interestM": 2.1,
+          "redemptionM": 0
+        },
+        {
+          "date": "2036-02-20",
+          "interestM": 2.1,
+          "redemptionM": 0
+        },
+        {
+          "date": "2037-02-20",
+          "interestM": 2.1,
+          "redemptionM": 0
+        },
+        {
+          "date": "2038-02-20",
+          "interestM": 2.1,
+          "redemptionM": 0
+        },
+        {
+          "date": "2039-02-20",
+          "interestM": 2.1,
+          "redemptionM": 0
+        },
+        {
+          "date": "2040-02-20",
+          "interestM": 2.1,
+          "redemptionM": 0
+        },
+        {
+          "date": "2041-02-20",
+          "interestM": 2.1,
+          "redemptionM": 0
+        },
+        {
+          "date": "2042-02-20",
+          "interestM": 2.1,
+          "redemptionM": 0
+        },
+        {
+          "date": "2043-02-20",
+          "interestM": 2.1,
+          "redemptionM": 120
+        }
+      ]
+    },
+    {
+      "isin": "CH0579132918",
+      "coupon": 0.15,
+      "volumeM": 140,
+      "maturity": "2070-11-28",
+      "listed": "2020-11-26",
+      "kind": "public",
+      "payments": [
+        {
+          "date": "2024-11-28",
+          "interestM": 0.21,
+          "redemptionM": 0
+        },
+        {
+          "date": "2025-11-28",
+          "interestM": 0.21,
+          "redemptionM": 0
+        },
+        {
+          "date": "2026-11-28",
+          "interestM": 0.21,
+          "redemptionM": 0
+        },
+        {
+          "date": "2027-11-28",
+          "interestM": 0.21,
+          "redemptionM": 0
+        },
+        {
+          "date": "2028-11-28",
+          "interestM": 0.21,
+          "redemptionM": 0
+        },
+        {
+          "date": "2029-11-28",
+          "interestM": 0.21,
+          "redemptionM": 0
+        },
+        {
+          "date": "2030-11-28",
+          "interestM": 0.21,
+          "redemptionM": 0
+        },
+        {
+          "date": "2031-11-28",
+          "interestM": 0.21,
+          "redemptionM": 0
+        },
+        {
+          "date": "2032-11-28",
+          "interestM": 0.21,
+          "redemptionM": 0
+        },
+        {
+          "date": "2033-11-28",
+          "interestM": 0.21,
+          "redemptionM": 0
+        },
+        {
+          "date": "2034-11-28",
+          "interestM": 0.21,
+          "redemptionM": 0
+        },
+        {
+          "date": "2035-11-28",
+          "interestM": 0.21,
+          "redemptionM": 0
+        },
+        {
+          "date": "2036-11-28",
+          "interestM": 0.21,
+          "redemptionM": 0
+        },
+        {
+          "date": "2037-11-28",
+          "interestM": 0.21,
+          "redemptionM": 0
+        },
+        {
+          "date": "2038-11-28",
+          "interestM": 0.21,
+          "redemptionM": 0
+        },
+        {
+          "date": "2039-11-28",
+          "interestM": 0.21,
+          "redemptionM": 0
+        },
+        {
+          "date": "2040-11-28",
+          "interestM": 0.21,
+          "redemptionM": 0
+        },
+        {
+          "date": "2041-11-28",
+          "interestM": 0.21,
+          "redemptionM": 0
+        },
+        {
+          "date": "2042-11-28",
+          "interestM": 0.21,
+          "redemptionM": 0
+        },
+        {
+          "date": "2043-11-28",
+          "interestM": 0.21,
+          "redemptionM": 0
+        },
+        {
+          "date": "2044-11-28",
+          "interestM": 0.21,
+          "redemptionM": 0
+        },
+        {
+          "date": "2045-11-28",
+          "interestM": 0.21,
+          "redemptionM": 0
+        },
+        {
+          "date": "2046-11-28",
+          "interestM": 0.21,
+          "redemptionM": 0
+        },
+        {
+          "date": "2047-11-28",
+          "interestM": 0.21,
+          "redemptionM": 0
+        },
+        {
+          "date": "2048-11-28",
+          "interestM": 0.21,
+          "redemptionM": 0
+        },
+        {
+          "date": "2049-11-28",
+          "interestM": 0.21,
+          "redemptionM": 0
+        },
+        {
+          "date": "2050-11-28",
+          "interestM": 0.21,
+          "redemptionM": 0
+        },
+        {
+          "date": "2051-11-28",
+          "interestM": 0.21,
+          "redemptionM": 0
+        },
+        {
+          "date": "2052-11-28",
+          "interestM": 0.21,
+          "redemptionM": 0
+        },
+        {
+          "date": "2053-11-28",
+          "interestM": 0.21,
+          "redemptionM": 0
+        },
+        {
+          "date": "2054-11-28",
+          "interestM": 0.21,
+          "redemptionM": 0
+        },
+        {
+          "date": "2055-11-28",
+          "interestM": 0.21,
+          "redemptionM": 0
+        },
+        {
+          "date": "2056-11-28",
+          "interestM": 0.21,
+          "redemptionM": 0
+        },
+        {
+          "date": "2057-11-28",
+          "interestM": 0.21,
+          "redemptionM": 0
+        },
+        {
+          "date": "2058-11-28",
+          "interestM": 0.21,
+          "redemptionM": 0
+        },
+        {
+          "date": "2059-11-28",
+          "interestM": 0.21,
+          "redemptionM": 0
+        },
+        {
+          "date": "2060-11-28",
+          "interestM": 0.21,
+          "redemptionM": 0
+        },
+        {
+          "date": "2061-11-28",
+          "interestM": 0.21,
+          "redemptionM": 0
+        },
+        {
+          "date": "2062-11-28",
+          "interestM": 0.21,
+          "redemptionM": 0
+        },
+        {
+          "date": "2063-11-28",
+          "interestM": 0.21,
+          "redemptionM": 0
+        },
+        {
+          "date": "2064-11-28",
+          "interestM": 0.21,
+          "redemptionM": 0
+        },
+        {
+          "date": "2065-11-28",
+          "interestM": 0.21,
+          "redemptionM": 0
+        },
+        {
+          "date": "2066-11-28",
+          "interestM": 0.21,
+          "redemptionM": 0
+        },
+        {
+          "date": "2067-11-28",
+          "interestM": 0.21,
+          "redemptionM": 0
+        },
+        {
+          "date": "2068-11-28",
+          "interestM": 0.21,
+          "redemptionM": 0
+        },
+        {
+          "date": "2069-11-28",
+          "interestM": 0.21,
+          "redemptionM": 0
+        },
+        {
+          "date": "2070-11-28",
+          "interestM": 0.21,
+          "redemptionM": 140
+        }
+      ]
+    }
+  ]
+}

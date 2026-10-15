@@ -11,7 +11,8 @@
     "provenance": "tsx src/provenance.ts",
     "budget": "tsx src/budget.ts",
     "schools": "tsx src/schools.ts",
-    "mobility": "tsx src/mobility.ts"
+    "mobility": "tsx src/mobility.ts",
+    "debtservice": "tsx src/debtservice.ts"
   },
   "keywords": [],
   "author": "",
