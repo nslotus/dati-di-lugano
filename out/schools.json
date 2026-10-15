@@ -1,0 +1,238 @@
+{
+  "generatedAt": "2026-10-15T10:56:50.344Z",
+  "minConfidence": 0.8,
+  "method": "TypeSafe pre-parsed value extraction from the City's school-start releases; checks: kindergarten + primary = total, sections × average ≈ pupils.",
+  "results": [
+    {
+      "schoolYear": "2024/25",
+      "source": "https://www.lugano.ch/dam/jcr:774e4f20-eb34-4ce6-8c55-4951d7b3884e/20240902-cs-inizio-scuole.pdf",
+      "archived": "sources/20240902-inizio-anno-scolastico.pdf",
+      "model": "jev-1.14.0",
+      "candidates": 35,
+      "usage": {
+        "input_tokens": 5485,
+        "output_tokens": 2320
+      },
+      "figures": {
+        "totalPupils": {
+          "value": 3360,
+          "raw": "3'360",
+          "decimals": 0,
+          "confidence": 0.96,
+          "context": " fondazione L’Istituto, nel suo ventesimo anniversario di fondazione, sarà frequentato da 3'360 allievi, suddivisi in 1'179 di scuola dell’infanzia (media "
+        },
+        "kgPupils": {
+          "value": 1179,
+          "raw": "1'179",
+          "decimals": 0,
+          "confidence": 0.99,
+          "context": "suo ventesimo anniversario di fondazione, sarà frequentato da 3'360 allievi, suddivisi in 1'179 di scuola dell’infanzia (media di 17.34 allievi per sezione"
+        },
+        "kgSections": {
+          "value": 68,
+          "raw": "68",
+          "decimals": 0,
+          "confidence": 0.99,
+          "context": "media di 17.59 allievi per classe). Il numero di sezioni di scuola dell’infanzia è pari a 68 (come lo scorso anno), mentre le classi di scuola elementar"
+        },
+        "kgAverage": {
+          "value": 17.34,
+          "raw": "17.34",
+          "decimals": 2,
+          "confidence": 0.99,
+          "context": ", sarà frequentato da 3'360 allievi, suddivisi in 1'179 di scuola dell’infanzia (media di 17.34 allievi per sezione) e 2'181 nella scuola elementare (media"
+        },
+        "prPupils": {
+          "value": 2181,
+          "raw": "2'181",
+          "decimals": 0,
+          "confidence": 0.98,
+          "context": "llievi, suddivisi in 1'179 di scuola dell’infanzia (media di 17.34 allievi per sezione) e 2'181 nella scuola elementare (media di 17.59 allievi per classe)"
+        },
+        "prClasses": {
+          "value": 124,
+          "raw": "124",
+          "decimals": 0,
+          "confidence": 0.96,
+          "context": "ll’infanzia è pari a 68 (come lo scorso anno), mentre le classi di scuola elementare sono 124 (una in più rispetto all’anno precedente). La realtà dell’I"
+        },
+        "prAverage": {
+          "value": 17.59,
+          "raw": "17.59",
+          "decimals": 2,
+          "confidence": 0.96,
+          "context": "l’infanzia (media di 17.34 allievi per sezione) e 2'181 nella scuola elementare (media di 17.59 allievi per classe). Il numero di sezioni di scuola dell’in"
+        }
+      },
+      "checks": {
+        "pupilsAddUp": true,
+        "kgAverageFits": true,
+        "prAverageFits": true
+      },
+      "status": {
+        "totalPupils": "accepted",
+        "kgPupils": "accepted",
+        "kgSections": "accepted",
+        "kgAverage": "accepted",
+        "prPupils": "accepted",
+        "prClasses": "accepted",
+        "prAverage": "accepted"
+      },
+      "lowConfidence": []
+    },
+    {
+      "schoolYear": "2025/26",
+      "source": "https://www.lugano.ch/dam/jcr:6ea44591-f14e-4fe7-a278-d883546c7e1b/20250903-cs-inizio-anno-scolastico-2025-2026.pdf",
+      "archived": "sources/20250903-inizio-anno-scolastico.pdf",
+      "model": "jev-1.14.0",
+      "candidates": 40,
+      "usage": {
+        "input_tokens": 6099,
+        "output_tokens": 2634
+      },
+      "figures": {
+        "totalPupils": {
+          "value": 3267,
+          "raw": "3'267",
+          "decimals": 0,
+          "confidence": 0.99,
+          "context": "dell’Istituto scolastico Nel nuovo anno scolastico l’Istituto accoglierà complessivamente 3'267 allievi: di questi, 1’177 frequenteranno la scuola dell’inf"
+        },
+        "kgPupils": {
+          "value": 1177,
+          "raw": "1’177",
+          "decimals": 0,
+          "confidence": 0.98,
+          "context": "el nuovo anno scolastico l’Istituto accoglierà complessivamente 3'267 allievi: di questi, 1’177 frequenteranno la scuola dell’infanzia (media di 17,06 bamb"
+        },
+        "kgSections": {
+          "value": 69,
+          "raw": "69",
+          "decimals": 0,
+          "confidence": 0.98,
+          "context": "elementare (media di 17,56 alunni per classe). Le sezioni di scuola dell’infanzia saranno 69, una in più rispetto all’anno scorso, mentre le classi di s"
+        },
+        "kgAverage": {
+          "value": 17.06,
+          "raw": "17,06",
+          "decimals": 2,
+          "confidence": 0.99,
+          "context": "ivamente 3'267 allievi: di questi, 1’177 frequenteranno la scuola dell’infanzia (media di 17,06 bambini per sezione) e 2'090 la scuola elementare (media di"
+        },
+        "prPupils": {
+          "value": 2090,
+          "raw": "2'090",
+          "decimals": 0,
+          "confidence": 0.99,
+          "context": "esti, 1’177 frequenteranno la scuola dell’infanzia (media di 17,06 bambini per sezione) e 2'090 la scuola elementare (media di 17,56 alunni per classe). Le"
+        },
+        "prClasses": {
+          "value": 119,
+          "raw": "119",
+          "decimals": 0,
+          "confidence": 0.96,
+          "context": "no 69, una in più rispetto all’anno scorso, mentre le classi di scuola elementare saranno 119, cinque in meno rispetto all’anno precedente. La distribuzi"
+        },
+        "prAverage": {
+          "value": 17.56,
+          "raw": "17,56",
+          "decimals": 2,
+          "confidence": 0.98,
+          "context": "dell’infanzia (media di 17,06 bambini per sezione) e 2'090 la scuola elementare (media di 17,56 alunni per classe). Le sezioni di scuola dell’infanzia sara"
+        }
+      },
+      "checks": {
+        "pupilsAddUp": true,
+        "kgAverageFits": true,
+        "prAverageFits": true
+      },
+      "status": {
+        "totalPupils": "accepted",
+        "kgPupils": "accepted",
+        "kgSections": "accepted",
+        "kgAverage": "accepted",
+        "prPupils": "accepted",
+        "prClasses": "accepted",
+        "prAverage": "accepted"
+      },
+      "lowConfidence": []
+    },
+    {
+      "schoolYear": "2026/27",
+      "source": "https://www.lugano.ch/dam/jcr:3a340d7f-0d96-4d7a-8af3-f512b72d1c9e/20260831-inizio-anno-scolastico-2026-27-comunicato.pdf",
+      "archived": "sources/20260831-inizio-anno-scolastico.pdf",
+      "model": "jev-1.14.0",
+      "candidates": 40,
+      "usage": {
+        "input_tokens": 6105,
+        "output_tokens": 2634
+      },
+      "figures": {
+        "totalPupils": {
+          "value": 3289,
+          "raw": "3’289",
+          "decimals": 0,
+          "confidence": 0.98,
+          "context": "dell’Istituto scolastico Nel nuovo anno scolastico l’Istituto accoglierà complessivamente 3’289 allievi, di cui 1’254 alla scuola dell’infanzia, con una me"
+        },
+        "kgPupils": {
+          "value": 1254,
+          "raw": "1’254",
+          "decimals": 0,
+          "confidence": 0.98,
+          "context": "co Nel nuovo anno scolastico l’Istituto accoglierà complessivamente 3’289 allievi, di cui 1’254 alla scuola dell’infanzia, con una media di 18,17 bambini p"
+        },
+        "kgSections": {
+          "value": 69,
+          "raw": "69",
+          "decimals": 0,
+          "confidence": 0.98,
+          "context": ", con una media di 17,70 alunni per classe. Le sezioni della scuola dell’infanzia saranno 69, lo stesso numero dello scorso anno, mentre le classi della"
+        },
+        "kgAverage": {
+          "value": 18.17,
+          "raw": "18,17",
+          "decimals": 2,
+          "confidence": 0.99,
+          "context": " complessivamente 3’289 allievi, di cui 1’254 alla scuola dell’infanzia, con una media di 18,17 bambini per sezione, e 2’035 alla scuola elementare, con un"
+        },
+        "prPupils": {
+          "value": 2035,
+          "raw": "2’035",
+          "decimals": 0,
+          "confidence": 0.99,
+          "context": "vi, di cui 1’254 alla scuola dell’infanzia, con una media di 18,17 bambini per sezione, e 2’035 alla scuola elementare, con una media di 17,70 alunni per c"
+        },
+        "prClasses": {
+          "value": 115,
+          "raw": "115",
+          "decimals": 0,
+          "confidence": 0.97,
+          "context": " 69, lo stesso numero dello scorso anno, mentre le classi della scuola elementare saranno 115, quattro in meno rispetto all’anno precedente. Le dimension"
+        },
+        "prAverage": {
+          "value": 17.7,
+          "raw": "17,70",
+          "decimals": 2,
+          "confidence": 0.98,
+          "context": " una media di 18,17 bambini per sezione, e 2’035 alla scuola elementare, con una media di 17,70 alunni per classe. Le sezioni della scuola dell’infanzia sa"
+        }
+      },
+      "checks": {
+        "pupilsAddUp": true,
+        "kgAverageFits": true,
+        "prAverageFits": true
+      },
+      "status": {
+        "totalPupils": "accepted",
+        "kgPupils": "accepted",
+        "kgSections": "accepted",
+        "kgAverage": "accepted",
+        "prPupils": "accepted",
+        "prClasses": "accepted",
+        "prAverage": "accepted"
+      },
+      "lowConfidence": []
+    }
+  ]
+}

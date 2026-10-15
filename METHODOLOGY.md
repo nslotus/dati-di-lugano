@@ -92,6 +92,16 @@ Deficits printed as positive amounts ("disavanzo … CHF 4.2 milioni") are store
 
 The city's final-accounts decks print each recap row as *actual · budget · difference · percent*. `src/budget.ts` reads the budget column directly from that table (row label and column position, no model involved) for 9 rows in 2024 and 2025: operating spending and revenue, operating balance, total operating result, gross investment, investment receipts, net investment, self-financing and the overall financing result. Checks that stop the run: actual − budget equals the printed difference to the cent (18 of 18 rows), and every actual already extracted in `out/city-figures.json` matches (10 of 10). The 2025 self-financing budget of CHF 35'747 is as printed; it agrees with the deck's summary ("P2025 0.0 Mio") and the 2026 budget release ("contro CHF 0.0 milioni nel preventivo 2025").
 
+### School figures (`npm run schools`)
+
+`src/schools.ts` extracts seven figures per school year from the City's school-start releases (2 September 2024, 3 September 2025, 31 August 2026): total pupils, kindergarten pupils, sections and average, primary pupils, classes and average. It uses the same TypeSafe pre-parsed value extraction as the financial figures: code lists every number in the release with its surrounding words (35–40 per release), Jev picks one per figure, and code copies the printed value. Each year must pass three arithmetic checks: kindergarten + primary = total, and sections × average = pupils within the rounding of the printed average. Run of 15 October 2026: 21 of 21 figures accepted (confidence 0.96–0.99), 9 of 9 checks passed, all values equal to a manual phrase check of the PDFs.
+
+| School year | Pupils | Kindergarten | Primary |
+|---|---|---|---|
+| 2024/25 | 3,360 | 1,179 in 68 sections (17.34) | 2,181 in 124 classes (17.59) |
+| 2025/26 | 3,267 | 1,177 in 69 sections (17.06) | 2,090 in 119 classes (17.56) |
+| 2026/27 | 3,289 | 1,254 in 69 sections (18.17) | 2,035 in 115 classes (17.70) |
+
 ## 4. Research log
 
 Searches were run with Claude Code's web search and Exa (`web_search_exa`, `web_fetch_exa`); files were downloaded with curl.
